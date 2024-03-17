@@ -1,12 +1,9 @@
-import { createPresence } from "@solid-primitives/presence";
-import { createListTransition } from "@solid-primitives/transition-group";
-import clsx from "clsx";
-import { Component, For, Show, createEffect, createSignal, useTransition } from "solid-js";
-import { TransitionGroup } from "solid-transition-group";
-import $ from "jquery";
-import { resolveElements } from "@solid-primitives/refs";
+import clsx from 'clsx';
+import $ from 'jquery';
+import { Component, For, createSignal } from 'solid-js';
+import { TransitionGroup } from 'solid-transition-group';
 
-type NotificationType = "success" | "info" | "error";
+type NotificationType = 'success' | 'info' | 'error';
 
 type NotificationProps = {
   message: string;
@@ -19,10 +16,10 @@ export const Notification: Component<NotificationProps> = (props) => {
   return (
     <div
       ref={notificationRef!}
-      class={clsx("appDeliveryTimeMessage", {
-        "notf-success": props.type === "success",
-        "notf-inform": props.type === "info",
-        "notf-wrong": props.type === "error",
+      class={clsx('appDeliveryTimeMessage', {
+        'notf-success': props.type === 'success',
+        'notf-inform': props.type === 'info',
+        'notf-wrong': props.type === 'error',
       })}
     >
       <span>{props.message}</span>
@@ -38,8 +35,12 @@ export const NotificationsBox: Component<NotificationsBoxProps> = (props) => {
   const [sg, setSg] = createSignal([1, 2, 3]);
 
   return (
-    <div class='notification-box' id='notifications' style={{ transition: "height 1s" }}>
-      <div id='idk' style={{ opacity: 0 }}>
+    <div
+      class="notification-box"
+      id="notifications"
+      style={{ transition: 'height 1s' }}
+    >
+      <div id="idk" style={{ opacity: 0 }}>
         idk
       </div>
       <TransitionGroup
@@ -70,11 +71,17 @@ export const NotificationsBox: Component<NotificationsBoxProps> = (props) => {
           $(e).remove();
         }}
       >
-        <For each={props.notifications}>{(notification) => <div>{notification.type}</div>}</For>
+        <For each={props.notifications}>
+          {(notification) => <div>{notification.type}</div>}
+        </For>
       </TransitionGroup>
 
-      <button onClick={() => setSg((sg) => [...sg, sg.length + 1])}>Add number</button>
-      <button onClick={() => setSg((sg) => sg.slice(0, -1))}>Remove number</button>
+      <button onClick={() => setSg((sg) => [...sg, sg.length + 1])}>
+        Add number
+      </button>
+      <button onClick={() => setSg((sg) => sg.slice(0, -1))}>
+        Remove number
+      </button>
     </div>
   );
 };

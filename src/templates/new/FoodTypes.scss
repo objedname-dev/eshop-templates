@@ -1,64 +1,64 @@
 .extended-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .food-types {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    max-width: $lg;
+    overflow: auto;
+    padding: 0 1.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .food-types .food-type-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 0.25rem;
+    padding: 1rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .food-types .food-type-button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: calc(100% - 1rem);
+    height: 2px;
+    background-color: var(--color-brand-500);
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: 0.3s ease;
+  }
+
+  .food-types .food-type-button:hover::before,
+  .food-types .food-type-button.active::before {
+    opacity: 1;
+  }
+
+  .food-types .food-type-button.show-extra,
+  .food-types .food-type-button.hide-extra,
+  .food-types .food-type-button.invisible {
+    display: none;
+  }
+
+  .food-types .food-type-button > img {
+    width: 1.75rem;
+  }
+
+  .food-types.js-item-type-sub .food-type-button {
+    padding: 0.5rem 1rem;
+  }
+
+  @include media-sm() {
+    align-items: center;
 
     .food-types {
-        display: flex;
-        max-width: $lg;
-        overflow: auto;
-        padding: 0 1.5rem;
-        -webkit-overflow-scrolling: touch;
+      justify-content: center;
     }
-
-    .food-types .food-type-button {
-        position: relative;
-        display: flex;
-        align-items: center;
-        flex-shrink: 0;
-        gap: 0.25rem;
-        padding: 1rem;
-        cursor: pointer;
-        user-select: none;
-    }
-
-    .food-types .food-type-button::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        width: calc(100% - 1rem);
-        height: 2px;
-        background-color: var(--color-brand-500);
-        opacity: 0;
-        transform: translateX(-50%);
-        transition: .3s ease;
-    }
-
-    .food-types .food-type-button:hover::before,
-    .food-types .food-type-button.active::before {
-        opacity: 1;
-    }
-
-    .food-types .food-type-button.show-extra,
-    .food-types .food-type-button.hide-extra,
-    .food-types .food-type-button.invisible {
-        display: none;
-    }
-
-    .food-types .food-type-button>img {
-        width: 1.75rem;
-    }
-
-    .food-types.js-item-type-sub .food-type-button {
-        padding: 0.5rem 1rem
-    }
-
-    @include media-sm() {
-        align-items: center;
-
-        .food-types {
-            justify-content: center;
-        }
-    }
+  }
 }

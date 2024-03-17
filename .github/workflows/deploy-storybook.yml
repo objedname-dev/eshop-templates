@@ -1,0 +1,20 @@
+name: Deploy Storybook
+
+on: workflow_dispatch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Storybook
+        run: npm run build-storybook
+
+      - name: Deploy to GH pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npm run deploy-storybook -- -u "github-actions-bot <support+actions@github.com>"

@@ -1,4 +1,4 @@
-import { Component, For } from "solid-js";
+import { Component, For } from 'solid-js';
 
 type Props = {
   logoUrl: string;
@@ -15,7 +15,7 @@ type Props = {
 
 export const MultiappOverlay: Component<Props> = (props) => {
   return (
-    <div id='multiapp-home' class='multiapp-box'>
+    <div id="multiapp-home" class="multiapp-box">
       <style>
         {`.multiapp-loading {
         	z-index: 28000;
@@ -46,61 +46,72 @@ export const MultiappOverlay: Component<Props> = (props) => {
         </script>
       */}
       <div
-        class='multiapp-loading'
-        style={{ display: "none", "background-image": `url('${props.loadingImgUrl}')` }}
+        class="multiapp-loading"
+        style={{
+          display: 'none',
+          'background-image': `url('${props.loadingImgUrl}')`,
+        }}
       >
-        <object data='/images/loading/loading.svg' type='image/svg+xml'></object>
+        <object
+          data="/images/loading/loading.svg"
+          type="image/svg+xml"
+        ></object>
       </div>
 
-      <div class='multi-toppanel hw-acc'>
+      <div class="multi-toppanel hw-acc">
         <div
-          class='multi-toppanel-logo'
-          style={{ "background-image": `url('${props.logoUrl}')` }}
+          class="multi-toppanel-logo"
+          style={{ 'background-image': `url('${props.logoUrl}')` }}
         ></div>
       </div>
 
-      <div class='app-banner-content hw-acc banner-version-app_multiapp'>
-        <div class='swiper-container-multi'>
-          <div class='swiper-wrapper'></div>
-          <div class='swiper-pagination-multi'></div>
+      <div class="app-banner-content hw-acc banner-version-app_multiapp">
+        <div class="swiper-container-multi">
+          <div class="swiper-wrapper"></div>
+          <div class="swiper-pagination-multi"></div>
         </div>
-        <div class='no-banners'></div>
-        <div class='cleaner' />
+        <div class="no-banners"></div>
+        <div class="cleaner" />
       </div>
 
-      <div class='app-banner-content hw-acc banner-version-eshop_multiapp'>
-        <div class='swiper-container-multi'>
-          <div class='swiper-wrapper'></div>
-          <div class='swiper-pagination-multi'></div>
+      <div class="app-banner-content hw-acc banner-version-eshop_multiapp">
+        <div class="swiper-container-multi">
+          <div class="swiper-wrapper"></div>
+          <div class="swiper-pagination-multi"></div>
         </div>
-        <div class='no-banners'></div>
-        <div class='cleaner' />
+        <div class="no-banners"></div>
+        <div class="cleaner" />
       </div>
 
-      <div class='multiapp-content'>
+      <div class="multiapp-content">
         <For each={props.multiapps}>
           {({ bgUrl, imageUrl, linkUrl, name, description }) => (
-            <a href={linkUrl} class='js-multiapp-link'>
-              <div class='multiapp-col' style={{ "background-image": `url('${bgUrl}')` }}>
+            <a href={linkUrl} class="js-multiapp-link">
+              <div
+                class="multiapp-col"
+                style={{ 'background-image': `url('${bgUrl}')` }}
+              >
                 <div
-                  class='multiapp-href-logo'
-                  style={{ "background-image": `url('${imageUrl}')` }}
+                  class="multiapp-href-logo"
+                  style={{ 'background-image': `url('${imageUrl}')` }}
                 ></div>
                 <h4>{name}</h4>
-                <div class='multiapp-categories'>
-                  <div class='multiapp-category-col multiapp_flag_'></div>
+                <div class="multiapp-categories">
+                  <div class="multiapp-category-col multiapp_flag_"></div>
                 </div>
 
-                {props.showDescriptions && <div class='multiapp-description'>{description}</div>}
+                {props.showDescriptions && (
+                  <div class="multiapp-description">{description}</div>
+                )}
 
-                <div class='multiapp-link-box'>
-                  <span class='multiapp-link-btn'>&nbsp;</span>
+                <div class="multiapp-link-box">
+                  <span class="multiapp-link-btn">&nbsp;</span>
                 </div>
               </div>
             </a>
           )}
         </For>
-        <div class='cleaner' />
+        <div class="cleaner" />
       </div>
     </div>
   );

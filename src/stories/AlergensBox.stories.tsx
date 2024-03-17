@@ -1,12 +1,13 @@
-import type { Meta, StoryObj } from "storybook-solidjs";
-import { AlergensBox, defaultAlergens } from "@/components/AlergensBox";
+import type { Meta, StoryObj } from 'storybook-solidjs';
+
+import { AlergensBox, defaultAlergens } from '@/components/AlergensBox';
 
 const meta = {
-  title: "Components/Alergens/Alergens List",
+  title: 'Components/Alergens/Alergens List',
   component: AlergensBox,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
 } satisfies Meta<typeof AlergensBox>;
 

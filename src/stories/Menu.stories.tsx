@@ -1,12 +1,13 @@
-import type { Meta, StoryObj } from "storybook-solidjs";
-import { Menu } from "@/components/Menu";
+import type { Meta, StoryObj } from 'storybook-solidjs';
+
+import { Menu } from '@/components/Menu';
 
 const meta = {
-  title: "Components/Global/Menu",
+  title: 'Components/Global/Menu',
   component: Menu,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
 } satisfies Meta<typeof Menu>;
 

@@ -1,12 +1,13 @@
-import type { Meta, StoryObj } from "storybook-solidjs";
-import { OrdersHistoryBox } from "@/components/OrdersHistoryBox";
+import type { Meta, StoryObj } from 'storybook-solidjs';
+
+import { OrdersHistoryBox } from '@/components/OrdersHistoryBox';
 
 const meta = {
-  title: "Components/Orders History/Orders History Box",
+  title: 'Components/Orders History/Orders History Box',
   component: OrdersHistoryBox,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
 } satisfies Meta<typeof OrdersHistoryBox>;
 
@@ -23,35 +24,35 @@ export const WithOrders: Story = {
   args: {
     orders: [
       {
-        date: "07:51 5.3.2024",
-        address: "Hlavní 11, Ostrava, 12300",
-        status: "Objednávka",
+        date: '07:51 5.3.2024',
+        address: 'Hlavní 11, Ostrava, 12300',
+        status: 'Objednávka',
         items: [
           {
-            name: "Pizza Montano",
+            name: 'Pizza Montano',
             count: 1,
-            price: "109 Kč",
+            price: '109 Kč',
           },
         ],
-        totalPrice: "114 Kč",
+        totalPrice: '114 Kč',
       },
       {
-        date: "18:34 8.3.2024",
-        address: "Hlavní 11, Ostrava, 12300",
-        status: "Objednávka",
+        date: '18:34 8.3.2024',
+        address: 'Hlavní 11, Ostrava, 12300',
+        status: 'Objednávka',
         items: [
           {
-            name: "Pizza Montano",
+            name: 'Pizza Montano',
             count: 1,
-            price: "109 Kč",
+            price: '109 Kč',
           },
           {
-            name: "Pizza šunková",
+            name: 'Pizza šunková',
             count: 1,
-            price: "169 Kč",
+            price: '169 Kč',
           },
         ],
-        totalPrice: "283 Kč",
+        totalPrice: '283 Kč',
       },
     ],
   },

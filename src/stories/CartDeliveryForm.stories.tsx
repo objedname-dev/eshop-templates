@@ -1,17 +1,18 @@
-import type { Meta, StoryObj } from "storybook-solidjs";
-import { CartDeliveryForm } from "@/components/CartDeliveryForm";
-import { ComponentProps } from "solid-js";
+import { ComponentProps } from 'solid-js';
+import type { Meta, StoryObj } from 'storybook-solidjs';
+
+import { CartDeliveryForm } from '@/components/CartDeliveryForm';
 
 const meta = {
-  title: "Components/Cart/Delivery Form",
+  title: 'Components/Cart/Delivery Form',
   component: CartDeliveryForm,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
   argTypes: {
-    selectedDelivery: { control: "select", options: ["delivery", "pickup"] },
-    selectedPayment: { control: "select", options: ["card", "cash"] },
+    selectedDelivery: { control: 'select', options: ['delivery', 'pickup'] },
+    selectedPayment: { control: 'select', options: ['card', 'cash'] },
   },
 } satisfies Meta<typeof CartDeliveryForm>;
 

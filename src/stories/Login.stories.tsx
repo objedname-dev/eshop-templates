@@ -1,12 +1,13 @@
-import type { Meta, StoryObj } from "storybook-solidjs";
-import { Login } from "@/components/Login";
+import type { Meta, StoryObj } from 'storybook-solidjs';
+
+import { Login } from '@/components/Login';
 
 const meta = {
-  title: "Components/Account/Login",
+  title: 'Components/Account/Login',
   component: Login,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
 } satisfies Meta<typeof Login>;
 

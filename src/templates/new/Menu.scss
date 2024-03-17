@@ -1,191 +1,190 @@
 .menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  z-index: 102;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+  max-width: $xl3;
+  transform: translateX(-50%);
+
+  &::before {
+    content: '';
     position: fixed;
+    top: 0;
+    left: -100%;
+    width: 200vw;
+    height: 100%;
+    background-color: var(--color-black);
+    opacity: 0.9;
+    z-index: -1;
+  }
+
+  .menu-hide-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: var(--icon-delete-white);
+    background-size: 80%;
+    background-position: center;
+    align-self: flex-end;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .menu-image-top {
+    display: none;
+  }
+
+  .menu-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-content: flex-start;
+    position: relative;
+    padding-bottom: 5rem;
+    gap: 0.75rem;
+    margin-top: 3.5rem;
+    max-width: $lg;
+  }
+
+  .menu-btn {
+    display: flex;
+    width: calc(50% - 0.625rem);
+    cursor: pointer;
+  }
+
+  .menu-btn .menu-btn-content {
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.5rem 0.5rem 2.75rem;
+    min-height: 3.5rem;
+    width: 100%;
+    background-size: 1.5rem;
+    background-position: center left 0.5rem;
+    color: var(--color-white);
+    line-height: 1.1;
+    font-weight: 500;
+  }
+
+  .menu-btn .menu-btn-content::before {
+    content: '';
+    position: absolute;
     top: 0;
-    left: 50%;
-    width: 100vw;
-    height: 100vh;
-    z-index: 102;
-    padding: 1rem;
-    backdrop-filter: blur(4px);
-    max-width: $xl3;
-    transform: translateX(-50%);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    background-color: var(--color-black);
+    opacity: 0;
+    z-index: -1;
+    transition: 0.2s ease;
+  }
 
-    &::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 200vw;
-        height: 100%;
-        background-color: var(--color-black);
-        opacity: 0.9;
-        z-index: -1;
-    }
+  .menu-btn:hover .menu-btn-content::before {
+    opacity: 0.5;
+  }
 
+  .menu-btn.selected .menu-btn-content::before {
+    opacity: 1;
+  }
+
+  .menu-btn .menu-btn-content.offer-icon {
+    background-image: var(--icon-offer-white);
+  }
+
+  .menu-btn .menu-btn-content.cart-icon {
+    background-image: var(--icon-cart-white);
+  }
+
+  .menu-btn .menu-btn-content.reservation-icon-tables_form {
+    background-image: var(--icon-table-white);
+  }
+
+  .menu-btn .menu-btn-content.fire-icon {
+    background-image: var(--icon-fire-white);
+  }
+
+  .menu-btn .menu-btn-content.pointer-icon {
+    background-image: var(--icon-pointer-white);
+  }
+
+  .menu-btn .menu-btn-content.photo-icon {
+    background-image: var(--icon-photo-white);
+  }
+
+  .menu-btn .menu-btn-content.salad-icon {
+    background-image: var(--icon-salad-white);
+  }
+
+  .menu-btn .menu-btn-content.terms-icon {
+    background-image: var(--icon-terms-white);
+  }
+
+  .menu-btn.account-menu {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-btn.account-menu .menu-btn-content {
+    padding: 0.5rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+  }
+
+  .menu-btn.account-menu .menu-btn-content::before {
+    background-color: var(--color-primary-500);
+    opacity: 1;
+  }
+
+  .menu-signature {
+    margin-top: 1rem;
+    color: var(--color-white);
+    background-size: 1.5rem;
+    background-position: center left;
+    padding-left: 2rem;
+    opacity: 0.5;
+  }
+
+  @include media-md() {
     .menu-hide-btn {
-        width: 2.5rem;
-        height: 2.5rem;
-        background-image: var(--icon-delete-white);
-        background-size: 80%;
-        background-position: center;
-        align-self: flex-end;
-        cursor: pointer;
-        z-index: 1;
-    }
-
-    .menu-image-top {
-        display: none;
+      position: absolute;
+      top: 5.5rem;
+      right: 2rem;
     }
 
     .menu-content {
-        display: flex;
-        flex-wrap: wrap;
-        flex-grow: 1;
-        align-content: flex-start;
-        position: relative;
-        padding-bottom: 5rem;
-        gap: 0.75rem;
-        margin-top: 3.5rem;
-        max-width: $lg;
+      margin-top: 0;
+      align-content: center;
+      justify-content: center;
+      gap: 3rem;
     }
 
     .menu-btn {
-        display: flex;
-        width: calc(50% - 0.625rem);
-        cursor: pointer;
+      width: auto;
+      font-size: 1.5rem;
     }
 
     .menu-btn .menu-btn-content {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 0.5rem 0.5rem 0.5rem 2.75rem;
-        min-height: 3.5rem;
-        width: 100%;
-        background-size: 1.5rem;
-        background-position: center left 0.5rem;
-        color: var(--color-white);
-        line-height: 1.1;
-        font-weight: 500;
-    }
-
-    .menu-btn .menu-btn-content::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 0.5rem;
-        background-color: var(--color-black);
-        opacity: 0;
-        z-index: -1;
-        transition: .2s ease;
-    }
-
-    .menu-btn:hover .menu-btn-content::before {
-        opacity: 0.5;
-    }
-
-    .menu-btn.selected .menu-btn-content::before {
-        opacity: 1;
-    }
-
-    .menu-btn .menu-btn-content.offer-icon {
-        background-image: var(--icon-offer-white);
-    }
-
-    .menu-btn .menu-btn-content.cart-icon {
-        background-image: var(--icon-cart-white);
-    }
-
-    .menu-btn .menu-btn-content.reservation-icon-tables_form {
-        background-image: var(--icon-table-white);
-    }
-
-    .menu-btn .menu-btn-content.fire-icon {
-        background-image: var(--icon-fire-white);
-    }
-
-    .menu-btn .menu-btn-content.pointer-icon {
-        background-image: var(--icon-pointer-white);
-    }
-
-    .menu-btn .menu-btn-content.photo-icon {
-        background-image: var(--icon-photo-white);
-    }
-
-    .menu-btn .menu-btn-content.salad-icon {
-        background-image: var(--icon-salad-white);
-    }
-
-    .menu-btn .menu-btn-content.terms-icon {
-        background-image: var(--icon-terms-white);
+      background-size: 2.5rem;
+      padding: 1rem 1rem 1rem 3.75rem;
     }
 
     .menu-btn.account-menu {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
+      width: auto;
+      min-width: 12rem;
+      left: 50%;
+      bottom: unset;
+      top: 75%;
+      transform: translateX(-50%);
     }
-
-    .menu-btn.account-menu .menu-btn-content {
-        padding: 0.5rem;
-        font-weight: 500;
-        border-radius: 0.5rem;
-    }
-
-    .menu-btn.account-menu .menu-btn-content::before {
-        background-color: var(--color-primary-500);
-        opacity: 1;
-    }
-
-    .menu-signature {
-        margin-top: 1rem;
-        color: var(--color-white);
-        background-size: 1.5rem;
-        background-position: center left;
-        padding-left: 2rem;
-        opacity: 0.5;
-    }
-
-    @include media-md() {
-
-        .menu-hide-btn {
-            position: absolute;
-            top: 5.5rem;
-            right: 2rem;
-        }
-
-        .menu-content {
-            margin-top: 0;
-            align-content: center;
-            justify-content: center;
-            gap: 3rem;
-        }
-
-        .menu-btn {
-            width: auto;
-            font-size: 1.5rem;
-        }
-
-        .menu-btn .menu-btn-content {
-            background-size: 2.5rem;
-            padding: 1rem 1rem 1rem 3.75rem;
-        }
-
-        .menu-btn.account-menu {
-            width: auto;
-            min-width: 12rem;
-            left: 50%;
-            bottom: unset;
-            top: 75%;
-            transform: translateX(-50%);
-        }
-    }
+  }
 }

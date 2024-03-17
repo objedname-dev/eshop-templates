@@ -1,12 +1,13 @@
-import type { Meta, StoryObj } from "storybook-solidjs";
-import { ReservationFormBox } from "@/components/ReservationFormBox";
+import type { Meta, StoryObj } from 'storybook-solidjs';
+
+import { ReservationFormBox } from '@/components/ReservationFormBox';
 
 const meta = {
-  title: "Components/Reservations/Form",
+  title: 'Components/Reservations/Form',
   component: ReservationFormBox,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
 } satisfies Meta<typeof ReservationFormBox>;
 

@@ -1,4 +1,4 @@
-import { Component, For } from "solid-js";
+import { Component, For } from 'solid-js';
 
 type Props = {
   minibanners: string[];
@@ -6,15 +6,15 @@ type Props = {
 
 export const Minibanners: Component<Props> = (props) => {
   return (
-    <div class='mini-banners-box'>
+    <div class="mini-banners-box">
       <For each={props.minibanners}>
         {(minibannerUrl) => (
-          <div class='minibanner'>
-            <img src={minibannerUrl} width='100%' />
+          <div class="minibanner">
+            <img src={minibannerUrl} width="100%" />
           </div>
         )}
       </For>
-      <div class='clear'></div>
+      <div class="clear"></div>
     </div>
   );
 };

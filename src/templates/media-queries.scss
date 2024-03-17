@@ -7,43 +7,43 @@ $xl2: 1536px;
 $xl3: 1920px;
 
 @mixin media-xs {
-    @media (min-width: $xs) {
-        @content;
-    }
+  @media (min-width: $xs) {
+    @content;
+  }
 }
 
 @mixin media-sm {
-    @media (min-width: $sm) {
-        @content;
-    }
+  @media (min-width: $sm) {
+    @content;
+  }
 }
 
 @mixin media-md {
-    @media (min-width: $md) {
-        @content;
-    }
+  @media (min-width: $md) {
+    @content;
+  }
 }
 
 @mixin media-lg {
-    @media (min-width: $lg) {
-        @content;
-    }
+  @media (min-width: $lg) {
+    @content;
+  }
 }
 
 @mixin media-xl {
-    @media (min-width: $xl) {
-        @content;
-    }
+  @media (min-width: $xl) {
+    @content;
+  }
 }
 
 @mixin media-2xl {
-    @media (min-width: $xl2) {
-        @content;
-    }
+  @media (min-width: $xl2) {
+    @content;
+  }
 }
 
 @mixin media-3xl {
-    @media (min-width: $xl3) {
-        @content;
-    }
+  @media (min-width: $xl3) {
+    @content;
+  }
 }

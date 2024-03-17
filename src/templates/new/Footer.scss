@@ -1,276 +1,276 @@
 footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-dark-900);
+  color: var(--color-white);
+
+  .footer-box {
+    width: 100%;
+    max-width: $xl;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--color-dark-900);
-    color: var(--color-white);
+    padding: 0 1rem;
+  }
 
-    .footer-box {
-        width: 100%;
-        max-width: $xl;
-        display: flex;
-        flex-direction: column;
-    }
+  .footer-logo {
+    height: 12rem;
+    width: 100%;
+    max-width: 16rem;
+    background-position: center;
+    background-size: 100% auto;
+    margin: 1rem 0;
+  }
 
-    .footer-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 1rem;
-    }
+  .footer-column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
-    .footer-logo {
-        height: 12rem;
-        width: 100%;
-        max-width: 16rem;
-        background-position: center;
-        background-size: 100% auto;
-        margin: 1rem 0;
-    }
+  .footer-33-col {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-33-col > h4,
+  .footer-payment-box > h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .footer-33-col > p {
+    text-align: center;
+  }
+
+  .footer-payment-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .footer-payment-type {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: 100%;
+    background-position: center;
+  }
+
+  .footer-info-btn {
+    font-weight: 500;
+    font-size: 1.75rem;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .social-link {
+    background-position: center;
+    height: 1.75rem;
+    padding: 0 1.125rem;
+  }
+
+  .footer-factory-select-content {
+    margin-top: 1rem;
+  }
+
+  .footer-select-factory {
+    display: flex;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-white);
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .footer-select-factory-icon {
+    background-image: var(--icon-arrow_bottom-white);
+    background-size: auto 100%;
+    background-position: center;
+    width: 1rem;
+    height: 1.5rem;
+    transform: rotate(-90deg);
+    transition: 0.3s ease;
+  }
+
+  .footer-select-factory:hover .footer-select-factory-icon {
+    transform: rotate(0deg);
+  }
+
+  .open-hours-content {
+    width: 100%;
+    max-width: 20rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .open-hours-content:first-of-type {
+    margin-top: 0.5rem;
+  }
+
+  .footer-app-content {
+    display: none;
+  }
+
+  .footer-author {
+    text-align: center;
+    margin: 2rem 1rem 7rem 1rem;
+  }
+
+  .footer-author > a {
+    opacity: 0.5;
+    transition: 0.2s ease;
+  }
+
+  .footer-author > a:hover {
+    opacity: 1;
+  }
+
+  @include media-sm() {
+    display: flex;
 
     .footer-column {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .footer-33-col {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-33-col>h4,
-    .footer-payment-box>h4 {
-        font-size: 1.25rem;
-        font-weight: 500;
-        text-align: center;
-    }
-
-    .footer-33-col>p {
-        text-align: center;
-    }
-
-    .footer-payment-content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: .5rem;
-    }
-
-    .footer-payment-type {
-        width: 2.5rem;
-        height: 2.5rem;
-        background-size: 100%;
-        background-position: center;
+      flex-direction: row;
+      justify-content: center;
     }
 
     .footer-info-btn {
-        font-weight: 500;
-        font-size: 1.75rem;
-    }
-
-    .social-links {
-        display: flex;
-        gap: 0.5rem;
-        margin-top: 0.5rem;
-    }
-
-    .social-link {
-        background-position: center;
-        height: 1.75rem;
-        padding: 0 1.125rem;
+      font-size: 1.5rem;
     }
 
     .footer-factory-select-content {
-        margin-top: 1rem;
+      margin-top: 3rem;
+      align-self: center;
+    }
+  }
+
+  @include media-xl() {
+    .footer-logo {
+      width: 20rem;
     }
 
-    .footer-select-factory {
-        display: flex;
-        padding: .5rem 1rem;
-        border: 1px solid var(--color-white);
-        justify-content: center;
-        align-items: center;
-        gap: .5rem;
+    .footer-content {
+      position: relative;
+      flex-direction: row;
+      padding-top: 4rem;
+      gap: 2rem;
     }
 
-    .footer-select-factory-icon {
-        background-image: var(--icon-arrow_bottom-white);
-        background-size: auto 100%;
-        background-position: center;
-        width: 1rem;
-        height: 1.5rem;
-        transform: rotate(-90deg);
-        transition: .3s ease;
+    .footer-33-col {
+      align-items: flex-start;
+      max-width: unset;
     }
 
-    .footer-select-factory:hover .footer-select-factory-icon {
-        transform: rotate(0deg);
-    }
-
-    .open-hours-content {
-        width: 100%;
-        max-width: 20rem;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .open-hours-content:first-of-type {
-        margin-top: 0.5rem;
+    .footer-payment-box > h4 {
+      text-align: start;
     }
 
     .footer-app-content {
-        display: none;
+      width: 20rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-app-content > a {
+      width: 8rem;
+      height: 2.75rem;
+      background-size: auto 100%;
+      background-position: center;
     }
 
     .footer-author {
-        text-align: center;
-        margin: 2rem 1rem 7rem 1rem;
+      text-align: end;
+      margin-bottom: 1.5rem;
     }
-
-    .footer-author>a {
-        opacity: 0.5;
-        transition: 0.2s ease;
-    }
-
-    .footer-author>a:hover {
-        opacity: 1;
-    }
-
-    @include media-sm() {
-        display: flex;
-
-        .footer-column {
-            flex-direction: row;
-            justify-content: center;
-        }
-
-        .footer-info-btn {
-            font-size: 1.5rem;
-        }
-
-        .footer-factory-select-content {
-            margin-top: 3rem;
-            align-self: center;
-        }
-    }
-
-    @include media-xl() {
-        .footer-logo {
-            width: 20rem;
-        }
-
-        .footer-content {
-            position: relative;
-            flex-direction: row;
-            padding-top: 4rem;
-            gap: 2rem;
-        }
-
-        .footer-33-col {
-            align-items: flex-start;
-            max-width: unset;
-        }
-
-        .footer-payment-box>h4 {
-            text-align: start;
-        }
-
-        .footer-app-content {
-            width: 20rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .footer-app-content>a {
-            width: 8rem;
-            height: 2.75rem;
-            background-size: auto 100%;
-            background-position: center;
-        }
-
-        .footer-author {
-            text-align: end;
-            margin-bottom: 1.5rem;
-        }
-    }
+  }
 }
 
 /* Payment Types Icons */
 .mastercard-accepted-payment {
-    background-image: var(--icon-payment-type-mastercard-white);
+  background-image: var(--icon-payment-type-mastercard-white);
 }
 
 .visa-accepted-payment {
-    background-image: var(--icon-payment-type-visa-white);
+  background-image: var(--icon-payment-type-visa-white);
 }
 
 .gpwebpay-accepted-payment {
-    background-image: var(--icon-payment-type-gpwebpay-white);
+  background-image: var(--icon-payment-type-gpwebpay-white);
 }
 
 .maestro-accepted-payment {
-    background-image: var(--icon-payment-type-maestro-white);
+  background-image: var(--icon-payment-type-maestro-white);
 }
 
 .b-payment-accepted-payment {
-    background-image: var(--icon-payment-type-b-payment-white);
+  background-image: var(--icon-payment-type-b-payment-white);
 }
 
 .gopay-accepted-payment {
-    background-image: var(--icon-payment-type-gopay-white);
+  background-image: var(--icon-payment-type-gopay-white);
 }
 
 .ticket-restaurant-accepted-payment {
-    background-image: var(--icon-payment-type-ticket-white);
+  background-image: var(--icon-payment-type-ticket-white);
 }
 
 .nase-stravenka-accepted-payment {
-    background-image: var(--icon-payment-type-nase-stravenka-white);
+  background-image: var(--icon-payment-type-nase-stravenka-white);
 }
 
 .sodexo-accepted-payment {
-    background-image: var(--icon-payment-type-sodexo-white);
+  background-image: var(--icon-payment-type-sodexo-white);
 }
 
 .edenred-accepted-payment {
-    background-image: var(--icon-payment-type-edenred-white);
+  background-image: var(--icon-payment-type-edenred-white);
 }
 
 .up-accepted-payment {
-    background-image: var(--icon-payment-type-up-white);
+  background-image: var(--icon-payment-type-up-white);
 }
 
 /* Social Icons */
 .social-icon-fb {
-    background-image: var(--icon-social-facebook-white);
+  background-image: var(--icon-social-facebook-white);
 }
 
 .social-icon-instagram {
-    background-image: var(--icon-social-instagram-white);
+  background-image: var(--icon-social-instagram-white);
 }
 
 .social-icon-twitter {
-    background-image: var(--icon-social-twitter-white);
+  background-image: var(--icon-social-twitter-white);
 }
 
 .social-icon-google_companies {
-    background-image: var(--icon-social-google_companies-white);
+  background-image: var(--icon-social-google_companies-white);
 }
 
 .social-icon-seznam_firmy {
-    background-image: var(--icon-social-seznam_firmy-white);
+  background-image: var(--icon-social-seznam_firmy-white);
 }
 
 /* App Store Icons */
 .appstore {
-    background-image: var(--icon-store-app_store-white);
+  background-image: var(--icon-store-app_store-white);
 }
 
 .googleplay {
-    background-image: var(--icon-store-google_play-white);
+  background-image: var(--icon-store-google_play-white);
 }

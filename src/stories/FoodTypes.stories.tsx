@@ -1,9 +1,10 @@
-import type { Meta, StoryObj } from "storybook-solidjs";
-import { FoodTypes } from "@/components/FoodTypes";
-import { createEffect, createSignal } from "solid-js";
+import { createEffect, createSignal } from 'solid-js';
+import type { Meta, StoryObj } from 'storybook-solidjs';
+
+import { FoodTypes } from '@/components/FoodTypes';
 
 const meta = {
-  title: "Components/Home/Food Types",
+  title: 'Components/Home/Food Types',
   render: (props) => {
     const [foodTypes, setFoodTypes] = createSignal(props.foodTypes);
 
@@ -18,7 +19,7 @@ const meta = {
           console.log(selectedIndex, type);
           setFoodTypes((foodTypes) => {
             switch (type) {
-              case "main":
+              case 'main':
                 return foodTypes.map((foodType, index) => ({
                   ...foodType,
                   active: index === selectedIndex,
@@ -27,13 +28,15 @@ const meta = {
                     active: false,
                   })),
                 }));
-              case "sub":
+              case 'sub':
                 return foodTypes.map((foodType) => ({
                   ...foodType,
-                  subFoodTypes: foodType.subFoodTypes?.map((subFoodType, index) => ({
-                    ...subFoodType,
-                    active: index === selectedIndex,
-                  })),
+                  subFoodTypes: foodType.subFoodTypes?.map(
+                    (subFoodType, index) => ({
+                      ...subFoodType,
+                      active: index === selectedIndex,
+                    }),
+                  ),
                 }));
             }
           });
@@ -41,9 +44,9 @@ const meta = {
       />
     );
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
 } satisfies Meta<typeof FoodTypes>;
 
@@ -54,76 +57,76 @@ export const Default: Story = {
   args: {
     foodTypes: [
       {
-        name: "Vše",
-        className: "foodtype-all",
+        name: 'Vše',
+        className: 'foodtype-all',
         active: true,
       },
       {
-        name: "Denní menu",
-        iconUrl: "https://objedname.eu/svg/454545/food_daily_menu.svg",
+        name: 'Denní menu',
+        iconUrl: 'https://objedname.eu/svg/454545/food_daily_menu.svg',
       },
       {
-        name: "Pizza",
-        iconUrl: "https://objedname.eu/svg/454545/pizza_pizza_slice.svg",
+        name: 'Pizza',
+        iconUrl: 'https://objedname.eu/svg/454545/pizza_pizza_slice.svg',
         subFoodTypes: [
           {
-            name: "Tomatový základ",
+            name: 'Tomatový základ',
             active: false,
           },
           {
-            name: "Smetanový základ",
+            name: 'Smetanový základ',
             active: false,
           },
         ],
       },
       {
-        name: "Burgery",
-        iconUrl: "https://objedname.eu/svg/454545/hamburger_burger.svg",
+        name: 'Burgery',
+        iconUrl: 'https://objedname.eu/svg/454545/hamburger_burger.svg',
         subFoodTypes: [
           {
-            name: "Hovězí",
+            name: 'Hovězí',
             active: false,
           },
           {
-            name: "Kuřecí",
+            name: 'Kuřecí',
             active: false,
           },
           {
-            name: "Vegan",
+            name: 'Vegan',
             active: false,
           },
         ],
       },
       {
-        name: "Nápoje",
-        iconUrl: "https://objedname.eu/svg/454545/pizza_pizza_slice.svg",
+        name: 'Nápoje',
+        iconUrl: 'https://objedname.eu/svg/454545/pizza_pizza_slice.svg',
         subFoodTypes: [
           {
-            name: "Limonády",
+            name: 'Limonády',
             active: false,
           },
           {
-            name: "Čaj",
+            name: 'Čaj',
             active: false,
           },
           {
-            name: "Káva",
+            name: 'Káva',
             active: false,
           },
           {
-            name: "Pivo",
+            name: 'Pivo',
             active: false,
           },
           {
-            name: "Vodka",
+            name: 'Vodka',
             active: false,
           },
           {
-            name: "Gin",
+            name: 'Gin',
             active: false,
           },
           {
-            name: "Rum",
+            name: 'Rum',
             active: false,
           },
         ],

@@ -1,12 +1,13 @@
-import type { Meta, StoryObj } from "storybook-solidjs";
-import { BottomPanel } from "@/components/BottomPanel";
+import type { Meta, StoryObj } from 'storybook-solidjs';
+
+import { BottomPanel } from '@/components/BottomPanel';
 
 const meta = {
-  title: "Components/Global/Bottom Panel",
+  title: 'Components/Global/Bottom Panel',
   component: BottomPanel,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
 } satisfies Meta<typeof BottomPanel>;
 

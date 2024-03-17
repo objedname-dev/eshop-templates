@@ -1,12 +1,13 @@
-import type { Meta, StoryObj } from "storybook-solidjs";
-import { FilterProductsBox } from "@/components/FilterProductsBox";
+import type { Meta, StoryObj } from 'storybook-solidjs';
+
+import { FilterProductsBox } from '@/components/FilterProductsBox';
 
 const meta = {
-  title: "Components/Home/Filter Products",
+  title: 'Components/Home/Filter Products',
   component: FilterProductsBox,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
 } satisfies Meta<typeof FilterProductsBox>;
 

@@ -1,7 +1,7 @@
-import { Component, For, Match, Show, Switch } from "solid-js";
+import { Component, For, Match, Switch } from 'solid-js';
 
 type Media = {
-  type: "img" | "iframe";
+  type: 'img' | 'iframe';
   mediaUrl: string;
 };
 
@@ -9,12 +9,12 @@ const GalleryColumn: Component<{ media: Media[] }> = (props) => {
   return (
     <For each={props.media}>
       {(media) => (
-        <a href={media.mediaUrl} data-lightbox='gallery-0'>
+        <a href={media.mediaUrl} data-lightbox="gallery-0">
           <Switch>
-            <Match when={media.type === "img"}>
+            <Match when={media.type === 'img'}>
               <img src={media.mediaUrl} />
             </Match>
-            <Match when={media.type === "iframe"}>
+            <Match when={media.type === 'iframe'}>
               <iframe src={media.mediaUrl} allowfullscreen></iframe>
             </Match>
           </Switch>
@@ -32,13 +32,17 @@ type Props = {
 
 export const GalleryPhotoDetail: Component<Props> = (props) => {
   return (
-    <div class='gallery-photo-detail'>
-      <div class='photo-content-left'>{props.left && <GalleryColumn media={props.left} />}</div>
-      <div class='photo-content-right'>{props.right && <GalleryColumn media={props.right} />}</div>
+    <div class="gallery-photo-detail">
+      <div class="photo-content-left">
+        {props.left && <GalleryColumn media={props.left} />}
+      </div>
+      <div class="photo-content-right">
+        {props.right && <GalleryColumn media={props.right} />}
+      </div>
 
-      <div class='cleaner' />
+      <div class="cleaner" />
 
-      <div class='gallery-name-title'>{props.title}</div>
+      <div class="gallery-name-title">{props.title}</div>
     </div>
   );
 };

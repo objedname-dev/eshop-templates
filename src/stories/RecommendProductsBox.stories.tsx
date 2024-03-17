@@ -1,12 +1,16 @@
-import type { Meta, StoryObj } from "storybook-solidjs";
-import { RecommendProductsBox, defaultProducts } from "@/components/RecommendProductsBox";
+import type { Meta, StoryObj } from 'storybook-solidjs';
+
+import {
+  RecommendProductsBox,
+  defaultProducts,
+} from '@/components/RecommendProductsBox';
 
 const meta = {
-  title: "Components/Global/Recommended Products",
+  title: 'Components/Global/Recommended Products',
   component: RecommendProductsBox,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
 } satisfies Meta<typeof RecommendProductsBox>;
 
@@ -15,7 +19,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    title: "Také doporučujeme:",
+    title: 'Také doporučujeme:',
     products: defaultProducts,
   },
 };

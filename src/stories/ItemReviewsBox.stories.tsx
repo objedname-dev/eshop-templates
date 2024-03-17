@@ -1,12 +1,13 @@
-import type { Meta, StoryObj } from "storybook-solidjs";
-import { ItemReviewsBox } from "@/components/ItemReviewsBox";
+import type { Meta, StoryObj } from 'storybook-solidjs';
+
+import { ItemReviewsBox } from '@/components/ItemReviewsBox';
 
 const meta = {
-  title: "Components/Item Detail/Reviews",
+  title: 'Components/Item Detail/Reviews',
   component: ItemReviewsBox,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
 } satisfies Meta<typeof ItemReviewsBox>;
 

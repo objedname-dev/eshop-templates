@@ -1,18 +1,19 @@
-import type { Meta, StoryObj } from "storybook-solidjs";
-import { Toggle } from "@/components/Toggle";
+import type { Meta, StoryObj } from 'storybook-solidjs';
+
+import { Toggle } from '@/components/Toggle';
 
 const meta = {
-  title: "Components/Global/Toggle",
+  title: 'Components/Global/Toggle',
   render: (props) => {
     return (
-      <div class='tw-bg-red tw-h-64'>
+      <div class="tw-bg-red tw-h-64">
         <Toggle {...props} />
       </div>
     );
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
 } satisfies Meta<typeof Toggle>;
 

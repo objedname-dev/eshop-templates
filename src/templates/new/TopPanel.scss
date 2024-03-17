@@ -4,8 +4,8 @@
   z-index: 101;
   display: grid;
   grid-template-areas:
-    "translator-box translator-box translator-box"
-    "logo multiapp menu";
+    'translator-box translator-box translator-box'
+    'logo multiapp menu';
   grid-template-columns: 1fr auto auto;
   grid-template-rows: 2.5rem 3.5rem;
   top: 0;
@@ -18,7 +18,7 @@
   transition: 0.4s ease;
 
   &::before {
-    content: "";
+    content: '';
     position: fixed;
     top: 0;
     left: -200%;
@@ -40,7 +40,7 @@
     width: 3.75rem;
     height: 100%;
     cursor: pointer;
-    margin: 0 .125rem 0 auto;
+    margin: 0 0.125rem 0 auto;
   }
 
   .toppanel-btn {
@@ -63,7 +63,7 @@
     user-select: none;
   }
 
-  .goog-te-gadget>span {
+  .goog-te-gadget > span {
     display: none;
   }
 
@@ -77,15 +77,15 @@
     border: none;
   }
 
-  >a {
+  > a {
     grid-area: logo;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-left: .625rem;
+    margin-left: 0.625rem;
   }
 
-  >a>img {
+  > a > img {
     cursor: pointer;
     display: block;
     object-fit: contain;
@@ -93,8 +93,7 @@
   }
 
   @include media-sm() {
-    grid-template-areas:
-      "multiapp logo translator-box menu";
+    grid-template-areas: 'multiapp logo translator-box menu';
     grid-template-columns: auto auto 1fr auto;
     grid-template-rows: 5rem;
     height: 5rem;

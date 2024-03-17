@@ -1,0 +1,3 @@
+src/templates/default/**/*.css
+src/templates/king/**/*.css
+src/templates/rounded/**/*.css
