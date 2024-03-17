@@ -22,7 +22,9 @@ export const CartItem: Component<CartItemProps> = (props) => {
       <div class="content">
         <div
           class="item-photo-content"
-          style='background-image: url("/user-data/factories/80/imgs/thumbs/13348.jpg");'
+          style={{
+            'background-image': `url('${props.imageUrl ?? 'https://cdn.objedname.eu/user-data/factories/80/imgs/thumbs/default_thumb.jpg'}')`,
+          }}
         >
           <div class="stickers-content"></div>
           <div class="item-photo-content-bottom">

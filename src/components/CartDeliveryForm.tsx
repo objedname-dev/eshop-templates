@@ -8,16 +8,17 @@ export type PaymentType = 'card' | 'cash';
 
 type Props = {
   selectedDelivery: DeliveryType | null;
-  onSelectDelivery: (selectedDelivery: DeliveryType) => void;
+  onSelectDelivery?: (selectedDelivery: DeliveryType) => void;
   selectedPayment: PaymentType | null;
-  onSelectPayment: (selectedPayment: PaymentType) => void;
+  onSelectPayment?: (selectedPayment: PaymentType) => void;
+  addressErrorMessage?: string;
   isLoggedIn?: boolean;
   bonusPointsMin?: number;
   bonusPointsTotal?: number;
   bonusPointsPaymentTotal?: number;
-  onPlusBonusPoint: () => void;
-  onMinusBonusPoint: () => void;
-  onAllBonusPoints: () => void;
+  onPlusBonusPoint?: () => void;
+  onMinusBonusPoint?: () => void;
+  onAllBonusPoints?: () => void;
 };
 
 export const CartDeliveryForm: Component<Props> = (props) => {
@@ -104,7 +105,12 @@ export const CartDeliveryForm: Component<Props> = (props) => {
         </div>
       </div>
       <div ref={addressContainerEl!} class="js-address-container" style="">
-        <div class="address-error-box js-address-error" style="display: none;"></div>
+        <div
+          class="address-error-box js-address-error"
+          style={{ display: props.addressErrorMessage ? 'block' : 'none' }}
+        >
+          {props.addressErrorMessage}
+        </div>
         <div class="field">
           <input
             id="street"

@@ -14,6 +14,13 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-  args: {},
+export const IsClosed: Story = {
+  args: {
+    isOpen: false,
+  },
+};
+export const IsOpen: Story = {
+  args: {
+    isOpen: true,
+  },
 };

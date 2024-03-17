@@ -1,21 +1,19 @@
 import type { Meta, StoryObj } from 'storybook-solidjs';
 
-import { Toggle } from '@/components/Toggle';
+import { SubmitButton } from '@/components/SubmitButton';
 
 const meta = {
-  title: 'Components/Forms/Toggle',
-  component: Toggle,
+  title: 'Components/Forms/Submit Button',
+  component: SubmitButton,
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
   },
-} satisfies Meta<typeof Toggle>;
+} satisfies Meta<typeof SubmitButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {
-    checked: false,
-  },
+  args: {},
 };

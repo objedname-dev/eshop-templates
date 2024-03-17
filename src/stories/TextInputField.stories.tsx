@@ -1,21 +1,21 @@
 import type { Meta, StoryObj } from 'storybook-solidjs';
 
-import { Toggle } from '@/components/Toggle';
+import { TextInputField } from '@/components/TextInputField';
 
 const meta = {
-  title: 'Components/Forms/Toggle',
-  component: Toggle,
+  title: 'Components/Forms/Text Input Field',
+  component: TextInputField,
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
   },
-} satisfies Meta<typeof Toggle>;
+} satisfies Meta<typeof TextInputField>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    checked: false,
+    label: 'Text field',
   },
 };

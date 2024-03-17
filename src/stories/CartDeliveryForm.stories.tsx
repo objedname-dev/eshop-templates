@@ -24,6 +24,7 @@ export const Default: Story = {
     selectedDelivery: null,
     selectedPayment: null,
     isLoggedIn: false,
+    addressErrorMessage: 'Vaše uložená adresa byla opravena, prosím zkontrolujte ji.',
     bonusPointsTotal: 0,
     bonusPointsPaymentTotal: 0,
     bonusPointsMin: 10,

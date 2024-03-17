@@ -1,13 +1,18 @@
 import clsx from 'clsx';
 import $ from 'jquery';
-import { Component, For, createSignal } from 'solid-js';
+import { Component, For } from 'solid-js';
 import { TransitionGroup } from 'solid-transition-group';
 
-type NotificationType = 'success' | 'info' | 'error';
+export enum NotificationType {
+  SUCCESS = 'success',
+  INFO = 'info',
+  ERROR = 'error',
+}
 
 type NotificationProps = {
   message: string;
   type: NotificationType;
+  className?: string;
 };
 
 export const Notification: Component<NotificationProps> = (props) => {
@@ -16,11 +21,14 @@ export const Notification: Component<NotificationProps> = (props) => {
   return (
     <div
       ref={notificationRef!}
-      class={clsx('appDeliveryTimeMessage', {
-        'notf-success': props.type === 'success',
-        'notf-inform': props.type === 'info',
-        'notf-wrong': props.type === 'error',
-      })}
+      class={clsx(
+        {
+          'notf-success': props.type === 'success',
+          'notf-inform': props.type === 'info',
+          'notf-wrong': props.type === 'error',
+        },
+        props.className,
+      )}
     >
       <span>{props.message}</span>
     </div>
@@ -32,46 +40,11 @@ type NotificationsBoxProps = {
 };
 
 export const NotificationsBox: Component<NotificationsBoxProps> = (props) => {
-  const [sg, setSg] = createSignal([1, 2, 3]);
-
   return (
-    <div class="notification-box" id="notifications" style={{ transition: 'height 1s' }}>
-      <div id="idk" style={{ opacity: 0 }}>
-        idk
-      </div>
-      <TransitionGroup
-        onBeforeEnter={(e) => {
-          $(e).hide();
-        }}
-        onEnter={(e, done) => {
-          $(e).slideDown({ done });
-        }}
-        onBeforeExit={(e) => console.log(e)}
-        onExit={(e, done) => $(e).slideUp({ done })}
-        onAfterExit={(e) => {
-          $(e).remove();
-        }}
-      >
-        <For each={sg()}>{(notification) => <div>{notification}</div>}</For>
+    <div class="notification-box" id="notifications">
+      <TransitionGroup onExit={(e, done) => $(e).slideUp({ done })} onAfterExit={(e) => e.remove()}>
+        <For each={props.notifications}>{(notification) => <Notification {...notification} />}</For>
       </TransitionGroup>
-
-      <TransitionGroup
-        onBeforeEnter={(e) => {
-          $(e).hide();
-        }}
-        onEnter={(e, done) => {
-          $(e).fadeIn({ done });
-        }}
-        onExit={(e, done) => $(e).fadeOut({ done })}
-        onAfterExit={(e) => {
-          $(e).remove();
-        }}
-      >
-        <For each={props.notifications}>{(notification) => <div>{notification.type}</div>}</For>
-      </TransitionGroup>
-
-      <button onClick={() => setSg((sg) => [...sg, sg.length + 1])}>Add number</button>
-      <button onClick={() => setSg((sg) => sg.slice(0, -1))}>Remove number</button>
     </div>
   );
 };

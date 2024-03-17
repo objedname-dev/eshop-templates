@@ -1,5 +1,7 @@
 import { Component, For, Match, Switch } from 'solid-js';
 
+import { BackButton } from './BackButton';
+
 type Media = {
   type: 'img' | 'iframe';
   mediaUrl: string;
@@ -33,6 +35,7 @@ type Props = {
 export const GalleryPhotoDetail: Component<Props> = (props) => {
   return (
     <div class="gallery-photo-detail">
+      <BackButton />
       <div class="photo-content-left">{props.left && <GalleryColumn media={props.left} />}</div>
       <div class="photo-content-right">{props.right && <GalleryColumn media={props.right} />}</div>
 

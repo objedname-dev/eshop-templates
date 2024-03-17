@@ -28,6 +28,7 @@ export const Step2: Story = {
     totalPrice: '120 Kč',
     showDelivery: true,
     deliveryPrice: '60 Kč',
+    extraMessage: 'Nakupte ještě za 236Kč a máte dopravu zdarma',
     bonusPoints: 21,
   },
 };

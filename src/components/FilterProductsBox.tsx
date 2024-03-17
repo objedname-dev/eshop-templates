@@ -1,11 +1,19 @@
+import clsx from 'clsx';
 import { Component } from 'solid-js';
 
-export const FilterProductsBox: Component = () => {
+type Props = {
+  isOpen?: boolean;
+  onOpenBtnClick?: () => void;
+};
+
+export const FilterProductsBox: Component<Props> = (props) => {
   return (
     <div class="filter-products-box">
       <div class="js-toggle-list-view">&nbsp;</div>
-      <button class="filter-products-btn gradient-btn">Hledat / Filtrovat</button>
-      <div class="filter-products-content active">
+      <button class="filter-products-btn gradient-btn" onClick={props.onOpenBtnClick}>
+        Hledat / Filtrovat
+      </button>
+      <div class={clsx('filter-products-content', props.isOpen && 'active')}>
         <div class="filter-content">
           <div class="filter-title">Vyhledávejte podle názvu:</div>
           <div class="search-box">

@@ -6,15 +6,23 @@ type Props = {
   deliveryPrice?: string;
   showCoupon?: boolean;
   bonusPoints?: number;
-  totalPrice: number;
+  totalPrice?: string;
+  extraMessage?: string;
   nextBtnText: string;
   nextBtnDisabled?: boolean;
-  onNextBtnClick: () => void;
+  onNextBtnClick?: () => void;
 };
 
 export const CartSum: Component<Props> = (props) => {
   return (
     <div class="cart-sum">
+      {props.extraMessage && (
+        <div class="cart-extras">
+          <div class="cart-extras-info bonus">
+            <span>{props.extraMessage}</span>
+          </div>
+        </div>
+      )}
       {props.showDelivery && (
         <div class="cart-price-column">
           <div class="cart-col-name">Cena za dopravu</div>

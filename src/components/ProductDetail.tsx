@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import { Component, ComponentProps, For, JSXElement, Show, createSignal } from 'solid-js';
 
+import { BackButton } from './BackButton';
 import { RecommendProductsBox } from './RecommendProductsBox';
 
 type Props = {
@@ -30,6 +31,7 @@ export const ProductDetail: Component<Props> = (props) => {
 
   return (
     <div class="item-detail-box">
+      <BackButton />
       <div class="product-detail item-offer-listed" data-food-type="foodtype-pizza">
         <div class="content-detail">
           <div
