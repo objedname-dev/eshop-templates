@@ -20,8 +20,7 @@ export const TemplateProvider: Component<Props> = (props) => {
     return css.replace(/\/ui\/system\//g, 'https://objedname.eu/ui/system/');
   });
 
-  const root = () =>
-    window.parent.document.querySelector("button[title='Go full screen [alt F]']")?.parentElement;
+  const root = () => window.parent.document.querySelector("button[title^='Go full screen']")?.parentElement;
 
   return (
     <>
