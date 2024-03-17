@@ -1,0 +1,1968 @@
+@charset "UTF-8";
+/* CSS Document */
+/*
+Atlantis
+╔═══╦╗░░░░░░░╔╗░░░░░░░░░░░░╔═══╦═══╦═══╗
+║╔═╗║║░╔╗░░░░║║░░░░░░░░░░░░║╔═╗║╔═╗║╔═╗║
+║║░║║╚═╬╬══╦═╝╠═╗╔══╦╗╔╦══╗║║░╚╣╚══╣╚══╗
+║║░║║╔╗╠╣║═╣╔╗║╔╗╣╔╗║╚╝║║═╣║║░╔╬══╗╠══╗║
+║╚═╝║╚╝║║║═╣╚╝║║║║╔╗║║║║║═╣║╚═╝║╚═╝║╚═╝║
+╚═══╩══╣╠══╩══╩╝╚╩╝╚╩╩╩╩══╝╚═══╩═══╩═══╝
+░░░░░░╔╝║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░╚═╝░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+>>>>>>>>>>>> King 1.5.1 <<<<<<<<<<<<<<<
+
+White = #FFFFFF
+Dark White = #EAEAEA
+Light Gray = #676767
+Gray = #313030
+Darker Gray = #2C2C2C
+Dark Gray = #212121
+Orange = #D9A239
+Red = #B84C4C = (184,76,76)
+Green = (75,183,90)
+Green = #4BB75A
+Blue = (82,165,187)
+Yellow = (167,183,70)
+Black = (0,0,0);
+Black = #000000;
+
+Images
+------
+gray
+green
+red
+blue
+white
+
+Other
+------
+Gradient = from: #F56E68 to: #DBA43B
+
+*/
+
+body {
+	background-color: #FFFFFF;
+}
+
+/********************* INPUT STYLES ******************/
+input, textarea, select {
+	color: #676767;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+input:focus, textarea:focus, select:focus {
+	outline: 0;
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+input[type="submit"], input[type="button"] {
+	color: #FFFFFF;
+}
+button:focus { outline:none }
+input[type="text"], input[type="password"], input[type="number"], input[type="email"], select, input[type="tel"], textarea, input[type="date"], input[type="time"] {
+	background-color: transparent;
+}
+input:focus::-webkit-input-placeholder { color:transparent; } input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */ input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+textarea:focus::-webkit-input-placeholder { color:transparent; } textarea:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */ textarea:focus::-moz-placeholder { color:transparent; } /* FF 19+ */ textarea:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+#timepicker {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+a {
+	color: #D9A239;
+}
+a.btn-href {
+	color: #FFFFFF;
+}
+.gradient-btn, label.tutorial-top.active, .swiper-pagination-bullet-active, .social-btn, .product-delete-btn, .review-content-reply, .review-user-img, .swiper-pagination-bullet-active, .swiper-pagination-bullet:hover, .menu-content-logo, .reservation-selected, .js-cart-action-container button, .sticker-timed, .item-sale-date, footer, .order-his-column {
+	background-image: -webkit-linear-gradient(top, #F56E68, #DBA43B);
+	background-image: -moz-linear-gradient(top, #F56E68, #DBA43B);
+	background-image: -ms-linear-gradient(top, #F56E68, #DBA43B);
+	background-image: -o-linear-gradient(top, #F56E68, #DBA43B);
+	background-image: linear-gradient(to top right, #F56E68, #DBA43B);
+}
+.body-container {
+	color: #676767;
+}
+button.menu-hide-btn {
+	background-image: url('/ui/system/icons/white/delete.svg');
+}
+ul.menu {
+	background-color: #FFFFFF;
+	-webkit-box-shadow: -50px 0px 20px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: -50px 0px 20px 0px rgba(0,0,0,0.2);
+	box-shadow: -50px 0px 20px 0px rgba(0,0,0,0.2);
+}
+.menu-content {
+}
+.menu-content-logo {
+}
+.menu-content-logo::after {
+    background: -webkit-linear-gradient(rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.6) 100%);
+    background: linear-gradient(rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.6) 100%);
+}
+button.toppanel-btn {
+	background-image: url('/ui/system/icons/white/menu_list.svg');
+}
+.toppanel, .multi-toppanel {
+}
+.toppanel.mini-menu {
+	background-color: rgba(184,76,76,0.9);
+}
+/*IPHONE X and more display FIX*/
+.toppanel::before {
+	background-color: rgba(184,76,76,1.0);
+}
+button.menu-hide-btn {
+	background-color: transparent;
+}
+li.menu-btn {
+	border-left: 1vw solid #FFFFFF;
+	color: #2B2B2B;
+}
+.menu-btn.selected {
+	border-left: 1vw solid #D9A239;
+	background-color: rgba(0,0,0,0.1);
+}
+.menu-btn.account {
+}
+.account-menu.gradient-btn {
+	color: #FFFFFF;
+}
+
+/********************* FOODTYPES 
+.foodtype-all {
+	background-image: url('/ui/system/icons/gray/food_all.svg');
+}
+.foodtype-pizza, .foodtype-czechpizza, .foodtype-pizza-own, .foodtype-pizza-small, .foodtype-pizza-big {
+	background-image: url('/ui/system/icons/gray/pizza.svg');
+}
+.foodtype-economy {
+	background-image: url('/ui/system/icons/gray/cash.svg');
+}
+.foodtype-food {
+	background-image: url('/ui/system/icons/gray/food.svg');
+}
+.foodtype-appetizer, .foodtype-starters {
+	background-image: url('/ui/system/icons/gray/starters.svg');
+}
+.foodtype-attachments {
+	background-image: url('/ui/system/icons/gray/attachments.svg');
+}
+.foodtype-drinks {
+	background-image: url('/ui/system/icons/gray/drink.svg');
+}
+.foodtype-noodles {
+	background-image: url('/ui/system/icons/gray/noodles.svg');
+}
+.foodtype-burgers, .foodtype-burger, .foodtype-kebab-burger {
+	background-image: url('/ui/system/icons/gray/burger.svg');
+}
+.foodtype-addons {
+	background-image: url('/ui/system/icons/gray/plus.svg');
+}
+.foodtype-daily-menu {
+	background-image: url('/ui/system/icons/gray/daily_menu.svg');
+}
+.foodtype-child-menu, .foodtype-children-menu {
+	background-image: url('/ui/system/icons/gray/daily_menu_child.svg');
+}
+.food-type-button.show-extra {
+	background-image: url('/ui/system/icons/gray/plus.svg');
+}
+.food-type-button.hide-extra {
+	background-image: url('/ui/system/icons/gray/minus.svg');
+}
+.foodtype-soup, .foodtype-soups {
+	background-image: url('/ui/system/icons/gray/soap.svg');
+}
+.foodtype-pasta-salsa, .foodtype-baked-pasta {
+	background-image: url('/ui/system/icons/gray/pasta.svg');
+}
+.foodtype-pig {
+	background-image: url('/ui/system/icons/gray/steak.svg');
+}
+.foodtype-chicken, .foodtype-meat, .foodtype-chicken-meal {
+	background-image: url('/ui/system/icons/gray/meat.svg');
+}
+.foodtype-specialites, .foodtype-kebab-plate, .foodtype-taste-food {
+	background-image: url('/ui/system/icons/gray/food_special.svg');
+}
+.foodtype-starters {
+	background-image: url('/ui/system/icons/gray/starters.svg');
+}
+.foodtype-steaks, .foodtype-steak, .foodtype-beef-meal, .foodtype-pork-meal {
+	background-image: url('/ui/system/icons/gray/steak.svg');
+}
+.foodtype-potatoes, .foodtype-potatoes-pocket {
+	background-image: url('/ui/system/icons/gray/potato_pocket.svg');
+}
+.foodtype-fish, .foodtype-fish-meal {
+	background-image: url('/ui/system/icons/gray/fish.svg');
+}
+.foodtype-salads, .foodtype-salate, .foodtype-gluten-free {
+	background-image: url('/ui/system/icons/gray/salad.svg');
+}
+.foodtype-vegetarian {
+	background-image: url('/ui/system/icons/gray/salad.svg');
+}
+.foodtype-deserts, .foodtype-desserts, .foodtype-dessert {
+	background-image: url('/ui/system/icons/gray/dezert.svg');
+}
+.foodtype-sweet {
+	background-image: url('/ui/system/icons/gray/dezert.svg');
+}
+.foodtype-drinks-virgin {
+	background-image: url('/ui/system/icons/gray/drink.svg');
+}
+.foodtype-beer {
+	background-image: url('/ui/system/icons/gray/beer.svg');
+}
+.foodtype-wine {
+	background-image: url('/ui/system/icons/gray/wine.svg');
+}
+.foodtype-classic {
+	background-image: url('/ui/system/icons/gray/food.svg');
+}
+.foodtype-pasta {
+	background-image: url('/ui/system/icons/gray/pasta.svg');
+}
+.foodtype-beer-wine-food {
+	background-image: url('/ui/system/icons/gray/potato_pocket.svg');
+}
+.foodtype-vegetable-attachments {
+	background-image: url('/ui/system/icons/gray/salad.svg');
+}
+.foodtype-coctails {
+	background-image: url('/ui/system/icons/gray/coctail.svg');
+}
+.foodtype-smoothie {
+	background-image: url('/ui/system/icons/gray/drink.svg');
+}
+.foodtype-alcohol {
+	background-image: url('/ui/system/icons/gray/beer.svg');
+}
+.foodtype-mixed-virgin {
+	background-image: url('/ui/system/icons/gray/coctail.svg');
+}
+.foodtype-mixed-alcohol {
+	background-image: url('/ui/system/icons/gray/coctail.svg');
+}
+.foodtype-gnocchi-traditional {
+	background-image: url('/ui/system/icons/gray/gnocchi.svg');
+}
+.foodtype-sushi {
+	background-image: url('/ui/system/icons/gray/sushi.svg');
+}
+.foodtype-frited-food, .foodtype-fast-food {
+	background-image: url('/ui/system/icons/gray/frited_food.svg');
+}
+.foodtype-sauces {
+	background-image: url('/ui/system/icons/gray/sauce.svg');
+}
+.foodtype-sauce {
+	background-image: url('/ui/system/icons/gray/sauce.svg');
+}
+.foodtype-gluten-free-pizza {
+	background-image: url('/ui/system/icons/gray/glutten_free_pizza.svg');
+}
+.foodtype-gnocchi {
+	background-image: url('/ui/system/icons/gray/gnocchi.svg');
+}
+.foodtype-risotto {
+	background-image: url('/ui/system/icons/gray/rice.svg');
+}
+.foodtype-pizza-xxl {
+	background-image: url('/ui/system/icons/gray/pizza_xxl.svg');
+}
+.foodtype-frited-bread {
+	background-image: url('/ui/system/icons/gray/bread_frited.svg');
+}
+.foodtype-kebab, .foodtype-kebab-box, .foodtype-baked-kebab, .foodtype-gyros {
+	background-image: url('/ui/system/icons/gray/gyros.svg');
+}
+.foodtype-panini {
+	background-image: url('/ui/system/icons/gray/panini.svg');
+}
+.foodtype-tortilla, .foodtype-durum-tortila, .foodtype-durum-mini {
+	background-image: url('/ui/system/icons/gray/tortilla.svg');
+}
+.foodtype-strips {
+	background-image: url('/ui/system/icons/gray/strips.svg');
+}
+.foodtype-meatless {
+	background-image: url('/ui/system/icons/gray/salad.svg');
+}
+.foodtype-roasted-ribs-marinade {
+	background-image: url('/ui/system/icons/gray/ribs.svg');
+}
+.foodtype-roasted-ribs {
+	background-image: url('/ui/system/icons/gray/ribs.svg');
+}
+.foodtype-halfpizza {
+	background-image: url('/ui/system/icons/gray/pizza.svg');
+}
+.foodtype-party-food {
+	background-image: url('/ui/system/icons/gray/party_mix.svg');
+}
+.foodtype-sendwitches, .foodtype-sandwitches, .foodtype-toast {
+	background-image: url('/ui/system/icons/gray/sandwich.svg');
+}
+.foodtype-frite-cheese {
+	background-image: url('/ui/system/icons/gray/frited_cheese.svg');
+}
+.foodtype-pancakes {
+	background-image: url('/ui/system/icons/gray/pancakes.svg');
+}
+.foodtype-cafe {
+	background-image: url('/ui/system/icons/gray/coffe_bar.svg');
+}
+.foodtype-pizza-sale {
+	background-image: url('/ui/system/icons/gray/pizza.svg');
+}
+.foodtype-lasagne {
+	background-image: url('/ui/system/icons/gray/lasagne.svg');
+}
+.foodtype-icecream {
+	background-image: url('/ui/system/icons/gray/ice_cream.svg');
+}
+******************/
+.food-type-button {
+	border: 0.5vw solid #1D1D1D;
+}
+.food-type-button.active {
+	background-color: rgba(0,0,0,0.04);
+}
+.swiper-pagination-bullet {
+	border: 0.5vw solid #FFFFFF;
+}
+.swiper-pagination-bullet-active {
+}
+.ingredient-type-cheese {
+	background-image: url('/ui/system/icons/gray/cheese.svg');
+}
+.ingredient-type-meat {
+	background-image: url('/ui/system/icons/gray/meat.svg');
+}
+.ingredient-type-vegetables {
+	background-image: url('/ui/system/icons/gray/vegetable.svg');
+}
+.ingredient-type-others {
+	background-image: url('/ui/system/icons/gray/attachments.svg');
+}
+.ingredient-type-fruits, .ingredient-type-fruit {
+	background-image: url('/ui/system/icons/gray/fruits.svg');
+}
+.ingredient-type-spices {
+	background-image: url('/ui/system/icons/gray/attachments.svg');
+}
+.ingredient-type-base, .ingredient-type-pizza-base {
+	background-image: url('/ui/system/icons/gray/base.svg');
+}
+.ingredient-type-sauces {
+	background-image: url('/ui/system/icons/gray/attachments.svg');
+}
+.ingredient-type-fish {
+	background-image: url('/ui/system/icons/gray/fish.svg');
+}
+
+/*************************************************************** ICONS ********************************************************/
+
+.arrow-left, .arrow-left-icon {
+	background-image: url('/ui/system/icons/white/arrow_left.svg');
+}
+.arrow-right {
+	background-image: url('/ui/system/icons/gray/arrow_right.svg');
+}
+.multiapp-link-btn {
+	background-image: url('/ui/system/icons/yellow/arrow_up.svg');
+}
+.item-taste-btn-icon {
+	background-image: url('/ui/system/icons/white/arrow_right.svg');
+}
+.arrow-up, .arrow-up-icon {
+	background-image: url('/ui/system/icons/white/arrow_up.svg');
+}
+.arrow-up-type {
+	background-image: url('/ui/system/icons/gray/arrow_bottom.svg');
+}
+.arrow-down, .arrow-down-icon {
+	background-image: url('/ui/system/icons/white/arrow_bottom.svg');
+}
+.reservation-cal-arrow.arrow-down {
+	background-image: url('/ui/system/icons/gray/arrow_bottom.svg');
+}
+.reservation-cal-arrow.arrow-up {
+	background-image: url('/ui/system/icons/gray/arrow_up.svg');
+}
+.star-icon {
+	background-image: url('/ui/system/icons/white/star.svg');
+}
+.heart-icon {
+	background-image: url('/ui/system/icons/white/heart.svg');
+}
+.heart-icon.active {
+	background-image: url('/ui/system/icons/white/heart_active.svg');
+}
+.favorite-item-btn.heart-icon, .item-detail-box .heart-icon {
+	background-image: url('/ui/system/icons/gray/heart.svg');
+}
+.favorite-item-btn.heart-icon-active, .item-detail-box .heart-icon-active, .item-detail-box .heart-icon:hover, .item-detail-box .heart-icon.active  {
+	background-image: url('/ui/system/icons/gray/heart_active.svg');
+}
+.photo-icon {
+	background-image: url('/ui/system/icons/gray/photo.svg');
+}
+.people-icon {
+	background-image: url('/ui/system/icons/gray/training.svg');
+}
+.movie-icon {
+	background-image: url('/ui/system/icons/white/movie.svg');
+}
+.pointer-icon {
+	background-image: url('/ui/system/icons/gray/pointer.svg');
+}
+.call-button-icon.pointer-icon {
+	background-image: url('/ui/system/icons/white/pointer.svg');
+}
+.calendar-icon {
+	background-image: url('/ui/system/icons/gray/calendar.svg');
+}
+.time-icon {
+	background-image: url('/ui/system/icons/gray/time.svg');
+}
+input.pointer-icon {
+	background-image: url('/ui/system/icons/gray/pointer.svg');
+}
+.customer-icon {
+	background-image: url('/ui/system/icons/gray/customer.svg');
+}
+.house-icon {
+	background-image: url('/ui/system/icons/white/house.svg');
+}
+.cart-icon {
+	background-image: url('/ui/system/icons/gray/cart.svg');
+}
+.cart-pay-btn .cart-icon {
+    background-image: url(/ui/system/icons/white/cart.svg);
+}
+.offer-icon {
+	background-image: url('/ui/system/icons/gray/offer.svg');
+}
+.delete-icon {
+	background-image: url('/ui/system/icons/white/delete.svg');
+}
+.facebook-icon {
+	background-image: url('/ui/system/icons/white/facebook.svg');
+}
+.instagram-icon {
+	background-image: url('/ui/system/icons/white/instagram.svg');
+}
+.twitter-icon {
+	background-image: url('/ui/system/icons/white/twitter.svg');
+}
+.repeat-icon {
+	background-image: url('/ui/system/icons/white/repeat_arrow.svg');
+}
+.magnify-icon, .item-buy-btn-icon {
+	background-image: url('/ui/system/icons/gray/magnify.svg');
+}
+.salad-icon {
+	background-image: url('/ui/system/icons/gray/salad.svg');
+}
+.wheat-icon {
+	background-image: url('/ui/system/icons/white/wheat.svg');
+}
+.item-detail-label.wheat-icon {
+	background-image: url('/ui/system/icons/gray/wheat.svg');
+}
+.menulist-icon {
+	background-image: url('/ui/system/icons/white/menu_list.svg');
+}
+.all-icon {
+	background-image: url('/ui/system/icons/white/food_all.svg');
+}
+.pizza-icon {
+	background-image: url('/ui/system/icons/white/pizza.svg');
+}
+.pencil-icon {
+	background-image: url('/ui/system/icons/gray/pencil.svg');
+}
+.item-info-btn select.pencil-icon {
+	background-image: url('/ui/system/icons/gray/pencil.svg');
+}
+.package-icon {
+	background-image: url('/ui/system/icons/white/package.svg');
+}
+.item-detail-label.package-icon {
+	background-image: url('/ui/system/icons/gray/package.svg');
+}
+.food-icon {
+	background-image: url('/ui/system/icons/white/salad.svg');
+}
+.attachments-icon {
+	background-image: url('/ui/system/icons/white/vegetable.svg');
+}
+.drinks-icon {
+	background-image: url('/ui/system/icons/white/vegetable.svg');
+}
+.burger-icon {
+	background-image: url('/ui/system/icons/white/burger.svg');
+}
+.gnocchi-icon {
+	background-image: url('/ui/system/icons/white/burger.svg');
+}
+.meat-icon {
+	background-image: url('/ui/system/icons/white/burger.svg');
+}
+.email-icon {
+	background-image: url('/ui/system/icons/white/email.svg');
+}
+input.email-icon {
+	background-image: url('/ui/system/icons/gray/email.svg');
+}
+input.customer-icon {
+	background-image: url('/ui/system/icons/white/customer.svg');
+}
+.mobile-icon {
+	background-image: url('/ui/system/icons/white/mobile.svg');
+}
+input.mobile-icon {
+	background-image: url('/ui/system/icons/gray/mobile.svg');
+}
+.delivery-icon-factory {
+	background-image: url('/ui/system/icons/gray/pointer.svg');
+}
+.delivery-icon-address {
+	background-image: url('/ui/system/icons/gray/transport.svg');
+}
+.delivery-icon-address_gift {
+	background-image: url('/ui/system/icons/gray/gift.svg');
+}
+.gift-icon {
+	background-image: url('/ui/system/icons/white/gift.svg');
+}
+.card-icon {
+	background-image: url('/ui/system/icons/white/credit_card.svg');
+}
+.points-icon {
+	background-image: url('/ui/system/icons/white/points.svg');
+}
+/*.cash-icon {
+	background-image: url('/ui/system/icons/white/cash.svg');
+}*/
+.payment-icon-card {
+	background-image: url('/ui/system/icons/gray/credit_card.svg');
+}
+.payment-icon-cash {
+	background-image: url('/ui/system/icons/gray/cash.svg');
+}
+.payment-icon-bonus_points {
+	background-image: url('/ui/system/icons/gray/points.svg');
+}
+.payment-icon-gate {
+	background-image: url('/ui/system/icons/gray/credit_card.svg');
+}
+.payment-icon-cash_factory {
+	background-image: url('/ui/system/icons/gray/cash.svg');
+}
+.orders-icon {
+	background-image: url('/ui/system/icons/gray/orders.svg');
+}
+.weight-icon {
+	background-image: url('/ui/system/icons/white/weight.svg');
+}
+.item-detail-label.weight-icon {
+	background-image: url('/ui/system/icons/gray/weight.svg');
+}
+.info-icon {
+	background-image: url('/ui/system/icons/white/information.svg');
+}
+.item-detail-label.info-icon {
+	background-image: url('/ui/system/icons/gray/information.svg');
+}
+.plus-icon, .change-btn.arrow-up-icon, .change-btn.arrow-up, .extend-qantity-btn.arrow-up-icon {
+	background-image: url('/ui/system/icons/green/plus.svg');
+}
+.recomend-product-icon.plus-icon {
+	background-image: url('/ui/system/icons/white/plus.svg');
+}
+.minus-icon, .change-btn.arrow-down-icon, .change-btn.arrow-down, .extend-qantity-btn.arrow-down-icon {
+	background-image: url('/ui/system/icons/red/minus.svg');
+}
+.fire-icon {
+	background-image: url('/ui/system/icons/gray/fire.svg');
+}
+.new-title.fire-icon {
+	background-image: url('/ui/system/icons/red/fire.svg');
+}
+.news-title.fire-icon {
+	background-image: url('/ui/system/icons/red/fire.svg');
+}
+.notf-success {
+	color: #4BB75A;
+}
+.notf-info, .notf-inform {
+	color: #4F4F4F;
+}
+.notf-wrong {
+	color: #B84C4C;
+}
+.cheese-icon {
+	background-image: url('/ui/system/icons/white/cheese.svg');
+}
+.item-type-z-lasky, .item-type-pro-radost, .item-type-gratulacni, .item-type-k-narozeninam-a-svatku, .item-type-klobasove, .item-type-darky-ke-kvetine, .item-type-cervene-ruze, .item-type-nejprodavanejsi {
+	background-image: url('/ui/system/icons/red/flower_ikvet.svg');
+}
+.multiapp-icon {
+    background-image: url(/ui/system/icons/gray/pointer.svg);
+}
+.multiapp_flag_food_distribution {
+	background-image: url('/ui/system/icons/white/food_distribution.svg');
+}
+.multiapp_flag_restaurant {
+	background-image: url('/ui/system/icons/white/restaurant.svg');
+}
+.multiapp_flag_pizzery {
+	background-image: url('/ui/system/icons/white/pizzery.svg');
+}
+.multiapp_flag_daily_menu {
+	background-image: url('/ui/system/icons/white/daily_menu.svg');
+}
+.multiapp_flag_coffe_bar {
+	background-image: url('/ui/system/icons/white/coffe_bar.svg');
+}
+.multiapp_flag_night_club {
+	background-image: url('/ui/system/icons/white/night_club.svg');
+}
+.multiapp_flag_disco {
+	background-image: url('/ui/system/icons/white/disco.svg');
+}
+.multiapp_flag_accommodation {
+	background-image: url('/ui/system/icons/white/house.svg');
+}
+.multiapp_flag_saloon {
+	background-image: url('/ui/system/icons/white/saloon.svg');
+}
+.multiapp_flag_training {
+	background-image: url('/ui/system/icons/white/training.svg');
+}
+.multiapp_flag_wedding {
+	background-image: url('/ui/system/icons/white/wedding.svg');
+}
+.multiapp_flag_birthday {
+	background-image: url('/ui/system/icons/white/birthday.svg');
+}
+.multiapp_flag_bowling {
+	background-image: url('/ui/system/icons/white/bowling.svg');
+}
+.multiapp_flag_beer_pub {
+	background-image: url('/ui/system/icons/white/beer_pub.svg');
+}
+.multiapp_flag_casino {
+	background-image: url('/ui/system/icons/white/casino.svg');
+}
+.multiapp_flag_squash {
+	background-image: url('/ui/system/icons/white/squash.svg');
+}
+.multiapp_flag_tenis {
+	background-image: url('/ui/system/icons/white/tenis.svg');
+}
+.multiapp_flag_snooker {
+	background-image: url('/ui/system/icons/white/snooker.svg');
+}
+.multiapp_flag_billiard {
+	background-image: url('/ui/system/icons/white/snooker.svg');
+}
+.multiapp_flag_pool {
+	background-image: url('/ui/system/icons/white/pool.svg');
+}
+.reservation-icon-tables_form {
+	background-image: url('/ui/system/icons/gray/table.svg');
+}
+.reservation-icon-rooms_form {
+	background-image: url('/ui/system/icons/gray/calendar.svg');
+}
+.reservation-icon-bowling_form {
+	background-image: url('/ui/system/icons/gray/bowling.svg');
+}
+.terms-icon {
+	background-image: url('/ui/system/icons/gray/terms.svg');
+}
+.reservation-header-tables_form {
+	background-image: url(/ui/system/images/photos/app_reservation_table.jpg);
+}
+.reservation-header-rooms_form {
+	background-image: url(/ui/system/images/photos/app_reservation_hotel.jpg);
+}
+.reservation-header-bowling_form {
+	background-image: url(/ui/system/images/photos/app_reservation_bowling.jpg);
+}
+.reservation-header-squash_form {
+	background-image: url(/ui/system/images/photos/app_reservation_squash.jpg);
+}
+.bonus-points-icon {
+	background-image: url('/ui/system/icons/gray/wallet.svg');
+}
+.coupon-icon {
+	background-image: url('/ui/system/icons/gray/cupons.svg');
+}
+
+/* STATE */
+.cs-flag {
+	background-image: url('/ui/system/icons/flags/czech.svg');
+}
+.en-flag {
+	background-image: url('/ui/system/icons/flags/english.svg');
+}
+.de-flag {
+	background-image: url('/ui/system/icons/flags/germany.svg');
+}
+.us-flag {
+	background-image: url('/ui/system/icons/flags/english.svg');
+}
+
+/*ACCEPTED PAYMENT*/
+.mastercard-accepted-payment {
+	background-image: url('/ui/system/icons/white/mastercard-accepted-payment.png');
+}
+.visa-accepted-payment {
+	background-image: url('/ui/system/icons/white/visa-accepted-payment.png');
+}
+.gpwebpay-accepted-payment {
+	background-image: url('/ui/system/icons/white/gpwebpay-accepted-payment.png');
+}
+.maestro-accepted-payment {
+	background-image: url('/ui/system/icons/white/maestro-accepted-payment.png');
+}
+.b-payment-accepted-payment {
+	background-image: url('/ui/system/icons/white/b-payment-accepted-payment.png');
+}
+.gopay-accepted-payment {
+	background-image: url('/ui/system/icons/white/gopay-accepted-payment.png');
+}
+
+.ticket-restaurant-accepted-payment {
+	background-image: url('/ui/system/icons/white/ticket-restaurant-accepted-payment.png');
+}
+.nase-stravenka-accepted-payment {
+	background-image: url('/ui/system/icons/white/nase-stravenka-accepted-payment.png');
+}
+.edenred-accepted-payment {
+	background-image: url('/ui/system/icons/white/edenred-accepted-payment.png');
+}
+.sodexo-accepted-payment {
+	background-image: url('/ui/system/icons/white/sodexo-accepted-payment.png');
+}
+.up-accepted-payment, .edenred-accepted-payment {
+	background-image: url('/ui/system/icons/white/up-accepted-payment.png');
+}
+
+/**************************** ORDERS-ICONS ***************************************/
+.order-tracking-new .order-tracking-icon {
+	background-image: url(/ui/system/icons/gray/order_new.svg);
+}
+.order-tracking-new h3 {
+	color: #676767;
+}
+.order-tracking-cancelled .order-tracking-icon {
+	background-image: url(/ui/system/icons/red/order_cancelled.svg);
+}
+.order-tracking-cancelled h3 {
+	color: #B84C4C;
+}
+.order-tracking-confirmed .order-tracking-icon {
+	background-image: url(/ui/system/icons/green/order_confirmed.svg);
+}
+.order-tracking-confirmed h3, .order-tracking-delivered h3, .order-tracking-indelivery h3 {
+	color: #4BB75A;
+}
+.order-tracking-delivered .order-tracking-icon {
+	background-image: url(/ui/system/icons/green/order_delivered.svg);
+}
+.order-tracking-indelivery .order-tracking-icon {
+	background-image: url(/ui/system/icons/green/order_on_way.svg);
+}
+
+/************************************************************** ITEM *******************************************************/
+.product, .item {
+	background-color: #FFFFFF;
+}
+.product:hover, .item:hover {
+}
+.item-photo-content-bottom h4 {
+	color: #D9A239;
+	background-color: #FFFFFF;
+}
+.item-photo-content-bottom p {
+	color: #313030;
+	background-color: #FFFFFF;
+}
+.cart-items .item-photo-content-bottom h4 {
+	color: #FFFFFF;
+	background-color: transparent;
+	margin-left: 0;
+	padding-top: 0;
+}
+.item-photo-content::after, .bottom-panel::before, .cart-items .item-photo-content-bottom {
+    background: -webkit-linear-gradient(transparent 0%, rgba(0,0,0,0.2) 100%);
+    background: linear-gradient(transparent 0%, rgba(0,0,0,0.2) 100%);
+}
+.sticker-red {
+	background-color: rgba(184,76,76,0.8);
+	color: #FFFFFF;
+}
+.sticker-green {
+	background-color: rgba(75,183,90,0.8);
+	color: #FFFFFF;
+}
+.sticker-blue {
+	background-color: rgba(82,165,187,0.8);
+	color: #FFFFFF;
+}
+.sticker-yellow {
+	background-color: rgba(167,183,70,0.8);
+	color: #FFFFFF;
+}
+.sticker-timed {
+	color: #FFFFFF;
+}
+.sticker-custom {
+	color: #FFFFFF;
+}
+.item-info-btn {
+}
+.item-info-btn h4 {
+	color: #4BB75A;
+}
+.item-info-btn select {
+	background-color: transparent;
+	border: 1.5px solid #1D1D1D;
+}
+.review-star {
+	background-image: url('/ui/system/icons/gray/star.svg');
+}
+.review-star.active {
+	background-image: url('/ui/system/icons/green/star_active.svg');
+}
+.stars-write-review .review-stars-1, .stars-write-review .review-stars-2, .stars-write-review .review-stars-3, .stars-write-review .review-stars-4, .stars-write-review .review-stars-5 {
+	background-image: url('/ui/system/icons/gray/star.svg');
+}
+.stars-write-review .review-stars-1.active, .stars-write-review .review-stars-2.active, .stars-write-review .review-stars-3.active, .stars-write-review .review-stars-4.active, .stars-write-review .review-stars-5.active {
+	background-image: url('/ui/system/icons/green/star_active.svg');
+}
+.item-buy-btn {
+	border: 0.3vw solid #1D1D1D;
+}
+.home-list-view .item-buy-btn {
+	border: none;
+}
+.item-buy-btn.gradient-btn {
+	background-image: none;
+	background-color: transparent;
+}
+.item-buy-now {
+	background-color: #F3E92E;
+}
+.item-buy-now-icon {
+	background-image: url('/ui/system/icons/gray/cart.svg');
+}
+.item-taste-box {
+	border-top: 1px solid #EAEAEA;
+}
+.item-taste-box p {
+	color: #676767;
+}
+.js-toggle-list-view {
+	background-image: url('/ui/system/icons/gray/menu_list.svg');
+}
+.home-list-view .item-photo-content-bottom h4 {
+	color: #B84C4C;
+}
+.home-list-view .item-photo-content-bottom p {
+	color: #676767;
+}
+.calculator-icon {
+	background-image: url('/ui/system/icons/gray/calculator.svg');
+}
+.item-sale-date {
+	color: #FFFFFF;
+}
+.daily-menu-day {
+	background-color: #FFFFFF;
+	color: #EAEAEA;
+}
+
+/************************************************ ENHANCEMENT BOX **************************************************/
+.overlay-enhancement-box {
+	background-color: rgba(0,0,0,0.6);
+}
+.overlay-enhancement-content {
+	background-color: #FFFFFF;
+}
+.overlay-enhancement-box .cart-bottom-btns {
+	background-color: #FFFFFF;
+}
+.enhancement-header {
+	background-image: url('/ui/system/images/photos/enhancement_bg.jpg');
+	color: #F3E92E;
+}
+.overlay-enhancement-content .delete-btn, .delete-btn {
+	color: #FFFFFF;
+  cursor: pointer;
+}
+
+/******************************************************** ITEM - DETAIL *****************************************************/
+
+.product-detail {
+	background-color: #FFFFFF;
+}
+.item-detail-photo-content::after {
+    background: -webkit-linear-gradient(transparent 0%, rgba(0,0,0,0.3) 100%);
+    background: linear-gradient(transparent 0%, rgba(0,0,0,0.3) 100%);
+}
+.item-detail-photo-content h4 {
+	color: #FFFFFF;
+}
+button.favorite {
+	background-color: transparent;
+}
+.item-detail-desc-box {
+	border-top: 1px solid #EAEAEA;
+}
+.alergen-type {
+	border: 0.4vw solid #676767;
+}
+.add-cart-quantity {
+}
+input[type="button"].add-to-cart {
+	color: #FFFFFF;
+	background-color: #4BB75A;
+}
+input[type="button"].add-to-cart-unavailable {
+	color: #FFFFFF;
+	background-color: #676767;
+}
+.social-btn {
+}
+
+/**************************************************** ITEM - RESERVATION ************************************************/
+.reservation-hashtag-box span {
+	background-color: #D9A239;
+	color: #FFFFFF;
+}
+.reservation-cal-days-column {
+	border-right: 1px solid #EAEAEA;
+}
+.reservation-free {
+	background-color: #EAEAEA;
+}
+.reservation-denied {
+	background-color: #B84C4C;
+	color: #FFFFFF;
+}
+.reservation-selected {
+	color: #FFFFFF;
+}
+
+.reservation-header-tables_form::before, .reservation-header-rooms_form::before, .reservation-header-bowling_form::before, .reservation-header-squash_form::before {
+	background: -webkit-linear-gradient(rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.9) 100%);
+    background: linear-gradient(rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.9) 100%);
+}
+
+
+/********************************************************* BOTTOM PANEL ******************************************************/
+
+.bottom-panel {
+	background-color: rgba(255,255,255,0.9);
+}
+.bottom-btn h4 {
+	color: #D9A239;
+}
+.bottom-btn-cart {
+	background-color: #FFFFFF;
+	background-image: url('/ui/system/icons/red/cart_line.svg');
+}
+.bottom-btn-cart.empty {
+	background-image: url('/ui/system/icons/gray/cart_line.svg');
+}
+.bottom-btn-cart h4 {
+	color: #D9A239;
+}
+.bottom-btn-cart.empty h4 {
+	color: #676767;
+}
+.favorite-food {
+	background-image: url('/ui/system/icons/gray/heart.svg');
+}
+.favorite-food:hover {
+	background-image: url('/ui/system/icons/gray/heart_active.svg');
+}
+.last-orders {
+	background-image: url('/ui/system/icons/gray/last_orders.svg');
+}
+.account {
+	background-image: url('/ui/system/icons/gray/user.svg');
+}
+.points {
+}
+
+/************************************************************ LOGIN ********************************************************/
+
+.login-wrapper::after {
+	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 1) 100%);
+	background-image: linear-gradient(rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 1) 100%);
+}
+.login-image {
+	background-image: url('/ui/system/images/photos/login_screen.jpg');
+}
+.account-image {
+	background-image: url('/ui/system/images/photos/account_screen.jpg');
+}
+
+/************************************************************ MAP ********************************************************/
+
+.map-info-box {
+	background-color: #EAEAEA;
+}
+.map-content-title {
+    background: -webkit-linear-gradient(transparent 0%, rgba(0,0,0,0.5) 100%);
+    background: linear-gradient(transparent 0%, rgba(0,0,0,0.5) 100%);
+}
+.map-content-title h4 {
+	color: #FFFFFF;
+}
+.map-bottom-panel {
+	background-color: #FFFFFF;
+}
+.map-bottom-panel input[type="submit"] {
+	color: #FFFFFF;
+}
+
+/************************************************************ KONTAKT ********************************************************/
+
+.call-button-content {
+}
+.call-button {
+	color: #FFFFFF;
+}
+.open-hours-box h4, .contact-form-container h4 {
+	color: #D9A239;
+}
+.open-hours-box {
+	border-top: 1px solid #EAEAEA;
+	border-bottom: 1px solid #EAEAEA;
+}
+.open-hours-content {
+	border-top: 1px solid #EAEAEA;
+	background-color: #FFFFFF;
+}
+.open-hours-D {
+	border-right: 1px solid #EAEAEA;
+}
+.contact-form-content  {
+	background-color: #FFFFFF;
+}
+.contact-form-content textarea {
+	background-color: transparent;
+}
+.contact-form-content input[type="submit"] {
+	color: #FFFFFF;
+}
+.contact-form-content input[type="text"], .contact-form-content input[type="password"], .contact-form-content input[type="number"], .contact-form-content input[type="email"], .contact-form-content input[type="tel"] {
+	background-color: transparent;
+}
+#legend {
+	background: rgba(255,255,255,0.8);
+}
+
+/************************************************************* GALLERY *******************************************************/
+
+.gallery-content::after {
+    background: -webkit-linear-gradient(transparent 0%, rgba(0,0,0,0.5) 100%);
+    background: linear-gradient(transparent 0%, rgba(0,0,0,0.5) 100%);
+}
+.gallery-date {
+	color: #FFFFFF;
+}
+.gallery-bottom-content {
+	color: #FFFFFF;
+}
+.gallery-bottom-content h4 {
+	
+}
+.gallery-photo-detail::after {
+    background: -webkit-linear-gradient(transparent 0%, rgba(0,0,0,0.5) 100%);
+    background: linear-gradient(transparent 0%, rgba(0,0,0,0.5) 100%);
+}
+.gallery-name-title {
+	color: #FFFFFF;
+}
+
+/**************************************************************** ACCOUNT **********************************************************/
+
+.account-info-circle {
+	border: 1vw solid #FFFFFF;
+	color: #FFFFFF;
+}
+.account-form-box [type="submit"] {
+	color: #FFFFFF;
+}
+
+/**************************************************************** NEWS **********************************************************/
+
+.new-content {
+	background-color: rgba(255,255,255,0.9);
+}
+a.new-content {
+	color: #676767;
+}
+.new-title {
+	color: #D9A239;
+}
+.news-content {
+	color: #676767;
+}
+.news-content:nth-child(even) {
+	background-color: rgba(0,0,0,0.1);
+}
+.news-title {
+	color: #D9A239;
+}
+
+/************************************************************ NOTIFICATION ********************************************************/
+
+.notification-box, .order-tracking-box {
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+	background-color: rgba(255,255,255,0.9);
+}
+.appStatusMessage, .appDeliveryTimeMessage {
+	background-color: rgba(184,76,76,0.9);
+}
+.appStatusMessage span, .appDeliveryTimeMessage span {
+	color: #FFFFFF;
+}
+
+/************************************************************ CART ********************************************************/
+
+.cart-sum {
+	background-color: #FFFFFF;
+}
+.cart-bonus .cart-col-name, .cart-bonus .cart-col-value, .js-cart-bonus .cart-col-name, .js-cart-bonus .cart-col-value {
+	color: #4BB75A;
+}
+.cart-bottom-btns {
+	border-top: 1px solid #EAEAEA;
+	border-bottom: 1px solid #EAEAEA;
+}
+.cart-back-btn a {
+	color: #4F4F4F;
+}
+.cart-pay-btn a {
+	color: #FFFFFF;
+	background-color: #4BB75A;
+}
+.extended-menu-taste {
+}
+.extended-price {
+	/*color: #4BB75A;*/
+}
+.product-delete-btn {
+}
+.cart-inform-column h4, .cart-inform-column p {
+	color: #676767;
+}
+.extended-menu-taste {
+	border-top: 1px solid #EAEAEA;
+	border-bottom: 1px solid #EAEAEA;
+}
+.extended-menu-taste .ingredient-type-button.active {
+	background-color: #EAEAEA;
+}
+.ing-plus {
+	color: #4BB75A;
+}
+.ing-minus {
+	color: #B84C4C;
+}
+.js-cart-action-container button {
+	color: #FFFFFF;
+}
+.address-error-box {
+	color: #FFFFFF;
+	background-color: #B84C4C;
+}
+.bonus-points-controller {
+	background-color: #FFFFFF;
+}
+.bonus-points-value {
+	color: #4BB75A;
+}
+.package-item-cart {
+	background-image: url('/ui/system/icons/gray/package.svg');
+}
+.online-payment-content a {
+  background-color: #51B84B;
+  color: #FFFFFF;
+}
+.cart-extras-info.info {
+  border: 1px solid #52A5BB;
+  color: #52A5BB;
+}
+.cart-extras-info.bonus {
+  border: 1px solid #51B84B;
+  color: #51B84B;
+}
+.cart-extras-info.warning {
+  border: 1px solid #B84C4C;
+  color: #B84C4C;
+}
+
+/************************ CUPONS ********************************/
+.actions-container .cart-price-column.coupon-cart {
+	background-image: url('/ui/system/icons/gray/cupons.svg');
+}
+.actions-container .cart-price-column.cart-bonus {
+	background-image: url('/ui/system/icons/gray/star.svg');
+}
+.actions-container .cart-price-column.coupon-cart, .actions-container .cart-price-column.cart-bonus {
+	background-color: #F7FFD4;
+	border-top: 1px solid rgba(0,0,0,0.1);
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.actions-container .cart-bonus .cart-col-name, .actions-container .cart-bonus .cart-col-value {
+    color: #676767;
+}
+.set-coupon-btn, input[type="submit"].set-coupon-btn, input[type="button"].set-coupon-btn, button.set-coupon-btn {
+	background-color: #4BB75A;
+	color: #FFFFFF;
+}
+.coupon-delete-btn {
+	background-color: #B84C4C;
+	background-image: url("/ui/system/icons/white/delete.svg");
+}
+
+/*********************** WHISPERER **********************************/
+.ui-autocomplete {
+	background-color: #FFFFFF;
+	border-color: #CCCCCC;
+	border-color: rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.ui-state-hover,
+.ui-state-active {
+	background-color: rgba(0,0,0,0.1);
+}
+
+/******************************************************** TRANSPORT&PAY ****************************************************/
+
+.select-content-box {
+	background-color: #FFFFFF;
+}
+.select-content:nth-child(even) {
+	background-color: rgba(0,0,0,0.1);
+}
+.configurator-layout .select-content:nth-child(even) {
+	background-color: rgba(0,0,0,0.0);
+}
+.configurator-item-price {
+	background-color: #FFFFFF;
+}
+.configurator-item-price span {
+    color: #4BB75A;
+}
+.select-btn-img {
+	background-image: url('/ui/system/icons/white/plus.svg');
+}
+.configurator-contain-ingredients {
+	border-bottom: 1px solid #EAEAEA;
+}
+
+/************************************************************ REVIEWS ********************************************************/
+
+.review-content-reply {
+}
+.review-content-reply {
+	color: #FFFFFF;
+}
+.review-content {
+	background-color: #FFFFFF;
+}
+.review-user-img {
+	border: 2vw solid #EAEAEA;
+}
+
+/************************************************************ Orders history *************************************************/
+
+.order-his-column {
+	border: 1px solid #EAEAEA;
+}
+.order-his-top {
+}
+.order-his-date {
+	border-right: 0.3vw solid #EAEAEA;
+	border-bottom: 0.3vw solid #EAEAEA;
+}
+.order-his-status {
+	border-bottom: 0.3vw solid #EAEAEA;
+}
+.order-success {
+	color: #4BB75A;
+}
+.order-pending {
+	color: #919191;
+}
+.order-reject {
+	color: #B84C4C;
+}
+.order-his-adress {
+	background-image: url('/ui/system/img/icons/gray/pointer.svg');
+}
+.order-his-product:nth-child(even) {
+	background-color: rgba(0, 0, 0, 0.10);
+}
+.order-price {
+	color: #4BB75A;
+}
+.order-extended {
+	color: #4BB75A;
+}
+.order-his-bottom {
+	border-top: 0.3vw solid #EAEAEA;
+}
+.order-his-price h4 {
+	color: #4BB75A;
+}
+.order-his-btn button {
+	background-color: transparent;
+}
+
+/******************************************************* RECOMENDED PRODUCTS *****************************************************/
+	
+.cart-recomend-box {
+	background-color: #FFFFFF;
+}
+.recomend-product::after {
+	background: -webkit-linear-gradient(rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.3) 100%);
+    background: linear-gradient(rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.3) 100%);
+}
+.recomend-product-desc {
+	color: #FFFFFF;
+}
+
+/******************************************************* FILTER BOX *****************************************************/
+
+button.filter-products-btn {
+	color: #BABABA;
+	border: 1.5px solid #BABABA;
+}
+.filter-products-btn.gradient-btn {
+	background-color: transparent;
+	background: transparent;
+}
+.filter-products-content {
+	border-bottom: 1.5px solid #BABABA;
+	border-top: none;
+	border-left: 1.5px solid #BABABA;
+	border-right: 1.5px solid #BABABA;
+}
+input[type="text"].search-filter-input {
+	background-color: transparent;
+}
+.search-box {
+	background-color: rgba(0,0,0,0.04);
+}
+
+/******************************************************* CHECKBOX - FILTER *****************************************************/
+
+.filter-checkbox span {
+}
+.filter-checkbox {
+	border-bottom: 1px solid #676767;
+}
+.toggle .toggle-control {
+	border: 2px solid #8E8E93;
+	background-color: rgba(0, 0, 0, 0.06);
+}
+.toggle .toggle-control:after {
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 3px 2px rgba(0, 0, 0, 0.1);
+}
+.toggle input:checked + .toggle-control {
+	background-image: url('/ui/system/icons/white/correct.svg');
+    border-color: #D9A239;
+    background-color: #D9A239; 
+}
+
+/*******************************************************   ALERGENS    **********************************************************/
+
+.alergen-content:nth-child(even) {
+	background-color: rgba(0,0,0,0.05);
+}
+.alergen-content h1 {
+	color: #D9A239;
+	border: 0.5vw solid #D9A239;
+}
+.alergen-content h3 {
+	color: #D9A239;
+}
+.alergen-content p {
+}
+
+/**************************************************   NO - FILL    ******************************************************/
+
+.no-favorite-icon {
+	background-image: url('/ui/system/images/photos/no_favorite.png');
+}
+.no-cart-icon {
+	background-image: url('/ui/system/images/photos/no_cart.png');
+}
+.no-orders-icon {
+	background-image: url('/ui/system/images/photos/no_history.png');
+}
+.gallery-empty-msg {
+	background-image: url('/ui/system/images/photos/no_photos.png');
+}
+.no-news-icon {
+	background-image: url('/ui/system/images/photos/no_news.png');
+}
+
+/*******************************************************   TUTORIAL    **********************************************************/
+
+.data-tutorial-priority-5 .item-info-panel, .data-tutorial-priority-5 .add-cart-column {
+}
+.tutorial-body .item-buy-btn {
+	background-color: #4BB75A;
+	border: none;
+}
+.tutorial-body .item-buy-btn-icon {
+	background-image: url('/ui/system/icons/white/arrow_right.svg');
+}
+.tutorial-body .item-info-btn select {
+	border: 1.5px solid #FFFFFF;
+}
+.tutorial-body .add-cart-column {
+	background-color: #FFFFFF;
+}
+.tutorial-body .all-icon {
+	background-image: url('/ui/system/icons/gray/food_all.svg');
+}
+.tutorial-body .meat-icon {
+	background-image: url('/ui/system/icons/gray/burger.svg');
+}
+.tutorial-body .vegetable-icon {
+	background-image: url('/ui/system/icons/gray/vegetable.svg');
+}
+.tutorial-body .fruit-icon {
+	background-image: url('/ui/system/icons/gray/fruits.svg');
+}
+.tutorial-body .other-icon {
+	background-image: url('/ui/system/icons/gray/attachments.svg');
+}
+.tutorial-body input, .tutorial-body textarea, .tutorial-body select {
+	color: #FFFFFF;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/************************************************   MultiAPP    **********************************************************/
+.multiapp-box {
+	background-color: rgba(0,0,0,0.9);
+}
+a.multiapp-href span {
+	color: #FFFFFF;
+}
+.multiapp-description {
+	color: #FFFFFF;
+}
+
+/********************************************** ITEM SHARE ******************************************/
+.item-bg-image:after {
+	background: -webkit-linear-gradient(rgba(255,255,255,0.3) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(rgba(255,255,255,0.3) 0%, rgba(255,255,255,1) 100%);
+}
+.item-social {
+	background-color: #FFFFFF;
+	-webkit-box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.1);
+}
+.item-social .item-info-panel {
+	border-top: 1px solid #EAEAEA;
+	border-bottom: 1px solid #EAEAEA;
+}
+a.item-eshop-btn {
+	color: #FFFFFF;
+	background-color: #4BB75A;
+}
+
+/************************ CONTENT - COOKIES - BOX ************************/
+.edit-cookies-btn {
+	color: #fff;
+}
+#cc-main .pm__btn {
+	--cc-btn-primary-bg: linear-gradient(to top right, #F56E68, #DBA43B);
+	--cc-btn-primary-hover-bg: linear-gradient(to top right, #F56E68, #DBA43B);
+	--cc-btn-secondary-bg: linear-gradient(to top right, #F56E68, #DBA43B);
+	--cc-btn-secondary-hover-bg: linear-gradient(to top right, #F56E68, #DBA43B);
+}
+#cc-main .section__toggle:checked~.toggle__icon,
+#cc-main .section__toggle:checked:disabled~.toggle__icon {
+	--cc-toggle-readonly-bg: #D9A239;
+	--cc-toggle-on-bg: #D9A239;
+}
+
+/******************************************* LANGUAGE MODULE ************************************/
+.dropdown-content {
+	background-color: rgba(0,0,0,0.3);
+  	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content a {
+    color: #FFFFFF;
+}
+.lang-dropdown a:hover {
+	background-color: #DBA43B;
+}
+.dropbtn {
+	color: #FFFFFF;
+}
+.goog-te-gadget .goog-te-combo {
+	background-image: url("/ui/system/icons/gray/arrow_bottom.svg");
+	background-color: rgba(255,255,255,0.9);
+}
+.goog-te-gadget option {
+	background-color: rgba(184,76,76,1);
+	color: #FFFFFF;
+}
+
+/******************************* CONFIGURATOR **********************************/
+
+.overlay-enhancement-box.configurator-layout .overlay-enhancement-content {
+	border-right: 1px solid #EAEAEA;
+}
+.configurator-enhancement-content {
+	background-color: #FFFFFF;
+}
+.contain-ingredient {
+	background-color: rgba(255,255,255,0.90);
+}
+.contain-ingredient-delete-btn {
+	background-image: url('/ui/system/icons/red/delete.svg');
+}
+.configurator-render-box {
+	background-color: #FFFFFF;
+}
+
+/********************************************** RESPONZIVE PC ******************************************/
+
+@media only screen and (min-width: 1081px) {
+	
+/*********ICONS*********/
+	
+.orders-icon {
+	background-image: url('/ui/system/icons/white/orders.svg');
+}
+.favorite-food {
+	background-image: url('/ui/system/icons/white/heart.svg');
+}
+.favorite-food:hover {
+	background-image: url('/ui/system/icons/white/heart.svg');
+}
+.bottom-btn-cart.empty {
+	background-image: url('/ui/system/icons/white/cart_line.svg');
+}
+.customer-icon {
+	background-image: url('/ui/system/icons/white/customer.svg');
+}
+	
+/******** END ********/
+	
+.bottom-btn-cart.empty h4 {
+	color: #FFFFFF;
+}
+.points, .points h4 {
+	color: #FFFFFF;
+}
+a {
+	color: #D9A239;
+}
+a.btn-href {
+	color: #FFFFFF;
+}
+input[type="submit"] {
+	color: #FFFFFF;
+}
+.menu-logo {
+}
+button.toppanel-btn {
+	background-color: transparent;
+}
+li.menu-btn:hover {
+	background-color: rgba(0,0,0,0.1);
+}
+.swiper-pagination-bullet {
+	border: 2px solid #1D1D1D;
+}
+.swiper-pagination-bullet-active {
+}
+.swiper-pagination-bullet:hover {
+}
+button.menu-hide-btn {
+	background-image: url('/ui/system/icons/white/delete.svg');
+}
+.item-buy-btn {
+	border: 1.5px solid #1D1D1D;
+}
+.item-buy-now {
+	border: 1.5px solid #F3E92E;
+}
+
+	
+/************************************************ ICONS ************************************/
+	
+.reservation-header-tables_form {
+	background-image: url(/ui/system/images/photos/pc_reservation_table.jpg);
+}
+.reservation-header-room_form {
+	background-image: url(/ui/system/images/photos/pc_reservation_hotel.jpg);
+}
+.reservation-header-bowling_form {
+	background-image: url(/ui/system/images/photos/pc_reservation_bowling.jpg);
+}
+.reservation-header-squash_form {
+	background-image: url(/ui/system/images/photos/pc_reservation_squash.jpg);
+}
+	
+/************************************************************* BOTTOM-line *************************************************/
+	
+.bottom-panel {
+	background-color: transparent;
+}
+.bottom-btn-cart {
+	background-color: transparent;
+	background-image: url('/ui/system/icons/yellow/cart_line.svg');
+}
+.bottom-btn-cart h4 {
+	color: #F3E92E;
+}
+	
+	
+li.menu-btn {
+	border-left: 0vw solid #212121;
+}
+.menu-btn.selected {
+	border-left: 0vw solid #D28D3A;
+	background-color: rgba(0,0,0,0.1);
+}
+.menu-btn.account {
+}
+.extended-menu {
+	background-color: transparent;
+}
+.food-type-button {
+	border: 1px solid #1D1D1D;
+}
+.food-type-button:hover {
+}
+.food-type-button::after {
+	border-right: 1px solid #EAEAEA;
+	border-bottom: 1px solid #EAEAEA;
+}
+li.banner-point {
+	border: 2px solid #FFFFFF;
+}
+.product-detail {
+	background-color: transparent;
+}
+.item-info-panel {
+}
+.item-detail-photo-content::after {
+    background: -webkit-linear-gradient(rgba(0,0,0,0.0) 0%, rgba(0,0,0,0) 50%);
+    background: linear-gradient(rgba(0,0,0,0.0) 0%, rgba(0,0,0,0) 50%);
+}
+.alergen-type {
+	border: 2px solid #676767;
+}
+.account-info-circle {
+	border: 5px solid #FFFFFF;
+	color: #FFFFFF;
+}
+.gallery-photo-detail::after {
+    background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+    background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+}	
+.cart-bottom-btns {
+	border-top: 1px solid #EAEAEA;
+}
+.extended-menu-taste {
+	border-top: 1px solid #EAEAEA;
+}
+
+/***************************************************************** NEWS *****************************************************/
+
+.new-box {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.news-content {
+	background-color: #FFFFFF;
+}
+
+/***************************************************************** CONTACT *****************************************************/
+	
+.contact-form-content textarea {
+}
+
+/************************************************************* ITEM-DETAIL ***************************************/
+.item-detail-box .item-info-panel {
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #EAEAEA;
+}
+.item-detail-box .item-info-btn {
+}
+.item-detail-box .item-detail-photo-content h4 {
+	color: #D9A239;
+}
+button.favorite {
+}
+.item-detail-desc-box {
+	border-top: none;
+}
+.add-cart-column {
+	background-color: #FFFFFF;
+}
+.item-detail-box .add-cart-column {
+	background-color: transparent;
+}
+.add-cart-quantity {
+}
+.social-box {
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #EAEAEA;
+}
+.social-btn {
+}
+.review-content-reply {
+}
+.review-content-reply {
+	color: #FFFFFF;
+}
+.review-content {
+	background-color: #FFFFFF;
+}
+.review-user-img {
+	border: 5px solid #EAEAEA;
+}
+
+/***************************************************************** GALLERY *****************************************************/
+	
+.gallery-content::before {
+	background-color: rgba(0,0,0,0.2);
+	background-image: url('/ui/system/icons/white/photo.svg');
+}
+	
+/************************************************************ TRANSPORT&PAY ******************************************/
+
+.select-price {
+	color: #4BB75A;
+}
+	
+/********************************************************** Orders history **************************************/
+
+.order-his-column {
+	background-color: none;
+	border: none;
+	color: #FFFFFF;
+}
+.order-his-date {
+	border: none;
+}
+.order-his-status {
+	border: none;
+}
+.order-success {
+	color: #4BB75A;
+}
+.order-pending {
+	color: #919191;
+}
+.order-reject {
+	color: #B84C4C;
+}
+.order-his-adress {
+	background-image: url('/ui/system/icons/white/pointer.svg');
+}
+.order-price {
+	color: #4BB75A;
+}
+.order-extended {
+	color: #4BB75A;
+}
+.order-his-bottom {
+	border: none;
+}
+.order-his-price h4 {
+	color: #F3E92E;
+}
+.order-his-btn button {
+	background-color: transparent;
+}
+
+/********************************************************** CART ********************************************************/
+	
+.cart-inform-column {
+}
+.cart-items .item-info-panel {
+	border: none;
+}
+.cart-items .item-photo-content-bottom h4 {
+	color: #D9A239;
+}
+.cart-items .item-photo-content-bottom {
+    background: none;
+}
+
+/*******************************************************   ALERGENS    **********************************************************/
+
+.alergen-content h1 {
+	border: 2px solid #D9A239;
+}
+
+/*******************************************************   MAP    **********************************************************/
+	
+.map-bottom-panel {
+	border-right: 1px solid #EAEAEA;
+}
+	
+/********************************************** ITEM SHARE ******************************************/
+.item-bg-image:after {
+	background: -webkit-linear-gradient(rgba(255,255,255,0.3) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(rgba(255,255,255,0.3) 0%, rgba(255,255,255,1) 100%);
+}
+.item-social {
+	background-color: #FFFFFF;
+	-webkit-box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.1);
+}
+.item-social .item-info-panel {
+	border-top: 1px solid #EAEAEA;
+	border-bottom: 1px solid #EAEAEA;
+}
+a.item-eshop-btn {
+	color: #FFFFFF;
+	background-color: #4BB75A;
+}
+	
+/******************************************* FOOTER???? OLD KING FIX *******************************/
+.footer-center-column a {
+	color: #FFFFFF;
+	transition: 0.3s;
+}
+.footer-center-column a:hover {
+	color: #F3E92E;
+	transition: 0.3s;
+}
+.footer-author a {
+    color: #FFFFFF;
+  }
+	
+/****************************************** SOCIAL LINKS *************************************/
+.social-icon-fb {
+	background-image: url(/ui/system/icons/white/facebook.svg);
+}
+.social-icon-instagram {
+	background-image: url(/ui/system/icons/white/instagram.svg);
+}
+.social-icon-twitter {
+	background-image: url(/ui/system/icons/white/twitter.svg);
+}
+.social-icon-google_companies {
+	background-image: url(/ui/system/icons/white/google_companies.svg);
+}
+.social-icon-seznam_firmy {
+	background-image: url(/ui/system/icons/white/seznam_firmy.svg);
+}
+	
+/******************************************* LANGUAGE MODULE ************************************/
+.goog-te-gadget .goog-te-combo {
+	background-color: transparent;
+}
+.goog-te-gadget .goog-te-combo {
+	background-image: url("/ui/system/icons/white/arrow_bottom.svg");
+	color: #FFFFFF;
+}
+	
+/********************************************** FOOTER ******************************************/
+.footer-33-col {
+	color: #FFFFFF;
+}
+.footer-info-btn {
+	color: #FFFFFF;
+}
+.appstore {
+    background-image: url('/ui/system/icons/white/app_store.png');
+}
+.googleplay {
+    background-image: url('/ui/system/icons/white/google_play.png');
+}
+.footer-select-factory-icon {
+	background-image: url(/ui/system/icons/white/arrow_right.svg);
+}
+.footer-select-factory {
+	color: #FFFFFF;
+    border: 1.5px solid #FFFFFF;
+}
+footer .open-hours-content {
+   	border-top: 0px solid #EAEAEA;
+    background-color: transparent;
+}
+footer .open-hours-D {
+    border-right: 0px solid #EAEAEA;
+}
+	
+}
+
+/******************** Timed Orders ******************/
+.timed-order-wrapper {
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 2px 0px rgb(0 0 0 / 30%);
+}
+.timed-order-wrapper .day-select-row .day {
+  color: #313030;
+}
+.timed-order-wrapper .day-select-row .day:hover {
+  background-color: #EAEAEA;
+}
+
+.timed-order-wrapper .day-select-row .day.active {
+  color: #FFFFFF;
+  background-color: #D3A245;
+}
+.timed-order-wrapper .time-select-container .time-select {
+  border: 1px solid #313030;
+}
+.timed-order-wrapper .time-select-container .time-select.disabled {
+  border-color: #999999;
+}
+.timed-order-wrapper .time-select-container .time-select.eco {
+  color: #85BB36;
+  border-color: #85BB36;
+  background-image: url("/ui/system/icons/green/eco.png");
+}
+.timed-order-wrapper .time-select-container .time-select.eco:hover,
+.timed-order-wrapper .time-select-container .time-select.eco.active {
+  background-image: url("/ui/system/icons/white/eco.png");
+}
+.timed-order-wrapper .time-select-container .time-select.active,
+.timed-order-wrapper .time-select-container .time-select:hover {
+  background-color: #85BB36;
+  border-color: #85BB36;
+  box-shadow: 0px 0px 2px 0px #85BB36;
+  color: #FFFFFF;
+}
+.timed-order-wrapper .eco-message {
+  background-image: url("/ui/system/icons/green/eco.png");
+}

@@ -1,0 +1,143 @@
+/* TOP_PANEL */
+.toppanel {
+  position: fixed;
+  z-index: 101;
+  display: grid;
+  grid-template-areas:
+    "translator-box translator-box translator-box"
+    "logo multiapp menu";
+  grid-template-columns: 1fr auto auto;
+  grid-template-rows: 2.5rem 3.5rem;
+  top: 0;
+  width: 100%;
+  max-width: $xl3;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-brand-500);
+  align-content: center;
+  transition: 0.4s ease;
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: -200%;
+    width: 300vw;
+    height: 100%;
+    background-color: var(--color-brand-500);
+    z-index: -1;
+  }
+
+  &.mini-menu {
+    grid-template-rows: 0 3.5rem;
+  }
+
+  .multiapp-back {
+    grid-area: multiapp;
+    background-image: var(--icon-pointer-white);
+    background-position: center;
+    background-size: 50%;
+    width: 3.75rem;
+    height: 100%;
+    cursor: pointer;
+    margin: 0 .125rem 0 auto;
+  }
+
+  .toppanel-btn {
+    grid-area: menu;
+    background-image: var(--icon-menu_list-white);
+    background-position: center;
+    background-size: 50%;
+    width: 3.75rem;
+    height: 100%;
+  }
+
+  .translator-box {
+    grid-area: translator-box;
+    background-color: var(--color-brand-600);
+    overflow: hidden;
+  }
+
+  .goog-te-gadget {
+    color: transparent;
+    user-select: none;
+  }
+
+  .goog-te-gadget>span {
+    display: none;
+  }
+
+  .goog-te-gadget select.goog-te-combo {
+    height: 2.5rem;
+    width: 100%;
+    display: block;
+    background-color: transparent;
+    color: var(--color-black);
+    outline: none;
+    border: none;
+  }
+
+  >a {
+    grid-area: logo;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: .625rem;
+  }
+
+  >a>img {
+    cursor: pointer;
+    display: block;
+    object-fit: contain;
+    max-height: 90%;
+  }
+
+  @include media-sm() {
+    grid-template-areas:
+      "multiapp logo translator-box menu";
+    grid-template-columns: auto auto 1fr auto;
+    grid-template-rows: 5rem;
+    height: 5rem;
+    padding: 0 1rem;
+
+    &.mini-menu {
+      grid-template-rows: 5rem;
+    }
+
+    .multiapp-back {
+      margin: 0 0.5rem 0 0;
+      width: 4rem;
+    }
+
+    .toppanel-btn {
+      width: 4rem;
+    }
+
+    .translator-box {
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+    }
+
+    .goog-te-gadget {
+      display: flex;
+      align-items: center;
+    }
+
+    .goog-te-gadget select.goog-te-combo {
+      height: 2.5rem;
+      width: auto;
+      display: block;
+      background-color: transparent;
+      color: var(--color-black);
+      outline: none;
+      margin-left: 0.5rem;
+    }
+  }
+
+  @include media-lg() {
+    .toppanel-btn {
+      margin: 0 7rem 0 0;
+    }
+  }
+}

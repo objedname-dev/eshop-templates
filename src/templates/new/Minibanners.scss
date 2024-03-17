@@ -1,0 +1,17 @@
+.mini-banners-box {
+    margin: 0 auto;
+    max-width: $xl3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .minibanner {
+        width: 100%;
+    }
+
+    @include media-md() {
+        .minibanner {
+            width: 25%;
+        }
+    }
+}

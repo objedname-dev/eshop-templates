@@ -1,0 +1,179 @@
+.bottom-panel {
+    z-index: 100;
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 2.5rem;
+    width: 100%;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: var(--color-white);
+        opacity: 0.9;
+    }
+
+    .bottom-btn,
+    .bottom-btn-cart {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        background-position: center;
+        background-size: auto 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 20%;
+    }
+
+    .bottom-btn.orders-icon {
+        background-image: var(--icon-orders-gray);
+    }
+
+    .bottom-btn.favorite-food {
+        background-image: var(--icon-heart-gray);
+    }
+
+    .bottom-btn.favorite-food:hover {
+        background-image: var(--icon-heart_active-gray);
+    }
+
+    .bottom-btn-cart {
+        z-index: 1;
+        position: relative;
+        border-radius: 50%;
+
+        &::before {
+            content: "";
+            width: 4.75rem;
+            height: 4.75rem;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            border-radius: 50%;
+            z-index: -2;
+        }
+
+        &::after {
+            content: "";
+            width: 4.75rem;
+            height: 4.75rem;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: var(--icon-cart_empty-gray);
+            background-size: 70%;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+
+        >h4 {
+            margin-left: 31px;
+            margin-bottom: 10px;
+            background-color: var(--color-primary-500);
+            width: 20px;
+            height: 20px;
+            font-size: 13px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: var(--color-white);
+        }
+
+        &.empty h4 {
+            display: none;
+        }
+    }
+
+    .bottom-btn.customer-icon {
+        background-image: var(--icon-customer-gray);
+    }
+
+    .bottom-btn.points .bottom-btn-center {
+        display: flex;
+        flex-direction: column;
+        gap: 0.125rem;
+        line-height: 1;
+
+        >h4 {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--color-primary-500);
+        }
+
+        >label {
+            font-size: 12px;
+            cursor: pointer;
+        }
+    }
+
+    @include media-lg {
+        bottom: unset;
+        left: unset;
+        top: 1.25rem;
+        right: 12rem;
+        z-index: 101;
+        width: 14rem;
+        justify-content: flex-end;
+
+        &::before {
+            content: unset;
+        }
+
+        .bottom-btn {
+            max-width: 25%;
+        }
+
+        .bottom-btn.orders-icon {
+            background-image: var(--icon-orders-white);
+        }
+
+        .bottom-btn.favorite-food {
+            background-image: var(--icon-heart-white);
+        }
+
+        .bottom-btn.favorite-food:hover {
+            background-image: var(--icon-heart_active-white);
+        }
+
+        .bottom-btn-cart {
+            position: absolute;
+            right: -9rem;
+            top: 0;
+            transform: translateY(50%);
+        }
+
+        .bottom-btn-cart::before {
+            content: unset;
+        }
+
+        .bottom-btn-cart::after {
+            background-image: var(--icon-cart_empty-white);
+        }
+
+        .bottom-btn.customer-icon {
+            background-image: var(--icon-customer-white);
+        }
+
+        .bottom-btn.points .bottom-btn-center>h4,
+        .bottom-btn.points .bottom-btn-center>label {
+            color: var(--color-white);
+        }
+    }
+
+    @include media-3xl {
+        right: unset;
+        left: calc(50% + 41rem);
+        transform: translateX(-50%);
+    }
+}

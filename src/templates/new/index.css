@@ -1,0 +1,135 @@
+:root {
+  --color-white: #ffffff;
+  --color-gray-100: #f8f8f8;
+  --color-gray-200: #f0f0f0;
+  --color-gray-300: #e0e0e0;
+  --color-gray-400: #cccccc;
+  --color-gray-500: #9c9c9c;
+  --color-gray-600: #828282;
+  --color-gray-700: #4f4f4f;
+  --color-brand-500: #17ba9b;
+  --color-brand-600: #17ac91;
+  --color-primary-400: #e18348;
+  --color-primary-500: #ee6b1b;
+  --color-primary-600: #bd5617;
+  --color-dark-700: #444;
+  --color-dark-700: #333;
+  --color-dark-800: #222;
+  --color-dark-900: #111;
+  --color-black: #000;
+  --color-error-500: #ec1c2e;
+  --color-info-500: #0d63df;
+  --color-success-500: #00b82b;
+  --color-sticker-green-bg: rgba(75, 183, 90, 0.8);
+  --color-sticker-green-text: #ffffff;
+  --color-sticker-red-bg: rgba(184, 76, 76, 0.8);
+  --color-sticker-red-text: #ffffff;
+  --color-sticker-blue-bg: rgba(82, 165, 187, 0.8);
+  --color-sticker-blue-text: #ffffff;
+  --color-sticker-yellow-bg: rgba(167, 183, 70, 0.8);
+  --color-sticker-yellow-text: #ffffff;
+  --icon-menu_list-white: url("/ui/system/icons/white/menu_list.svg");
+  --icon-pointer-white: url("/ui/system/icons/white/pointer.svg");
+  --icon-orders-white: url("/ui/system/icons/white/orders.svg");
+  --icon-orders-gray: url("/ui/system/icons/gray/orders.svg");
+  --icon-heart-white: url("/ui/system/icons/white/heart.svg");
+  --icon-heart-gray: url("/ui/system/icons/gray/heart.svg");
+  --icon-heart_active-white: url("/ui/system/icons/white/heart_active.svg");
+  --icon-heart_active-gray: url("/ui/system/icons/gray/heart_active.svg");
+  --icon-cart_empty-white: url("/ui/system/icons/white/cart_empty.svg");
+  --icon-cart_empty-gray: url("/ui/system/icons/gray/cart_empty.svg");
+  --icon-cart-white: url("/ui/system/icons/white/cart.svg");
+  --icon-cart-gray: url("/ui/system/icons/gray/cart.svg");
+  --icon-customer-white: url("/ui/system/icons/white/customer.svg");
+  --icon-customer-gray: url("/ui/system/icons/gray/customer.svg");
+  --icon-delete-white: url("/ui/system/icons/white/delete.svg");
+  --icon-delete-gray: url("/ui/system/icons/gray/delete.svg");
+  --icon-offer-white: url("/ui/system/icons/white/offer.svg");
+  --icon-table-white: url("/ui/system/icons/white/table.svg");
+  --icon-fire-white: url("/ui/system/icons/white/fire.svg");
+  --icon-photo-white: url("/ui/system/icons/white/photo.svg");
+  --icon-salad-white: url("/ui/system/icons/white/salad.svg");
+  --icon-terms-white: url("/ui/system/icons/white/terms.svg");
+  --icon-plus-white: url("/ui/system/icons/white/plus.svg");
+  --icon-arrow_bottom-white: url("/ui/system/icons/white/arrow_bottom.svg");
+  --icon-arrow_bottom-gray: url("/ui/system/icons/gray/arrow_bottom.svg");
+  --icon-social-facebook-white: url("/ui/system/icons/white/facebook.svg");
+  --icon-social-instagram-white: url("/ui/system/icons/white/instagram.svg");
+  --icon-social-twitter-white: url("/ui/system/icons/white/twitter.svg");
+  --icon-social-google_companies-white: url("/ui/system/icons/white/google_companies.svg");
+  --icon-social-seznam_firmy-white: url("/ui/system/icons/white/seznam_firmy.svg");
+  --icon-payment-type-mastercard-white: url("/ui/system/icons/white/mastercard-accepted-payment.png");
+  --icon-payment-type-visa-white: url("/ui/system/icons/white/visa-accepted-payment.png");
+  --icon-payment-type-gpwebpay-white: url("/ui/system/icons/white/gpwebpay-accepted-payment.png");
+  --icon-payment-type-maestro-white: url("/ui/system/icons/white/maestro-accepted-payment.png");
+  --icon-payment-type-b-payment-white: url("/ui/system/icons/white/b-payment-accepted-payment.png");
+  --icon-payment-type-gopay-white: url("/ui/system/icons/white/gopay-accepted-payment.png");
+  --icon-payment-type-ticket-white: url("/ui/system/icons/white/ticket-accepted-payment.png");
+  --icon-payment-type-nase-stravenka-white: url("/ui/system/icons/white/nase-stravenka-accepted-payment.png");
+  --icon-payment-type-sodexo-white: url("/ui/system/icons/white/sodexo-accepted-payment.png");
+  --icon-payment-type-edenred-white: url("/ui/system/icons/white/up-accepted-payment.png");
+  --icon-payment-type-up-white: url("/ui/system/icons/white/up-accepted-payment.png");
+  --icon-store-app_store-white: url("/ui/system/icons/white/app_store.png");
+  --icon-store-google_play-white: url("/ui/system/icons/white/google_play.png");
+}
+
+@tailwind base;
+@tailwind components;
+
+* {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+
+button {
+  background-color: transparent;
+}
+
+select {
+  color: var(--color-black);
+  border: 1px solid var(--color-gray-400);
+  border-radius: 0.75rem;
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+  background-image: var(--icon-arrow_bottom-gray);
+  background-size: 1rem;
+  background-position: center right 0.5rem;
+  appearance: none;
+  outline: none;
+}
+
+.cleaner,
+.clear,
+.dummy,
+.invisible,
+.js-template {
+  display: none;
+}
+
+.sticker-red {
+  background-color: var(--color-sticker-red-bg);
+  color: var(--color-sticker-red-text);
+}
+.sticker-green {
+  background-color: var(--color-sticker-green-bg);
+  color: var(--color-sticker-red-text);
+}
+.sticker-blue {
+  background-color: var(--color-sticker-blue-bg);
+  color: var(--color-sticker-red-text);
+}
+.sticker-yellow {
+  background-color: var(--color-sticker-yellow-bg);
+  color: var(--color-sticker-red-text);
+}
+.sticker-timed {
+  background-color: var(--color-brand-500);
+  color: var(--color-sticker-red-text);
+}
+.sticker-custom {
+  color: var(--color-sticker-red-text);
+}
+
+.slide {
+  padding-top: 6rem;
+  min-height: 60vh;
+}
