@@ -19,6 +19,6 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
-    outDir: 'dist/objedname-eshop-components',
+    outDir: 'dist/objedname-eshop-templates',
   },
 });
