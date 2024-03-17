@@ -17,11 +17,7 @@ const meta = {
             logoUrl="https://objedname.eu/user-data/factories/80/imgs/logo/logo_hor_white.png"
             isMiniMenu
           />
-          <BottomPanel
-            cartItemsCount={0}
-            pointsCount={100}
-            showPoints={false}
-          />
+          <BottomPanel cartItemsCount={0} pointsCount={100} showPoints={false} />
           <div class="section">
             <div class="slide" id="orders-history" style={{ display: 'block' }}>
               <OrdersHistoryBox orders={props.orders} />

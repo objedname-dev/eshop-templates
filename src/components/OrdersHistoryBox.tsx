@@ -40,10 +40,7 @@ export const OrderHisColumn: Component<OrderHisColumnProps> = (props) => {
           <label>Cena celkem</label>
         </div>
         <div class="order-his-btn gradient-btn">
-          <button
-            class="js-order-reorder repeat-icon"
-            title="Znovu objednat"
-          ></button>
+          <button class="js-order-reorder repeat-icon" title="Znovu objednat"></button>
         </div>
       </div>
     </div>
@@ -60,22 +57,15 @@ export const OrdersHistoryBox: Component<OrdersHistoryBoxProps> = (props) => {
   return (
     <div class="orders-history-box">
       <h4>Historie nákupů</h4>
-      <p>
-        Znovu objednat lze pouze objednávky s položkami, které jsou nyní
-        dostupné.
-      </p>
+      <p>Znovu objednat lze pouze objednávky s položkami, které jsou nyní dostupné.</p>
 
       <div class="js-orders-history-container">
         <Switch>
           <Match when={orders().length === 0}>
-            <p class="no-content no-orders-icon">
-              Bohužel nemáte žádné objednávky v historii.
-            </p>
+            <p class="no-content no-orders-icon">Bohužel nemáte žádné objednávky v historii.</p>
           </Match>
           <Match when={orders().length > 0}>
-            <For each={orders()}>
-              {(order) => <OrderHisColumn {...order} />}
-            </For>
+            <For each={orders()}>{(order) => <OrderHisColumn {...order} />}</For>
           </Match>
         </Switch>
       </div>

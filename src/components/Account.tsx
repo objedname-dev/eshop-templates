@@ -17,10 +17,7 @@ export const Account: Component<Props> = (props) => {
           </div>
         </div>
         <div class="account-form-box">
-          <a
-            href="#"
-            class="js-no-submit js-account-continue-to-home btn-href gradient-btn"
-          >
+          <a href="#" class="js-no-submit js-account-continue-to-home btn-href gradient-btn">
             Pokračovat na hlavní nabídku
           </a>
           <a href="#" class="js-no-submit js-logout btn-href gradient-btn">

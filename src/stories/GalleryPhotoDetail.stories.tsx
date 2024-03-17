@@ -20,13 +20,11 @@ export const Default: Story = {
     left: [
       {
         type: 'img',
-        mediaUrl:
-          'https://objedname.eu/user-data/factories/80/imgs/gallery/512/880.jpg',
+        mediaUrl: 'https://objedname.eu/user-data/factories/80/imgs/gallery/512/880.jpg',
       },
       {
         type: 'img',
-        mediaUrl:
-          'https://objedname.eu/user-data/factories/80/imgs/gallery/512/882.jpg',
+        mediaUrl: 'https://objedname.eu/user-data/factories/80/imgs/gallery/512/882.jpg',
       },
       {
         type: 'iframe',
@@ -36,13 +34,11 @@ export const Default: Story = {
     right: [
       {
         type: 'img',
-        mediaUrl:
-          'https://objedname.eu/user-data/factories/80/imgs/gallery/512/881.jpg',
+        mediaUrl: 'https://objedname.eu/user-data/factories/80/imgs/gallery/512/881.jpg',
       },
       {
         type: 'img',
-        mediaUrl:
-          'https://objedname.eu/user-data/factories/80/imgs/gallery/512/883.jpg',
+        mediaUrl: 'https://objedname.eu/user-data/factories/80/imgs/gallery/512/883.jpg',
       },
     ],
   },

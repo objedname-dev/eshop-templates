@@ -23,9 +23,7 @@ type NewsColumnProps = {
 export const NewsColumn: Component<NewsColumnProps> = (props) => {
   return (
     <div class="news-column">
-      <For each={props.news}>
-        {(newContent) => <NewContent {...newContent} />}
-      </For>
+      <For each={props.news}>{(newContent) => <NewContent {...newContent} />}</For>
     </div>
   );
 };

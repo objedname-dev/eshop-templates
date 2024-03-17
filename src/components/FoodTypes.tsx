@@ -16,8 +16,7 @@ type Props = {
 };
 
 export const FoodTypes: Component<Props> = (props) => {
-  const activeFoodType = () =>
-    (props.foodTypes ?? []).find(({ active }) => active === true);
+  const activeFoodType = () => (props.foodTypes ?? []).find(({ active }) => active === true);
 
   return (
     <div class="extended-menu">
@@ -27,9 +26,7 @@ export const FoodTypes: Component<Props> = (props) => {
             <li
               class={clsx('food-type-button', active && 'active', className)}
               data-filter-id=""
-              onClick={() =>
-                props?.onFoodTypeClick?.({ index: index(), type: 'main' })
-              }
+              onClick={() => props?.onFoodTypeClick?.({ index: index(), type: 'main' })}
             >
               <Show when={iconUrl}>
                 <img src={iconUrl} alt={name} />
@@ -50,9 +47,7 @@ export const FoodTypes: Component<Props> = (props) => {
             <li
               class={clsx('food-type-button', active && 'active')}
               data-filter-id=""
-              onClick={() =>
-                props.onFoodTypeClick?.({ index: index(), type: 'sub' })
-              }
+              onClick={() => props.onFoodTypeClick?.({ index: index(), type: 'sub' })}
             >
               {name}
             </li>

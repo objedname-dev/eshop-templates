@@ -8,10 +8,7 @@ type Props = {
 };
 
 export const BottomPanel: Component<Props> = (props) => {
-  props = mergeProps(
-    { showPoints: true, pointsCount: 0, cartItemsCount: 0 },
-    props,
-  );
+  props = mergeProps({ showPoints: true, pointsCount: 0, cartItemsCount: 0 }, props);
 
   return (
     <div class="bottom-panel hw-acc">
@@ -26,20 +23,13 @@ export const BottomPanel: Component<Props> = (props) => {
         title="Oblíbené položky"
       ></div>
       <div
-        class={clsx(
-          'bottom-btn-cart js-cart-floating',
-          props.cartItemsCount === 0 && 'empty',
-        )}
+        class={clsx('bottom-btn-cart js-cart-floating', props.cartItemsCount === 0 && 'empty')}
         data-navigation-target="#cart"
         title="Košík"
       >
         <h4>{props.cartItemsCount}</h4>
       </div>
-      <div
-        class="bottom-btn customer-icon"
-        data-navigation-target="#account-settings"
-        title="Váš účet"
-      ></div>
+      <div class="bottom-btn customer-icon" data-navigation-target="#account-settings" title="Váš účet"></div>
       <div
         class="bottom-btn points"
         data-navigation-target="#account-settings"

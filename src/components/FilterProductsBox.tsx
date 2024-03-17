@@ -4,9 +4,7 @@ export const FilterProductsBox: Component = () => {
   return (
     <div class="filter-products-box">
       <div class="js-toggle-list-view">&nbsp;</div>
-      <button class="filter-products-btn gradient-btn">
-        Hledat / Filtrovat
-      </button>
+      <button class="filter-products-btn gradient-btn">Hledat / Filtrovat</button>
       <div class="filter-products-content active">
         <div class="filter-content">
           <div class="filter-title">Vyhledávejte podle názvu:</div>

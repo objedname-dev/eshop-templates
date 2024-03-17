@@ -18,9 +18,7 @@ export const CartSum: Component<Props> = (props) => {
       {props.showDelivery && (
         <div class="cart-price-column">
           <div class="cart-col-name">Cena za dopravu</div>
-          <div class="cart-col-value js-order-delivery-price">
-            {props.deliveryPrice}
-          </div>
+          <div class="cart-col-value js-order-delivery-price">{props.deliveryPrice}</div>
           <div class="cleaner" />
         </div>
       )}
@@ -28,14 +26,10 @@ export const CartSum: Component<Props> = (props) => {
         <div
           class={clsx(
             'cart-price-column',
-            props.bonusPoints >= 0
-              ? 'cart-bonus js-cart-bonus'
-              : 'js-cart-bonus-payment',
+            props.bonusPoints >= 0 ? 'cart-bonus js-cart-bonus' : 'js-cart-bonus-payment',
           )}
         >
-          <div class="cart-col-name">
-            {props.bonusPoints >= 0 ? 'Bonusové body' : 'Platba body'}
-          </div>
+          <div class="cart-col-name">{props.bonusPoints >= 0 ? 'Bonusové body' : 'Platba body'}</div>
           <div class="cart-col-value js-order-bonus-gain">
             {props.bonusPoints > 0 && '+'}
             {props.bonusPoints}
@@ -44,10 +38,7 @@ export const CartSum: Component<Props> = (props) => {
           <div class="cleaner" />
         </div>
       )}
-      <div
-        class="js-cart-actions-container actions-container"
-        style="display: none;"
-      ></div>
+      <div class="js-cart-actions-container actions-container" style="display: none;"></div>
       <div class="cart-price-column cart-price">
         <div class="cart-col-name">Cena celkem</div>
         <div class="cart-col-value js-order-price">{props.totalPrice}</div>
@@ -57,13 +48,7 @@ export const CartSum: Component<Props> = (props) => {
         <div class="coupon-box js-add-coupon-box">
           <div class="coupon-content">
             <div class="field">
-              <input
-                id="coupon"
-                type="text"
-                name="coupon"
-                class="coupon-icon"
-                placeholder="Kupón"
-              />
+              <input id="coupon" type="text" name="coupon" class="coupon-icon" placeholder="Kupón" />
               <label for="coupon">Kupón</label>
             </div>
             <button class="set-coupon-btn js-add-coupon-btn">Uplatnit</button>
@@ -80,10 +65,7 @@ export const CartSum: Component<Props> = (props) => {
         <div class="cart-pay-btn">
           <a
             href="#"
-            class={clsx(
-              'js-go-next js-no-submit',
-              props.nextBtnDisabled && 'require-consent',
-            )}
+            class={clsx('js-go-next js-no-submit', props.nextBtnDisabled && 'require-consent')}
             onClick={props.onNextBtnClick}
           >
             {props.nextBtnText}

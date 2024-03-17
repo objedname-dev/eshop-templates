@@ -46,13 +46,7 @@ export const CartCompleteOrderForm: Component<Props> = (props) => {
         <label for="surmane">Příjmení</label>
       </div>
       <div class="field">
-        <input
-          id="email"
-          type="text"
-          name="email"
-          class="email-icon"
-          placeholder="Email"
-        />
+        <input id="email" type="text" name="email" class="email-icon" placeholder="Email" />
         <label for="email">Email</label>
       </div>
       <div class="field">
@@ -67,20 +61,12 @@ export const CartCompleteOrderForm: Component<Props> = (props) => {
       </div>
 
       <div class="field">
-        <textarea
-          id="note"
-          name="note"
-          maxlength="500"
-          placeholder="Poznámka"
-        ></textarea>
+        <textarea id="note" name="note" maxlength="500" placeholder="Poznámka"></textarea>
         <label for="note">Poznámka</label>
       </div>
 
       <div class="js-time-order-container">
-        <div
-          class="save-data-box js-timed-order"
-          style={{ display: props.timedOrderData ? '' : 'none' }}
-        >
+        <div class="save-data-box js-timed-order" style={{ display: props.timedOrderData ? '' : 'none' }}>
           <div class="save-data-desc">Objednávka na čas </div>
 
           <div class="save-data-checkbox order-time-checkbox js-preorder">
@@ -98,10 +84,7 @@ export const CartCompleteOrderForm: Component<Props> = (props) => {
 
         <div class="clear" />
 
-        <div
-          class="field js-timepicker"
-          style={{ display: props.isTimedOrder ? '' : 'none' }}
-        >
+        <div class="field js-timepicker" style={{ display: props.isTimedOrder ? '' : 'none' }}>
           <input type="hidden" name="timed-order-selected-day" value="" />
           <input type="hidden" name="timed-order-selected-time" />
 
@@ -117,11 +100,7 @@ export const CartCompleteOrderForm: Component<Props> = (props) => {
               <div class="day-select-row" data-id="day-select-row">
                 <For each={props.timedOrderData}>
                   {({ date }, index) => (
-                    <div
-                      class={clsx('day', index() === 1 && 'active')}
-                      data-template="day"
-                      data-date={date}
-                    >
+                    <div class={clsx('day', index() === 1 && 'active')} data-template="day" data-date={date}>
                       <h5>{date}</h5>
                     </div>
                   )}
@@ -145,9 +124,7 @@ export const CartCompleteOrderForm: Component<Props> = (props) => {
                     data-time={time}
                   >
                     <span>{time}</span>
-                    {capacity === 0 && (
-                      <span class="availability">Nedostupné</span>
-                    )}
+                    {capacity === 0 && <span class="availability">Nedostupné</span>}
                   </div>
                 )}
               </For>
@@ -157,8 +134,7 @@ export const CartCompleteOrderForm: Component<Props> = (props) => {
               style={{ display: props.showTimedOrderEcoMessage ? '' : 'none' }}
               data-id="eco-message"
             >
-              Eco jízda, někdo ve vašem okolí udělal na tento čas také
-              objednávku.
+              Eco jízda, někdo ve vašem okolí udělal na tento čas také objednávku.
             </p>
           </div>
         </div>

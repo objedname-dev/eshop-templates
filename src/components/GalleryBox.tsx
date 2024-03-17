@@ -17,21 +17,15 @@ export const GalleryBox: Component<Props> = (props) => {
     <div class="gallery-box">
       <Switch>
         <Match when={galleries().length === 0}>
-          <p class="no-content gallery-empty-msg">
-            Zatím nemáme nahrané žádné fotografie.
-          </p>
+          <p class="no-content gallery-empty-msg">Zatím nemáme nahrané žádné fotografie.</p>
         </Match>
         <Match when={galleries().length > 0}>
           <For each={galleries()}>
             {({ title, thumbnailUrl, videoCount, photoCount, lastUpdated }) => (
               <a href="#" class="" data-gallery-id="2">
-                <div
-                  class="gallery-content"
-                  style={{ 'background-image': `url("${thumbnailUrl}")` }}
-                >
+                <div class="gallery-content" style={{ 'background-image': `url("${thumbnailUrl}")` }}>
                   <div class="gallery-date gradient-btn">
-                    Poslední změna{' '}
-                    <span class="js-last-edited">{lastUpdated}</span>
+                    Poslední změna <span class="js-last-edited">{lastUpdated}</span>
                   </div>
                   <div class="gallery-bottom-content">
                     <h4 class="js-gallery-name">{title}</h4>

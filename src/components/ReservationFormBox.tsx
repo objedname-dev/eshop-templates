@@ -102,16 +102,11 @@ export const ReservationFormBox: Component = () => {
             <label for="book-frm-17-bookNote">Poznámka</label>
           </div>
           <p>
-            Rezervace se stává platnou vždy až po obdržení potvrzovacího
-            e-mailu. Rezervace se řídí smluvními podmínkami a nařízením o
-            zpracování osobních údajů podle GDPR. Odesláním rezervace stvrzujete
-            svůj souhlas.{' '}
+            Rezervace se stává platnou vždy až po obdržení potvrzovacího e-mailu. Rezervace se řídí smluvními
+            podmínkami a nařízením o zpracování osobních údajů podle GDPR. Odesláním rezervace stvrzujete svůj
+            souhlas.{' '}
           </p>
-          <input
-            class="gradient-btn"
-            type="submit"
-            value=" Vyžádat rezervaci "
-          />
+          <input class="gradient-btn" type="submit" value=" Vyžádat rezervaci " />
         </div>
       </form>
     </div>

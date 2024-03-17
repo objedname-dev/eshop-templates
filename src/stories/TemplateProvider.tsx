@@ -16,15 +16,12 @@ export const TemplateProvider: Component<Props> = (props) => {
   });
 
   const [templateCss] = createResource(template, async () => {
-    const css: string = await (
-      await import(`../templates/${template()}/style.scss?inline`)
-    ).default;
+    const css: string = await (await import(`../templates/${template()}/style.scss?inline`)).default;
     return css.replace(/\/ui\/system\//g, 'https://objedname.eu/ui/system/');
   });
 
   const root = () =>
-    window.parent.document.querySelector("button[title='Go full screen [F]']")
-      ?.parentElement;
+    window.parent.document.querySelector("button[title='Go full screen [alt F]']")?.parentElement;
 
   return (
     <>
@@ -43,9 +40,7 @@ export const TemplateProvider: Component<Props> = (props) => {
           }
         >
           <select
-            class={clsx(
-              !root() && 'tw-fixed tw-bottom-2 tw-left-2 tw-z-50 tw-bg-white',
-            )}
+            class={clsx(!root() && 'tw-fixed tw-bottom-2 tw-left-2 tw-z-50 tw-bg-white')}
             value={template()}
             onChange={(e) => setTemplate(e.target.value)}
           >

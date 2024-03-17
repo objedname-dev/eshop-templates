@@ -4,8 +4,7 @@ import type { Meta, StoryObj } from 'storybook-solidjs';
 import { Footer, paymentMethods, socials } from '@/components/Footer';
 
 export const defaultProps = {
-  logoUrl:
-    'https://objedname.eu/user-data/factories/80/imgs/logo/logo_ver_white.png',
+  logoUrl: 'https://objedname.eu/user-data/factories/80/imgs/logo/logo_ver_white.png',
   address: 'Hlavní 11, Ostrava, 12300',
   showSelectFactory: true,
   paymentMethods: ['mastercard', 'visa', 'sodexo', 'up', 'b-payment', 'gopay'],

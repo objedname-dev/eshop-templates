@@ -67,10 +67,7 @@ export const Menu = () => {
         </li>
 
         <div class="cleaner"></div>
-        <li
-          class="menu-btn account-menu gradient-btn"
-          data-navigation-target="#account-settings"
-        >
+        <li class="menu-btn account-menu gradient-btn" data-navigation-target="#account-settings">
           <div class="dummy"></div>
           <div class="menu-btn-content cutomer-icon">
             <span class="description">Účet</span>

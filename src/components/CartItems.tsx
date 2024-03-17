@@ -30,12 +30,8 @@ export const CartItem: Component<CartItemProps> = (props) => {
           </div>
         </div>
         <div class="item-info-panel">
-          <div class="item-info-btn js-cart-item-variation">
-            {props.variant.name}
-          </div>
-          <div class="item-info-btn inked js-cart-item-price">
-            {props.variant.price}
-          </div>
+          <div class="item-info-btn js-cart-item-variation">{props.variant.name}</div>
+          <div class="item-info-btn inked js-cart-item-price">{props.variant.price}</div>
           <div class="item-info-btn">
             <div class="package-item-cart">{props.packagingPrice}</div>
           </div>

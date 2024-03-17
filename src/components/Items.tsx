@@ -57,11 +57,7 @@ export const Item: Component<ItemProps> = (props) => {
               <For each={props.stickers}>
                 {({ name, className, color }) => (
                   <div
-                    class={clsx(
-                      'sticker',
-                      color && 'sticker-custom',
-                      className,
-                    )}
+                    class={clsx('sticker', color && 'sticker-custom', className)}
                     style={color ? { 'background-color': color } : undefined}
                   >
                     {name}
@@ -79,9 +75,7 @@ export const Item: Component<ItemProps> = (props) => {
         <div class="item-info-panel">
           <div class="item-info-btn">
             <Switch>
-              <Match when={props.variants.length === 1}>
-                {selectedVariant().name}
-              </Match>
+              <Match when={props.variants.length === 1}>{selectedVariant().name}</Match>
               <Match when={props.variants.length > 1}>
                 <select
                   class="js-select-other arrow-up-type"
@@ -91,18 +85,14 @@ export const Item: Component<ItemProps> = (props) => {
                   }}
                 >
                   <For each={props.variants}>
-                    {({ name }, index) => (
-                      <option value={index()}>{name}</option>
-                    )}
+                    {({ name }, index) => <option value={index()}>{name}</option>}
                   </For>
                 </select>
               </Match>
             </Switch>
           </div>
           <div class="item-info-btn">
-            <h4 class="js-item-variation-price">
-              {selectedVariant().price} Kč
-            </h4>
+            <h4 class="js-item-variation-price">{selectedVariant().price} Kč</h4>
           </div>
           <div class="item-info-btn">
             <div class="review-star active"></div>
@@ -125,11 +115,7 @@ export const Item: Component<ItemProps> = (props) => {
       >
         <div class="item-buy-btn-icon"></div>
       </a>
-      <div
-        class="item-buy-now js-add-to-cart-btn"
-        data-item-variation-id="18544"
-        title="Koupit zrychleně"
-      >
+      <div class="item-buy-now js-add-to-cart-btn" data-item-variation-id="18544" title="Koupit zrychleně">
         <div class="item-buy-now-icon"></div>
       </div>
 

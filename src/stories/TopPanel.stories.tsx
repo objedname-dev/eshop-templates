@@ -22,8 +22,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    logoUrl:
-      'https://objedname.eu/user-data/factories/80/imgs/logo/logo_hor_white.png',
+    logoUrl: 'https://objedname.eu/user-data/factories/80/imgs/logo/logo_hor_white.png',
     translations: [
       { name: 'English', value: 'en' },
       { name: 'German', value: 'de' },

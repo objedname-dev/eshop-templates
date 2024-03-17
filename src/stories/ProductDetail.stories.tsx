@@ -17,8 +17,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     name: 'Pizza šunková',
-    imageUrl:
-      'https://objedname.eu/user-data/factories/80/imgs/items/24097.png',
+    imageUrl: 'https://objedname.eu/user-data/factories/80/imgs/items/24097.png',
     variants: [
       {
         name: '32cm',
@@ -31,8 +30,7 @@ export const Default: Story = {
         className: 'sticker-green',
       },
     ],
-    description:
-      'tomatový základ, houby, anglická slanina, olivy, cherry rajčata, bazalka',
+    description: 'tomatový základ, houby, anglická slanina, olivy, cherry rajčata, bazalka',
     packaging: '+5 Kč Krabice',
     alergens: [1, 3, 7],
     weight: '400g',

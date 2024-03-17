@@ -1,12 +1,5 @@
 import clsx from 'clsx';
-import {
-  Component,
-  ComponentProps,
-  For,
-  JSXElement,
-  Show,
-  createSignal,
-} from 'solid-js';
+import { Component, ComponentProps, For, JSXElement, Show, createSignal } from 'solid-js';
 
 import { RecommendProductsBox } from './RecommendProductsBox';
 
@@ -37,10 +30,7 @@ export const ProductDetail: Component<Props> = (props) => {
 
   return (
     <div class="item-detail-box">
-      <div
-        class="product-detail item-offer-listed"
-        data-food-type="foodtype-pizza"
-      >
+      <div class="product-detail item-offer-listed" data-food-type="foodtype-pizza">
         <div class="content-detail">
           <div
             class={clsx('item-detail-photo-content', isZoomed() && 'zoomed')}
@@ -51,11 +41,7 @@ export const ProductDetail: Component<Props> = (props) => {
               <For each={props.stickers}>
                 {({ name, className, color }) => (
                   <div
-                    class={clsx(
-                      'sticker',
-                      color && 'sticker-custom',
-                      className,
-                    )}
+                    class={clsx('sticker', color && 'sticker-custom', className)}
                     style={color ? { 'background-color': color } : undefined}
                   >
                     {name}
@@ -114,9 +100,7 @@ export const ProductDetail: Component<Props> = (props) => {
 
         <div class="item-detail-desc-box">
           <Show when={props.packaging}>
-            <div class="item-detail-label item-detail-package package-icon">
-              {props.packaging}
-            </div>
+            <div class="item-detail-label item-detail-package package-icon">{props.packaging}</div>
           </Show>
 
           <div class="select-content js-template js-pizza-base-template">
@@ -133,50 +117,31 @@ export const ProductDetail: Component<Props> = (props) => {
 
           <div class="js-item-scriptable-container" style="display:none;"></div>
 
-          <div class="item-detail-label item-detail-description info-icon">
-            {props.description}
-          </div>
+          <div class="item-detail-label item-detail-description info-icon">{props.description}</div>
 
           <Show when={props.alergens}>
             <div class="item-detail-label item-detail-alergens wheat-icon">
-              <For each={props.alergens}>
-                {(alergen) => <div class="alergen-type">{alergen}</div>}
-              </For>
+              <For each={props.alergens}>{(alergen) => <div class="alergen-type">{alergen}</div>}</For>
               <div class="cleaner" />
             </div>
           </Show>
 
           <Show when={props.weight}>
-            <div class="item-detail-label item-detail-weight weight-icon">
-              {props.weight}
-            </div>
+            <div class="item-detail-label item-detail-weight weight-icon">{props.weight}</div>
           </Show>
         </div>
 
         <div class="add-cart-column js-buy-panel">
-          <div
-            class="add-cart-quantity js-quantity-box"
-            style="display: block;"
-          >
-            <div
-              class="change-btn arrow-up-icon js-quantity-diff"
-              data-diff-value="1"
-            ></div>
+          <div class="add-cart-quantity js-quantity-box" style="display: block;">
+            <div class="change-btn arrow-up-icon js-quantity-diff" data-diff-value="1"></div>
             <label class="add-to-cart js-quantity-label" data-quantity="1">
               1x
             </label>
-            <div
-              class="change-btn arrow-down-icon js-quantity-diff"
-              data-diff-value="-1"
-            ></div>
+            <div class="change-btn arrow-down-icon js-quantity-diff" data-diff-value="-1"></div>
 
             <div class="cleaner" />
           </div>
-          <input
-            class="add-to-cart js-add-to-cart-btn"
-            type="button"
-            value="Vložit do košíku"
-          />
+          <input class="add-to-cart js-add-to-cart-btn" type="button" value="Vložit do košíku" />
           <input
             class="add-to-cart-unavailable js-item-unavailable-btn"
             type="button"

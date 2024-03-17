@@ -25,19 +25,12 @@ export const FavoriteItem: Component<Props> = (props) => {
           data-show-detail="13349"
           data-item-variation-id="18535"
         >
-          <div
-            class="item-photo-content"
-            style={{ 'background-image': `url("${props.imageUrl}")` }}
-          >
+          <div class="item-photo-content" style={{ 'background-image': `url("${props.imageUrl}")` }}>
             <div class="stickers-content">
               <For each={props.stickers}>
                 {({ name, className, color }) => (
                   <div
-                    class={clsx(
-                      'sticker',
-                      color && 'sticker-custom',
-                      className,
-                    )}
+                    class={clsx('sticker', color && 'sticker-custom', className)}
                     style={color ? { 'background-color': color } : undefined}
                   >
                     {name}
@@ -51,9 +44,7 @@ export const FavoriteItem: Component<Props> = (props) => {
           </div>
         </a>
         <div class="item-info-panel">
-          <div class="item-info-btn js-item-variation-name">
-            {props.variant.name}
-          </div>
+          <div class="item-info-btn js-item-variation-name">{props.variant.name}</div>
           <div class="item-info-btn inked">
             <h4 class="js-item-price">{props.variant.price}</h4>
           </div>
@@ -76,12 +67,7 @@ export const FavoriteItem: Component<Props> = (props) => {
       >
         <div class="item-buy-btn-icon"></div>
       </div>
-      <div
-        class="item-buy-now"
-        title="Koupit zrychleně"
-        data-item-id="13349"
-        data-item-variation-id="18535"
-      >
+      <div class="item-buy-now" title="Koupit zrychleně" data-item-id="13349" data-item-variation-id="18535">
         <div class="item-buy-now-icon"></div>
       </div>
       <div class="cleaner" />

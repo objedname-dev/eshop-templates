@@ -14,13 +14,7 @@ export const paymentMethods = [
   'up',
 ] as const;
 
-export const socials = [
-  'fb',
-  'instagram',
-  'twitter',
-  'google_companies',
-  'seznam_firmy',
-] as const;
+export const socials = ['fb', 'instagram', 'twitter', 'google_companies', 'seznam_firmy'] as const;
 
 type PaymentMethod = (typeof paymentMethods)[number];
 type Social = (typeof socials)[number];
@@ -46,10 +40,7 @@ export const Footer: Component<Props> = (props) => {
     <footer>
       <div class="footer-box">
         <div class="footer-content">
-          <div
-            class="footer-logo"
-            style={{ 'background-image': `url(${props.logoUrl})` }}
-          ></div>
+          <div class="footer-logo" style={{ 'background-image': `url(${props.logoUrl})` }}></div>
           <div class="footer-column">
             <div class="footer-33-col">
               <h4>Adresa:</h4>
@@ -60,9 +51,7 @@ export const Footer: Component<Props> = (props) => {
                 <div class="footer-payment-content">
                   <For each={props.paymentMethods}>
                     {(paymentMethod) => (
-                      <div
-                        class={`footer-payment-type ${paymentMethod}-accepted-payment`}
-                      />
+                      <div class={`footer-payment-type ${paymentMethod}-accepted-payment`} />
                     )}
                   </For>
                 </div>

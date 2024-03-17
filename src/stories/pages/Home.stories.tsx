@@ -7,16 +7,12 @@ import { Footer } from '@/components/Footer';
 import { Items } from '@/components/Items';
 import { TopPanel } from '@/components/TopPanel';
 
-import FoodTypesStory, {
-  Default as foodTypesProps,
-} from '../FoodTypes.stories';
+import FoodTypesStory, { Default as foodTypesProps } from '../FoodTypes.stories';
 import { defaultProps as defaultFooterProps } from '../Footer.stories';
 import { Default as itemsProps } from '../Items.stories';
 
 const FoodTypes = () =>
-  FoodTypesStory.render(
-    foodTypesProps.args as Parameters<typeof FoodTypesStory.render>[0],
-  );
+  FoodTypesStory.render(foodTypesProps.args as Parameters<typeof FoodTypesStory.render>[0]);
 
 const meta = {
   title: 'Pages/Home',
@@ -28,11 +24,7 @@ const meta = {
             logoUrl="https://objedname.eu/user-data/factories/80/imgs/logo/logo_hor_white.png"
             isMiniMenu
           />
-          <BottomPanel
-            cartItemsCount={0}
-            pointsCount={100}
-            showPoints={false}
-          />
+          <BottomPanel cartItemsCount={0} pointsCount={100} showPoints={false} />
           <div class="section">
             <div class="slide" id="home">
               <Banners

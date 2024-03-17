@@ -19,8 +19,7 @@ export const Default: Story = {
     items: [
       {
         name: 'Pizza Montano',
-        imageUrl:
-          'https://objedname.eu/user-data/factories/80/imgs/thumbs/13348.jpg',
+        imageUrl: 'https://objedname.eu/user-data/factories/80/imgs/thumbs/13348.jpg',
         variant: {
           name: '32 cm',
           price: '144 Kč',

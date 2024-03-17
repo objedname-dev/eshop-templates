@@ -1,9 +1,6 @@
 import type { Meta, StoryObj } from 'storybook-solidjs';
 
-import {
-  RecommendProductsBox,
-  defaultProducts,
-} from '@/components/RecommendProductsBox';
+import { RecommendProductsBox, defaultProducts } from '@/components/RecommendProductsBox';
 
 const meta = {
   title: 'Components/Global/Recommended Products',

@@ -33,12 +33,8 @@ type Props = {
 export const GalleryPhotoDetail: Component<Props> = (props) => {
   return (
     <div class="gallery-photo-detail">
-      <div class="photo-content-left">
-        {props.left && <GalleryColumn media={props.left} />}
-      </div>
-      <div class="photo-content-right">
-        {props.right && <GalleryColumn media={props.right} />}
-      </div>
+      <div class="photo-content-left">{props.left && <GalleryColumn media={props.left} />}</div>
+      <div class="photo-content-right">{props.right && <GalleryColumn media={props.right} />}</div>
 
       <div class="cleaner" />
 

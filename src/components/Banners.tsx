@@ -13,8 +13,7 @@ export const Banners: Component<Props> = (props) => {
     on(
       () => props.banners,
       () => {
-        if (!bannersRef || !bannersPaginationRef || props.banners.length < 2)
-          return;
+        if (!bannersRef || !bannersPaginationRef || props.banners.length < 2) return;
 
         const swiper = new Swiper(bannersRef, {
           speed: 1000,

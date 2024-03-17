@@ -28,9 +28,7 @@ export const CartDeliveryForm: Component<Props> = (props) => {
   const bonusPointsTotal = () => props.bonusPointsTotal ?? 0;
   const bonusPointsPaymentTotal = () => props.bonusPointsPaymentTotal ?? 0;
   const bonusPointsRemaining = () =>
-    bonusPointsTotal() - bonusPointsPaymentTotal() <= 0
-      ? 0
-      : bonusPointsTotal() - bonusPointsPaymentTotal();
+    bonusPointsTotal() - bonusPointsPaymentTotal() <= 0 ? 0 : bonusPointsTotal() - bonusPointsPaymentTotal();
 
   createEffect(() => {
     if (props.selectedDelivery === 'delivery') {
@@ -77,9 +75,7 @@ export const CartDeliveryForm: Component<Props> = (props) => {
 
       <div class="select-content-box js-delivery-container">
         <div class="select-content delivery-icon-address">
-          <div class="extended-title transport-icon js-delivery-name">
-            Rozvoz
-          </div>
+          <div class="extended-title transport-icon js-delivery-name">Rozvoz</div>
           <div class="extended-price js-delivery-price">Dle adresy</div>
           <div class="select-btn">
             <Toggle
@@ -93,9 +89,7 @@ export const CartDeliveryForm: Component<Props> = (props) => {
           <div class="select-address" style="display: none;"></div>
         </div>
         <div class="select-content delivery-icon-factory">
-          <div class="extended-title transport-icon js-delivery-name">
-            Osobní odběr
-          </div>
+          <div class="extended-title transport-icon js-delivery-name">Osobní odběr</div>
           <div class="extended-price js-delivery-price">0 Kč</div>
           <div class="select-btn">
             <Toggle
@@ -110,10 +104,7 @@ export const CartDeliveryForm: Component<Props> = (props) => {
         </div>
       </div>
       <div ref={addressContainerEl!} class="js-address-container" style="">
-        <div
-          class="address-error-box js-address-error"
-          style="display: none;"
-        ></div>
+        <div class="address-error-box js-address-error" style="display: none;"></div>
         <div class="field">
           <input
             id="street"
@@ -208,10 +199,7 @@ export const CartDeliveryForm: Component<Props> = (props) => {
             <span>Pro uplatnění se prosím přihlašte.</span>
           </div>
           <div class="bonus-points-center-class">
-            <a
-              class="bonus-points-href-btn btn-href gradient-btn"
-              data-navigation-target="#account-settings"
-            >
+            <a class="bonus-points-href-btn btn-href gradient-btn" data-navigation-target="#account-settings">
               Přihlásit se
             </a>
           </div>
@@ -223,36 +211,25 @@ export const CartDeliveryForm: Component<Props> = (props) => {
           <div class="bonus-points-head">
             <h4>Platba body</h4>
             <span class="js-bonus-points-min-msg">
-              Minimální částka je{' '}
-              <span class="js-bonus-min-amount">{bonusPointsMin()}</span> bodů.
+              Minimální částka je <span class="js-bonus-min-amount">{bonusPointsMin()}</span> bodů.
             </span>
             <span>1 bod = 1 Kč</span>
           </div>
           <div class="bonus-points-controller">
             <div class="bonus-points-remain bonus-points-icon">
-              Zůstatek:{' '}
-              <span class="js-bonus-balance">{bonusPointsRemaining()}</span>{' '}
-              bodů
+              Zůstatek: <span class="js-bonus-balance">{bonusPointsRemaining()}</span> bodů
             </div>
             <div class="bonus-points-controll-panel">
-              <div
-                class="bonus-points-btn minus-icon js-quantity-diff"
-                data-diff-value="-1"
-              ></div>
+              <div class="bonus-points-btn minus-icon js-quantity-diff" data-diff-value="-1"></div>
               <div class="bonus-points-value">
                 <h4 class="js-bonus-payment-amount">0</h4> <span>bodů</span>
               </div>
-              <div
-                class="bonus-points-btn plus-icon js-quantity-diff"
-                data-diff-value="1"
-              ></div>
+              <div class="bonus-points-btn plus-icon js-quantity-diff" data-diff-value="1"></div>
 
               <div class="clear" />
             </div>
             <div class="bonus-points-center-class">
-              <a class="bonus-points-href-btn btn-href gradient-btn js-bonus-pay-all">
-                Zaplatit celý nákup
-              </a>
+              <a class="bonus-points-href-btn btn-href gradient-btn js-bonus-pay-all">Zaplatit celý nákup</a>
             </div>
           </div>
         </div>

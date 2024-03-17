@@ -17,11 +17,7 @@ const meta = {
             logoUrl="https://objedname.eu/user-data/factories/80/imgs/logo/logo_hor_white.png"
             isMiniMenu
           />
-          <BottomPanel
-            cartItemsCount={0}
-            pointsCount={100}
-            showPoints={false}
-          />
+          <BottomPanel cartItemsCount={0} pointsCount={100} showPoints={false} />
           <div class="section">
             <div class="slide" id="gallery-items" style={{ display: 'block' }}>
               <GalleryPhotoDetail
@@ -29,13 +25,11 @@ const meta = {
                 left={[
                   {
                     type: 'img',
-                    mediaUrl:
-                      'https://objedname.eu/user-data/factories/80/imgs/gallery/512/880.jpg',
+                    mediaUrl: 'https://objedname.eu/user-data/factories/80/imgs/gallery/512/880.jpg',
                   },
                   {
                     type: 'img',
-                    mediaUrl:
-                      'https://objedname.eu/user-data/factories/80/imgs/gallery/512/882.jpg',
+                    mediaUrl: 'https://objedname.eu/user-data/factories/80/imgs/gallery/512/882.jpg',
                   },
                   {
                     type: 'iframe',
@@ -45,13 +39,11 @@ const meta = {
                 right={[
                   {
                     type: 'img',
-                    mediaUrl:
-                      'https://objedname.eu/user-data/factories/80/imgs/gallery/512/881.jpg',
+                    mediaUrl: 'https://objedname.eu/user-data/factories/80/imgs/gallery/512/881.jpg',
                   },
                   {
                     type: 'img',
-                    mediaUrl:
-                      'https://objedname.eu/user-data/factories/80/imgs/gallery/512/883.jpg',
+                    mediaUrl: 'https://objedname.eu/user-data/factories/80/imgs/gallery/512/883.jpg',
                   },
                 ]}
               />

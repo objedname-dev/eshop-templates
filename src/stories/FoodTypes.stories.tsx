@@ -31,12 +31,10 @@ const meta = {
               case 'sub':
                 return foodTypes.map((foodType) => ({
                   ...foodType,
-                  subFoodTypes: foodType.subFoodTypes?.map(
-                    (subFoodType, index) => ({
-                      ...subFoodType,
-                      active: index === selectedIndex,
-                    }),
-                  ),
+                  subFoodTypes: foodType.subFoodTypes?.map((subFoodType, index) => ({
+                    ...subFoodType,
+                    active: index === selectedIndex,
+                  })),
                 }));
             }
           });

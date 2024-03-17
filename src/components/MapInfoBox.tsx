@@ -21,10 +21,7 @@ export const MapInfoBox: Component<Props> = (props) => {
   return (
     <div class="map-info-box">
       <div id="mapInfoContent">
-        <div
-          class="map-content-image"
-          style={{ 'background-image': `url("${props.imageUrl}")` }}
-        >
+        <div class="map-content-image" style={{ 'background-image': `url("${props.imageUrl}")` }}>
           <div class="map-content-title">
             <h4 class="js-factory-name">{props.name}</h4>
           </div>
@@ -48,10 +45,7 @@ export const MapInfoBox: Component<Props> = (props) => {
       <div class="call-container">
         <div class="call-button-content">
           <h3 class="js-contact-telephone">{props.phone}</h3>
-          <div
-            class="call-button gradient-btn js-dial-call"
-            data-phone-number={props.phone}
-          >
+          <div class="call-button gradient-btn js-dial-call" data-phone-number={props.phone}>
             <div class="call-button-icon mobile-icon"></div>
             Zavolat
           </div>
@@ -111,12 +105,7 @@ export const MapInfoBox: Component<Props> = (props) => {
               <label for="message-senders-email">Váš e-mail</label>
             </div>
             <div class="field">
-              <textarea
-                name="message-text"
-                id="message-text"
-                placeholder="Váš dotaz..."
-                required
-              ></textarea>
+              <textarea name="message-text" id="message-text" placeholder="Váš dotaz..." required></textarea>
               <label for="message-text">Váš dotaz...</label>
             </div>
             <div class="contact-bottom-panel">
@@ -126,18 +115,12 @@ export const MapInfoBox: Component<Props> = (props) => {
               </select>
             </div>
 
-            <input
-              type="submit"
-              class="gradient-btn js-send-message-btn"
-              value="Odeslat"
-            />
+            <input type="submit" class="gradient-btn js-send-message-btn" value="Odeslat" />
           </form>
 
           <div class="cleaner" />
 
-          <div class="message-responce-time-comment">
-            Průměrně odpovídáme na technické dotazy do 24h.
-          </div>
+          <div class="message-responce-time-comment">Průměrně odpovídáme na technické dotazy do 24h.</div>
         </div>
       </div>
 

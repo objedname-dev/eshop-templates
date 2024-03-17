@@ -52,17 +52,11 @@ export const MultiappOverlay: Component<Props> = (props) => {
           'background-image': `url('${props.loadingImgUrl}')`,
         }}
       >
-        <object
-          data="/images/loading/loading.svg"
-          type="image/svg+xml"
-        ></object>
+        <object data="/images/loading/loading.svg" type="image/svg+xml"></object>
       </div>
 
       <div class="multi-toppanel hw-acc">
-        <div
-          class="multi-toppanel-logo"
-          style={{ 'background-image': `url('${props.logoUrl}')` }}
-        ></div>
+        <div class="multi-toppanel-logo" style={{ 'background-image': `url('${props.logoUrl}')` }}></div>
       </div>
 
       <div class="app-banner-content hw-acc banner-version-app_multiapp">
@@ -87,22 +81,14 @@ export const MultiappOverlay: Component<Props> = (props) => {
         <For each={props.multiapps}>
           {({ bgUrl, imageUrl, linkUrl, name, description }) => (
             <a href={linkUrl} class="js-multiapp-link">
-              <div
-                class="multiapp-col"
-                style={{ 'background-image': `url('${bgUrl}')` }}
-              >
-                <div
-                  class="multiapp-href-logo"
-                  style={{ 'background-image': `url('${imageUrl}')` }}
-                ></div>
+              <div class="multiapp-col" style={{ 'background-image': `url('${bgUrl}')` }}>
+                <div class="multiapp-href-logo" style={{ 'background-image': `url('${imageUrl}')` }}></div>
                 <h4>{name}</h4>
                 <div class="multiapp-categories">
                   <div class="multiapp-category-col multiapp_flag_"></div>
                 </div>
 
-                {props.showDescriptions && (
-                  <div class="multiapp-description">{description}</div>
-                )}
+                {props.showDescriptions && <div class="multiapp-description">{description}</div>}
 
                 <div class="multiapp-link-box">
                   <span class="multiapp-link-btn">&nbsp;</span>

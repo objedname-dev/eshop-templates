@@ -20,9 +20,7 @@ export const FavoriteItemsBox: Component<Props> = (props) => {
       </p>
 
       <div class="favorite-items-container">
-        <For each={props.items ?? []}>
-          {(item) => <FavoriteItem {...item} />}
-        </For>
+        <For each={props.items ?? []}>{(item) => <FavoriteItem {...item} />}</For>
       </div>
     </div>
   );

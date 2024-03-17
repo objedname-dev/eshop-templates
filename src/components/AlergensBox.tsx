@@ -4,8 +4,7 @@ export const defaultAlergens = [
   {
     number: 1,
     title: 'obiloviny obsahující lepek',
-    description:
-      'pšenice, žito, ječmen, oves, špalda, kamut nebo jejich hybridní odrůdy a výrobky z nich',
+    description: 'pšenice, žito, ječmen, oves, špalda, kamut nebo jejich hybridní odrůdy a výrobky z nich',
   },
   {
     number: 2,

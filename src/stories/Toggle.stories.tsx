@@ -4,13 +4,7 @@ import { Toggle } from '@/components/Toggle';
 
 const meta = {
   title: 'Components/Global/Toggle',
-  render: (props) => {
-    return (
-      <div class="tw-bg-red tw-h-64">
-        <Toggle {...props} />
-      </div>
-    );
-  },
+  component: Toggle,
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',

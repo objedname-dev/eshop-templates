@@ -11,9 +11,7 @@ export const Login: Component<Props> = (props) => {
         <h3>Přihlášení</h3>
         <Switch>
           <Match when={props.step === 1}>
-            <p class="desc-article">
-              Přihlašte se pomocí e-mailu a ušetříte tak čas při nakupování
-            </p>
+            <p class="desc-article">Přihlašte se pomocí e-mailu a ušetříte tak čas při nakupování</p>
             <form class="login-frm">
               <div class="field">
                 <input
@@ -42,9 +40,7 @@ export const Login: Component<Props> = (props) => {
             </div>
           </Match>
           <Match when={props.step === 2}>
-            <p class="desc-article">
-              Přihlašte se pomocí párovacího kódu, který jste obdrželi v emailu.
-            </p>
+            <p class="desc-article">Přihlašte se pomocí párovacího kódu, který jste obdrželi v emailu.</p>
             <form class="pair-frm">
               <div class="field">
                 <input

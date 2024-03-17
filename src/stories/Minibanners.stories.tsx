@@ -16,9 +16,7 @@ type Story = StoryObj<typeof meta>;
 
 export const SingleBanner: Story = {
   args: {
-    minibanners: [
-      'https://objedname.eu/user-data/factories/80/imgs/banners/banner_3694_ESHOP_MINI.jpg',
-    ],
+    minibanners: ['https://objedname.eu/user-data/factories/80/imgs/banners/banner_3694_ESHOP_MINI.jpg'],
   },
 };
 

@@ -35,11 +35,7 @@ export const NotificationsBox: Component<NotificationsBoxProps> = (props) => {
   const [sg, setSg] = createSignal([1, 2, 3]);
 
   return (
-    <div
-      class="notification-box"
-      id="notifications"
-      style={{ transition: 'height 1s' }}
-    >
+    <div class="notification-box" id="notifications" style={{ transition: 'height 1s' }}>
       <div id="idk" style={{ opacity: 0 }}>
         idk
       </div>
@@ -71,17 +67,11 @@ export const NotificationsBox: Component<NotificationsBoxProps> = (props) => {
           $(e).remove();
         }}
       >
-        <For each={props.notifications}>
-          {(notification) => <div>{notification.type}</div>}
-        </For>
+        <For each={props.notifications}>{(notification) => <div>{notification.type}</div>}</For>
       </TransitionGroup>
 
-      <button onClick={() => setSg((sg) => [...sg, sg.length + 1])}>
-        Add number
-      </button>
-      <button onClick={() => setSg((sg) => sg.slice(0, -1))}>
-        Remove number
-      </button>
+      <button onClick={() => setSg((sg) => [...sg, sg.length + 1])}>Add number</button>
+      <button onClick={() => setSg((sg) => sg.slice(0, -1))}>Remove number</button>
     </div>
   );
 };

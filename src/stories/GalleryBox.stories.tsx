@@ -34,8 +34,7 @@ export const WithGalleries: Story = {
         title: 'Galerie 1',
         photoCount: 1,
         videoCount: 0,
-        thumbnailUrl:
-          'https://objedname.eu/user-data/factories/80/imgs/gallery/512/615.jpg',
+        thumbnailUrl: 'https://objedname.eu/user-data/factories/80/imgs/gallery/512/615.jpg',
         lastUpdated: '11:57 30.11.2020',
       },
       {

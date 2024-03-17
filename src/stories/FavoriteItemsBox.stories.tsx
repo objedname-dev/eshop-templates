@@ -24,20 +24,17 @@ export const WithItems: Story = {
       {
         name: 'Pizza šunková',
         variant: { name: '32cm', price: '169 Kč' },
-        imageUrl:
-          'https://cdn.objedname.eu/user-data/factories/80/imgs/thumbs/24097.jpg',
+        imageUrl: 'https://cdn.objedname.eu/user-data/factories/80/imgs/thumbs/24097.jpg',
       },
       {
         name: 'Pizza šunková',
         variant: { name: '32cm', price: '169 Kč' },
-        imageUrl:
-          'https://cdn.objedname.eu/user-data/factories/80/imgs/thumbs/24097.jpg',
+        imageUrl: 'https://cdn.objedname.eu/user-data/factories/80/imgs/thumbs/24097.jpg',
       },
       {
         name: 'Pizza šunková',
         variant: { name: '32cm', price: '169 Kč' },
-        imageUrl:
-          'https://cdn.objedname.eu/user-data/factories/80/imgs/thumbs/24097.jpg',
+        imageUrl: 'https://cdn.objedname.eu/user-data/factories/80/imgs/thumbs/24097.jpg',
       },
     ],
   },

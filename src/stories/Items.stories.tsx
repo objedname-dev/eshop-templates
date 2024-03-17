@@ -82,8 +82,7 @@ export const Default: Story = {
         items: [
           {
             name: 'Pizza Kakaroto',
-            description:
-              'tomatový základ, eidam, zelené olivy, rajče, chilli, kuřecí maso, paprika',
+            description: 'tomatový základ, eidam, zelené olivy, rajče, chilli, kuřecí maso, paprika',
             stickers: [
               {
                 name: 'DOPORUČUJEME',
@@ -111,8 +110,7 @@ export const Default: Story = {
           },
           {
             name: 'Pizza Montano',
-            description:
-              'tomatový základ, smetana, eidam, cheddar, cibule, ananas, smetanito kousky sýra',
+            description: 'tomatový základ, smetana, eidam, cheddar, cibule, ananas, smetanito kousky sýra',
             stickers: [
               {
                 name: 'SLEVA 30 KČ',
@@ -132,8 +130,7 @@ export const Default: Story = {
           },
           {
             name: 'Pizza Oliviero',
-            description:
-              'tomatový základ, černé olivy, eidam, vejce, parmazán, rajče',
+            description: 'tomatový základ, černé olivy, eidam, vejce, parmazán, rajče',
             stickers: [
               {
                 name: 'SLEVA 30 KČ',

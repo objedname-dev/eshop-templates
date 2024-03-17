@@ -10,12 +10,7 @@ export const Toggle: Component<Props> = (props) => {
 
   return (
     <label class="label toggle">
-      <input
-        type="radio"
-        checked={props.checked}
-        onClick={props.onCheck}
-        {...rest}
-      />
+      <input type="radio" checked={props.checked} onClick={props.onCheck} {...rest} />
       <div class="toggle-control"></div>
     </label>
   );
