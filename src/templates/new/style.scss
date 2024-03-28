@@ -1,6 +1,10 @@
 @import '../media-queries.scss';
 @import '../tailwind.css';
 @import './index.css';
+@import './TextInput.scss';
+@import './TextInputField.scss';
+@import './Select.scss';
+@import './Button.scss';
 @import './Banners.scss';
 @import './BottomPanel.scss';
 @import './FoodTypes.scss';
@@ -9,3 +13,13 @@
 @import './Menu.scss';
 @import './Minibanners.scss';
 @import './TopPanel.scss';
+@import './FilterProducts.scss';
+@import './Alergens.scss';
+@import './CompanyTerms.scss';
+@import './Gallery.scss';
+@import './GalleryDetail.scss';
+@import './Login.scss';
+@import './Account.scss';
+@import './Contact.scss';
+@import './ItemDetail.scss';
+@import './RecommendBox.scss';

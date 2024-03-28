@@ -1,3 +1,4 @@
+import { createSignal } from 'solid-js';
 import type { Meta, StoryObj } from 'storybook-solidjs';
 
 import { BackButton } from '@/components/BackButton';
@@ -6,12 +7,15 @@ import { Footer } from '@/components/Footer';
 import { MapInfoBox } from '@/components/MapInfoBox';
 import { MapLegend } from '@/components/MapLegend';
 import { TopPanel } from '@/components/TopPanel';
+import MapsBg from '@/stories/assets/maps-bg.png';
 
 import { defaultProps as defaultFooterProps } from '../Footer.stories';
 
 const meta = {
   title: 'Pages/Contact',
   render: (props) => {
+    const [showMapInfoBox, setShowMapInfoBox] = createSignal(true);
+
     return (
       <div class="body-container">
         <div class="fullpage">
@@ -23,17 +27,27 @@ const meta = {
           <div class="section">
             <div class="slide" id="contact" style={{ display: 'block' }}>
               <div class="map-container">
-                <BackButton>Zobrazit na mapě</BackButton>
+                <BackButton
+                  onClick={() => setShowMapInfoBox(false)}
+                  style={{ display: showMapInfoBox() ? '' : 'none' }}
+                >
+                  Zobrazit na mapě
+                </BackButton>
                 <div class="map-content">
                   <div
                     id="map-map"
                     class="smap smap-defaults focus"
-                    style={{ width: '100%', height: '100%' }}
+                    style={{ width: '100%', height: '100%', 'background-image': `url('${MapsBg}')` }}
                   >
                     <div class="hud">
                       <div>
                         <div style={{ position: 'absolute', left: '0%', top: '50%' }}>
-                          <BackButton>Zobrazit kontakt</BackButton>
+                          <BackButton
+                            onClick={() => setShowMapInfoBox(true)}
+                            style={{ display: showMapInfoBox() ? 'none' : '' }}
+                          >
+                            Zobrazit kontakt
+                          </BackButton>
                         </div>
                         <div style={{ position: 'absolute', left: '2%', bottom: '5%' }}>
                           <MapLegend areas={props.areas} />
@@ -49,6 +63,7 @@ const meta = {
                   name={props.name}
                   openingHours={props.openingHours}
                   phone={props.phone}
+                  show={showMapInfoBox()}
                 />
               </div>
             </div>

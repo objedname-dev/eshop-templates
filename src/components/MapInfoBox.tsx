@@ -15,11 +15,12 @@ type Props = {
     timeFrom: string;
     timeTo: string;
   }[];
+  show?: boolean;
 };
 
 export const MapInfoBox: Component<Props> = (props) => {
   return (
-    <div class="map-info-box">
+    <div class="map-info-box" style={{ display: props.show ?? true ? '' : 'none' }}>
       <div id="mapInfoContent">
         <div class="map-content-image" style={{ 'background-image': `url("${props.imageUrl}")` }}>
           <div class="map-content-title">

@@ -1,0 +1,44 @@
+.gallery-photo-detail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: $lg;
+    margin: 0 auto;
+}
+
+.gallery-name-title {
+    width: 100%;
+    order: 1;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.photo-content-left,
+.photo-content-right {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    gap: 1rem;
+
+    >a {
+        border-radius: var(--border-radius-lg);
+        overflow: hidden;
+    }
+
+    a,
+    img,
+    iframe {
+        width: 100%;
+    }
+}
+
+.photo-content-left {
+    order: 2;
+}
+
+.photo-content-right {
+    order: 3;
+}

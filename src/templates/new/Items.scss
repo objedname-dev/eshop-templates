@@ -27,7 +27,7 @@
     z-index: -1;
   }
 
-  .items-title > h2 {
+  .items-title>h2 {
     background-color: var(--color-white);
     display: inline;
     padding: 0.25rem 0.75rem;
@@ -37,7 +37,7 @@
     font-weight: 500;
   }
 
-  .items-title > p {
+  .items-title>p {
     padding: 0 0.75rem;
   }
 
@@ -83,11 +83,11 @@
       margin-bottom: 1rem;
     }
 
-    .item-photo-content-bottom > h4 {
+    .item-photo-content-bottom>h4 {
       font-weight: 500;
     }
 
-    .item-photo-content-bottom > p {
+    .item-photo-content-bottom>p {
       font-size: 0.75rem;
       opacity: 0.75;
     }
@@ -104,15 +104,25 @@
       min-height: 2rem;
     }
 
-    .item-info-panel .item-info-btn:nth-child(1) > select {
+    .item-info-panel .item-info-btn:nth-child(1)>select {
       width: 100%;
+      border: 1px solid var(--color-gray-300);
+      border-radius: var(--border-radius-lg);
+    }
+
+    .item-info-panel .item-info-btn:nth-child(1)>select:hover {
+      border-color: var(--color-gray-500);
+    }
+
+    .item-info-panel .item-info-btn:nth-child(1)>select:focus {
+      border: 1px solid var(--color-info-500);
     }
 
     .item-info-panel .item-info-btn:nth-child(2) {
       height: 1.5rem;
     }
 
-    .item-info-panel .item-info-btn:nth-child(2) > h4 {
+    .item-info-panel .item-info-btn:nth-child(2)>h4 {
       font-weight: 500;
       font-size: 1.125rem;
     }

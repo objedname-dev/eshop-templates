@@ -28,8 +28,10 @@
   --color-sticker-blue-text: #ffffff;
   --color-sticker-yellow-bg: rgba(167, 183, 70, 0.8);
   --color-sticker-yellow-text: #ffffff;
+  --icon-magnify-gray: url('/ui/system/icons/gray/magnify.svg');
   --icon-menu_list-white: url('/ui/system/icons/white/menu_list.svg');
   --icon-pointer-white: url('/ui/system/icons/white/pointer.svg');
+  --icon-mobile-white: url('/ui/system/icons/white/mobile.svg');
   --icon-orders-white: url('/ui/system/icons/white/orders.svg');
   --icon-orders-gray: url('/ui/system/icons/gray/orders.svg');
   --icon-heart-white: url('/ui/system/icons/white/heart.svg');
@@ -47,12 +49,24 @@
   --icon-offer-white: url('/ui/system/icons/white/offer.svg');
   --icon-table-white: url('/ui/system/icons/white/table.svg');
   --icon-fire-white: url('/ui/system/icons/white/fire.svg');
+  --icon-email-gray: url('/ui/system/icons/gray/email.svg');
+  --icon-calculator-gray: url('/ui/system/icons/gray/calculator.svg');
   --icon-photo-white: url('/ui/system/icons/white/photo.svg');
+
+  --icon-weight-gray: url('/ui/system/icons/gray/weight.svg');
+  --icon-information-gray: url('/ui/system/icons/gray/information.svg');
+  --icon-package-gray: url('/ui/system/icons/gray/package.svg');
+  --icon-wheat-gray: url('/ui/system/icons/gray/wheat.svg');
+  --icon-star-green: url('/ui/system/icons/green/star.svg');
+  --icon-star_active-green: url('/ui/system/icons/green/star_active.svg');
+
   --icon-salad-white: url('/ui/system/icons/white/salad.svg');
   --icon-terms-white: url('/ui/system/icons/white/terms.svg');
   --icon-plus-white: url('/ui/system/icons/white/plus.svg');
   --icon-arrow_bottom-white: url('/ui/system/icons/white/arrow_bottom.svg');
   --icon-arrow_bottom-gray: url('/ui/system/icons/gray/arrow_bottom.svg');
+  --icon-arrow_left-white: url('/ui/system/icons/white/arrow_left.svg');
+  --icon-arrow_left-gray: url('/ui/system/icons/gray/arrow_left.svg');
   --icon-social-facebook-white: url('/ui/system/icons/white/facebook.svg');
   --icon-social-instagram-white: url('/ui/system/icons/white/instagram.svg');
   --icon-social-twitter-white: url('/ui/system/icons/white/twitter.svg');
@@ -71,6 +85,13 @@
   --icon-payment-type-up-white: url('/ui/system/icons/white/up-accepted-payment.png');
   --icon-store-app_store-white: url('/ui/system/icons/white/app_store.png');
   --icon-store-google_play-white: url('/ui/system/icons/white/google_play.png');
+  --icon-no_photos_gray: url('/ui/system/images/photos/no_photos.png');
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+  --border-radius-xl: 1.5rem;
+  --border-radius-rounded: 50%;
 }
 
 @tailwind base;
@@ -85,6 +106,7 @@ button {
   background-color: transparent;
 }
 
+/*
 select {
   color: var(--color-black);
   border: 1px solid var(--color-gray-400);
@@ -96,6 +118,7 @@ select {
   appearance: none;
   outline: none;
 }
+*/
 
 .cleaner,
 .clear,
@@ -130,6 +153,13 @@ select {
 }
 
 .slide {
-  padding-top: 6rem;
+  padding-top: 3.5rem;
   min-height: 60vh;
+}
+
+@media (min-width: 1280px) {
+  .slide {
+    padding-top: 5rem;
+    min-height: 60vh;
+  }
 }

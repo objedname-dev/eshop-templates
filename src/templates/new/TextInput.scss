@@ -1,0 +1,25 @@
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    min-height: 2.625rem;
+    color: var(--color-gray-700);
+    border-bottom: 1px solid var(--color-gray-300);
+    padding: 0.5rem 0.75rem;
+    outline: none;
+    transition: border-color 0.2s;
+    background-position: center right 0.75rem;
+    background-size: 1.25rem;
+
+    &:hover {
+        border-color: var(--color-gray-500);
+    }
+
+    &:focus {
+        border-bottom: 2px solid var(--color-info-500);
+    }
+}

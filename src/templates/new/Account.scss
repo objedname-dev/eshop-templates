@@ -1,0 +1,45 @@
+.account-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.account-info-center {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+    color: var(--color-brand-500);
+    padding: 2rem 0;
+
+    >h4 {
+        font-size: 2.75rem;
+        line-height: 2.75rem;
+    }
+
+    >label {
+        cursor: text;
+    }
+
+    &::before {
+        content: "";
+        width: 8rem;
+        height: 8rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 3px solid var(--color-brand-500);
+        border-radius: var(--border-radius-rounded);
+        pointer-events: none;
+    }
+}
+
+.account-form-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}

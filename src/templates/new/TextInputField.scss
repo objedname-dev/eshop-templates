@@ -1,0 +1,33 @@
+.field {
+    position: relative;
+    padding-top: 0.5rem;
+
+    >input::placeholder,
+    >textarea::placeholder {
+        color: transparent;
+    }
+
+    >label {
+        position: absolute;
+        top: 0.5rem;
+        left: 0;
+        padding: 0.5rem 0.75rem;
+        pointer-events: none;
+        border: 1px solid transparent;
+        transform-origin: 0 0;
+        transition: .2s;
+    }
+
+
+    >input:focus~label,
+    >input:not(:placeholder-shown)~label,
+    >textarea:focus~label,
+    >textarea:not(:placeholder-shown)~label {
+        transform: scale(0.85) translateY(-1.25rem) translateX(0.1rem);
+    }
+
+    >input:focus~label,
+    >textarea:focus~label {
+        color: var(--color-info-500);
+    }
+}

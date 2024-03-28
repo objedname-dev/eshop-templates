@@ -1,0 +1,49 @@
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    gap: 1.5rem;
+
+    .bottom-href {
+        font-weight: 500;
+    }
+}
+
+.login-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 0 1rem;
+    max-width: 20rem;
+
+    >h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .login-frm,
+    .pair-frm {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .login-frm input.email-icon {
+        background-image: var(--icon-email-gray);
+        padding-right: 2.25rem;
+    }
+
+    .pair-frm input.calculator-icon {
+        background-image: var(--icon-calculator-gray);
+        padding-right: 2.25rem;
+    }
+}
+
+.login-article-column {
+    display: none;
+}
