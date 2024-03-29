@@ -1,0 +1,73 @@
+.cart-sum {
+  padding: 1rem;
+  border-radius: var(--border-radius-lg);
+
+  .cart-price-column {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cart-price-column.cart-bonus,
+  .cart-price-column.cart-bonus .cart-col-name {
+    color: var(--color-success-500);
+  }
+
+  .cart-price-column.cart-price {
+    font-weight: 500;
+  }
+
+  .cart-col-name {
+    color: var(--color-gray-600);
+  }
+
+  .cart-bottom-btns {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .cart-bottom-btns > div,
+  .cart-bottom-btns > div > a {
+    width: 100%;
+  }
+
+  .cart-bottom-btns .cart-back-btn > a {
+    border: 1px solid var(--color-gray-700);
+  }
+  .cart-bottom-btns .cart-pay-btn > a {
+    background-color: var(--color-primary-500);
+    color: var(--color-white);
+  }
+
+  .coupon-content {
+    display: flex;
+    margin-top: 0.5rem;
+  }
+
+  .coupon-content > .field {
+    flex-grow: 1;
+  }
+
+  .coupon-content > .set-coupon-btn {
+    background-color: var(--color-success-500);
+    color: var(--color-white);
+  }
+}
+
+@include media-sm {
+  .cart-sum .cart-bottom-btns {
+    flex-direction: row;
+  }
+}
+
+@include media-lg {
+  .cart-sum {
+    border: 1px solid var(--color-gray-500);
+
+    .cart-price-column .cart-col-name {
+      color: var(--color-black);
+    }
+  }
+}

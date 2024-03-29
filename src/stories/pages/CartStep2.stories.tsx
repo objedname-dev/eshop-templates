@@ -28,6 +28,7 @@ const meta = {
                     <CartDeliveryForm
                       selectedDelivery={props.selectedDelivery}
                       selectedPayment={props.selectedPayment}
+                      isLoggedIn={props.isLoggedIn}
                     />
                   </div>
                   <div class="cart-right-box">
@@ -66,5 +67,6 @@ export const Default: Story = {
     totalPrice: '581 Kč',
     selectedDelivery: null,
     selectedPayment: null,
+    isLoggedIn: false,
   },
 };

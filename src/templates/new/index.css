@@ -31,6 +31,13 @@
   --icon-magnify-gray: url('/ui/system/icons/gray/magnify.svg');
   --icon-menu_list-white: url('/ui/system/icons/white/menu_list.svg');
   --icon-pointer-white: url('/ui/system/icons/white/pointer.svg');
+  --icon-pointer-gray: url('/ui/system/icons/gray/pointer.svg');
+  --icon-transport-gray: url('/ui/system/icons/gray/transport.svg');
+  --icon-card-gray: url('/ui/system/icons/gray/credit_card.svg');
+  --icon-cash-gray: url('/ui/system/icons/gray/cash.svg');
+  --icon-wallet-gray: url('/ui/system/icons/gray/wallet.svg');
+  --icon-eco-white: url('/ui/system/icons/white/eco.png');
+  --icon-eco-green: url('/ui/system/icons/green/eco.png');
   --icon-mobile-white: url('/ui/system/icons/white/mobile.svg');
   --icon-orders-white: url('/ui/system/icons/white/orders.svg');
   --icon-orders-gray: url('/ui/system/icons/gray/orders.svg');
@@ -63,6 +70,10 @@
   --icon-salad-white: url('/ui/system/icons/white/salad.svg');
   --icon-terms-white: url('/ui/system/icons/white/terms.svg');
   --icon-plus-white: url('/ui/system/icons/white/plus.svg');
+  --icon-plus-gray: url('/ui/system/icons/gray/plus.svg');
+  --icon-minus-white: url('/ui/system/icons/white/minus.svg');
+  --icon-minus-gray: url('/ui/system/icons/gray/minus.svg');
+  --icon-repeat_arrow-white: url('/ui/system/icons/white/repeat_arrow.svg');
   --icon-arrow_bottom-white: url('/ui/system/icons/white/arrow_bottom.svg');
   --icon-arrow_bottom-gray: url('/ui/system/icons/gray/arrow_bottom.svg');
   --icon-arrow_left-white: url('/ui/system/icons/white/arrow_left.svg');
@@ -85,21 +96,34 @@
   --icon-payment-type-up-white: url('/ui/system/icons/white/up-accepted-payment.png');
   --icon-store-app_store-white: url('/ui/system/icons/white/app_store.png');
   --icon-store-google_play-white: url('/ui/system/icons/white/google_play.png');
-  --icon-no_photos_gray: url('/ui/system/images/photos/no_photos.png');
+  --icon-no_photos-gray: url('/ui/system/images/photos/no_photos.png');
+  --icon-no_cart-gray: url('/ui/system/images/photos/no_cart.png');
+  --icon-no_news-gray: url('/ui/system/images/photos/no_news.png');
+  --icon-no_orders-gray: url('/ui/system/images/photos/no_history.png');
   --border-radius-sm: 0.25rem;
   --border-radius-md: 0.5rem;
   --border-radius-lg: 0.75rem;
   --border-radius-xl: 1rem;
   --border-radius-xl: 1.5rem;
+  --border-radius-max: 22.5rem;
   --border-radius-rounded: 50%;
 }
 
 @tailwind base;
 @tailwind components;
 
+@font-face {
+  font-family: Primary;
+  src: url('/fonts/OpenSans-Variable.ttf');
+}
+
 * {
   box-sizing: border-box;
   background-repeat: no-repeat;
+}
+
+html {
+  font-family: 'Primary';
 }
 
 button {
@@ -153,13 +177,13 @@ select {
 }
 
 .slide {
-  padding-top: 3.5rem;
+  padding: 3.5rem 0 7.5rem 0;
   min-height: 60vh;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 640px) {
   .slide {
     padding-top: 5rem;
-    min-height: 60vh;
+    min-height: 75vh;
   }
 }

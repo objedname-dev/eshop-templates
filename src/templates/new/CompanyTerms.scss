@@ -1,17 +1,20 @@
 .slide#company-terms {
-    max-width: $lg;
-    margin: 0 auto;
-    padding-right: 1rem;
-    padding-left: 1rem;
+  max-width: $lg;
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
 
+  .edit-cookies-btn {
+    margin-top: 1rem;
+  }
 
-    >h4 {
-        font-size: 2rem;
-        font-weight: 500;
-        margin: 0.5rem 0;
-    }
+  > h4 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+  }
 
-    >h4+div {
-        white-space: pre-wrap;
-    }
+  > h4 + div {
+    white-space: pre-wrap;
+  }
 }

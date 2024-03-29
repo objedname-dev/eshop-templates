@@ -1,32 +1,48 @@
 button,
-input[type="submit"],
-input[type="button"],
+input[type='submit'],
+input[type='button'],
 a.gradient-btn,
-a.back-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 3.125rem;
-    border-radius: var(--border-radius-lg);
-    padding: 0.5rem 1rem;
-    cursor: pointer;
+a.back-btn,
+.cart-back-btn > a,
+.cart-pay-btn > a,
+.set-coupon-btn,
+button.js-order-reorder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 3.125rem;
+  border-radius: var(--border-radius-lg);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 
 button.gradient-btn,
 a.gradient-btn,
-input[type="submit"].gradient-btn,
-input[type="button"] {
-    background-color: var(--color-primary-500);
-    color: var(--color-white);
+input[type='submit'].gradient-btn,
+input[type='button'],
+button.js-order-reorder {
+  background-color: var(--color-primary-500);
+  color: var(--color-white);
 }
 
 a.back-btn {
-    position: fixed;
-    top: 4.5rem;
-    left: 1rem;
-    background-color: var(--color-white);
-    color: var(--color-gray-700);
-    border-radius: var(--border-radius-xl);
-    border: 1px solid var(--color-gray-500);
+  position: fixed;
+  top: 4.5rem;
+  left: 1rem;
+  background-color: var(--color-white);
+  color: var(--color-gray-700);
+  border-radius: var(--border-radius-xl);
+  border: 1px solid var(--color-gray-500);
+}
+
+.cart-sum .cart-bottom-btns .cart-pay-btn > a.require-consent {
+  background-color: var(--color-gray-500);
+  cursor: not-allowed;
+}
+
+@include media-md {
+  a.back-btn {
+    top: 7rem;
+  }
 }

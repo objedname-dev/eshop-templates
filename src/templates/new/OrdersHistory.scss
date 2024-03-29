@@ -1,0 +1,122 @@
+.orders-history-box {
+  max-width: $lg;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  > h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .no-content {
+    grid-column: 1 / -1;
+    text-align: center;
+    background-image: var(--icon-no_orders-gray);
+    background-size: 13.5rem;
+    background-position: center top;
+    padding: 13.5rem 1rem 0 1rem;
+    margin: 8rem auto 0 auto;
+  }
+}
+
+.js-orders-history-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.order-his-column {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-gray-400);
+  border-radius: var(--border-radius-lg);
+}
+
+.order-his-top {
+  display: flex;
+  flex-wrap: wrap;
+
+  > div {
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+  }
+}
+
+.order-his-date {
+  width: 50%;
+  border-right: 1px solid var(--color-gray-400);
+}
+.order-his-status {
+  width: 50%;
+}
+
+.order-his-top .order-his-adress {
+  text-align: left;
+  width: 100%;
+  border-top: 1px solid var(--color-gray-400);
+  font-size: 1rem;
+  background-image: var(--icon-pointer-gray);
+  background-size: 1.5rem;
+  background-position: left 0.5rem top 0.5rem;
+  padding-left: 2.5rem;
+}
+
+.order-his-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.order-his-product {
+  display: flex;
+  padding: 0.25rem 0.5rem;
+}
+
+.order-title {
+  width: 50%;
+}
+.order-quantity {
+  width: 20%;
+  text-align: right;
+}
+.order-price {
+  width: 30%;
+  text-align: end;
+  color: var(--color-success-500);
+}
+.order-extended {
+}
+
+.order-his-bottom {
+  display: flex;
+  margin-top: auto;
+}
+
+.order-his-price {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  > h4 {
+    color: var(--color-success-500);
+  }
+}
+.order-his-btn {
+  margin: 0 0.5rem 0 auto;
+
+  button {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-image: var(--icon-repeat_arrow-white);
+    background-size: 60%;
+    background-position: center;
+  }
+}
