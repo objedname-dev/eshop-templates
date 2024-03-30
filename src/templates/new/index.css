@@ -100,6 +100,13 @@
   --icon-no_cart-gray: url('/ui/system/images/photos/no_cart.png');
   --icon-no_news-gray: url('/ui/system/images/photos/no_news.png');
   --icon-no_orders-gray: url('/ui/system/images/photos/no_history.png');
+
+  --icon-order_new-gray: url('/ui/system/icons/gray/order_new.svg');
+  --icon-order_confirmed-green: url('/ui/system/icons/green/order_confirmed.svg');
+  --icon-order_on_way-green: url('/ui/system/icons/green/order_on_way.svg');
+  --icon-order_delivered-green: url('/ui/system/icons/green/order_delivered.svg');
+  --icon-order_cancelled-red: url('/ui/system/icons/red/order_cancelled.svg');
+
   --border-radius-sm: 0.25rem;
   --border-radius-md: 0.5rem;
   --border-radius-lg: 0.75rem;

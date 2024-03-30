@@ -1,6 +1,7 @@
 @import '../media-queries.scss';
 @import '../tailwind.css';
 @import './index.css';
+@import './Animations.scss';
 @import './TextInput.scss';
 @import './TextInputField.scss';
 @import './Select.scss';
@@ -10,6 +11,7 @@
 @import './BottomPanel.scss';
 @import './FoodTypes.scss';
 @import './Footer.scss';
+@import './TrackingBox.scss';
 @import './Items.scss';
 @import './Menu.scss';
 @import './Minibanners.scss';
@@ -27,4 +29,6 @@
 @import './Cart.scss';
 @import './CartSum.scss';
 @import './News.scss';
+@import './NewsModal.scss';
 @import './OrdersHistory.scss';
+@import './Notifications.scss';
